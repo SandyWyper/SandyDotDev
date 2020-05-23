@@ -12,7 +12,7 @@ I decided to take the most basic starter from Gatsby and build up the neccary de
 - Also enabling the 'gatsby-plugin-offline' plugin.
 - git init and push up to GitHub
 
-### Enable blogs
+#### Enable blogs
 
 I want to have two 'blog' type parts to this site. Projects, where I show off things I have built, and Blog, where I write about web devery. Each feed will be generated using markdown files, images and templates that render the finished articles. I took the following steps to set this up.
 
@@ -110,4 +110,57 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
+```
+
+When doing this we are able to select which template to use for that page, and pass a variable along with it. I have used the "slug" that we created before. Then while in that template we can target the correct project/blog for our graphql query that extracts ervything we need to render the page.
+
+#### Blog and Projects landing pages
+
+The blog landing pages must be created dynamically to accomodate pagination if there too many posts to display on one page. 'gatcby-node.js' must look at how many posts there are, and generate multiple pages that use the same template which has the appropriate posts data fed to them.
+
+```
+  // Create blog-list pages
+  const blogPosts = articles.data.allMarkdownRemark.edges
+  const blogPostsPerPage = 6
+  const numBlogPages = Math.ceil(blogPosts.length / blogPostsPerPage)
+  Array.from({ length: numBlogPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: blogLandingTemplate,
+      context: {
+        limit: blogPostsPerPage,
+        skip: i * blogPostsPerPage,
+        numBlogPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+```
+
+Then that landing page will recieve the nesseccary variable to query for the relevant articles.
+
+Blog landing page query looks like this. More frontmatter can be queried, bu the takeaway is the way we are selecting which articles to display.
+
+```
+export const blogListQuery = graphql`
+  query blogListQuery($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/blog/" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
 ```

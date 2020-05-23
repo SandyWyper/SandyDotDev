@@ -1,3 +1,5 @@
+// TODO:: refactor foor less graphgl requests -
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -29,8 +31,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
+  // templates
   const blogTemplate = require.resolve(`./src/templates/blogTemplate.js`)
   const projectTemplate = require.resolve(`./src/templates/projectTemplate.js`)
+  const blogLandingTemplate = require.resolve(
+    `./src/templates/blogLandingTemplate.js`
+  )
+  const projectsLandingTemplate = require.resolve(
+    `./src/templates/projectsLandingTemplate.js`
+  )
 
   const result = await graphql(`
     {
@@ -75,6 +84,100 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         },
       })
     }
+  })
+
+  /// ------------------------------------ Create landing page for blog articles ---------------------  ///
+  /// --- I must query allMarkdownRemark for posts test them against a regex value in order to get only the ones with '/blog/' in the slug ---- ///
+  /// --- Then create however many landing pages are needed to allow for pagination --------------------  ///
+  /// --- Feed the template with some variables to tell that page which and how many articles to show --- ///
+  const articles = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/blog/" } } }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 120)
+            frontmatter {
+              tags
+              title
+              date(formatString: "DD/MM/YYYY")
+              category
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  // Handle errors
+  if (articles.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  // Create blog-list pages
+  const blogPosts = articles.data.allMarkdownRemark.edges
+  const blogPostsPerPage = 6
+  const numBlogPages = Math.ceil(blogPosts.length / blogPostsPerPage)
+  Array.from({ length: numBlogPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: blogLandingTemplate,
+      context: {
+        limit: blogPostsPerPage,
+        skip: i * blogPostsPerPage,
+        numBlogPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+  /// ------------------------------------ Create landing page for projects ---------------------  ///
+  const projects = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/projects/" } } }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 120)
+            frontmatter {
+              tags
+              title
+              date(formatString: "DD/MM/YYYY")
+              category
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  // Handle errors
+  if (projects.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  // Create projects-list pages
+  const projectPosts = projects.data.allMarkdownRemark.edges
+  const projectsPostsPerPage = 6
+  const numProjectPages = Math.ceil(projectPosts.length / projectsPostsPerPage)
+  Array.from({ length: numProjectPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/projects` : `/projects/${i + 1}`,
+      component: projectsLandingTemplate,
+      context: {
+        limit: projectsPostsPerPage,
+        skip: i * projectsPostsPerPage,
+        numProjectPages,
+        currentPage: i + 1,
+      },
+    })
   })
 }
 /// ------------------------------------------------------------------------------------------------  ///
