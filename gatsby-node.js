@@ -1,4 +1,4 @@
-// TODO:: refactor foor less graphgl requests -
+// TODO:: refactor for less graphgl requests -
 
 /**
  * Implement Gatsby's Node APIs in this file.
