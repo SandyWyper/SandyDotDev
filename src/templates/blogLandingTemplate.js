@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import PropTypes from "prop-types"
 
-export default class BlogList extends React.Component {
+class BlogList extends React.Component {
   render() {
     // render navigation between blog-listing pages if there are more then one.
     const { currentPage, numBlogPages } = this.props.pageContext
@@ -10,10 +11,10 @@ export default class BlogList extends React.Component {
     const isLast = currentPage === numBlogPages
     const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
     const nextPage = (currentPage + 1).toString()
-
     const posts = this.props.data.allMarkdownRemark.edges
+
     return (
-      <Layout>
+      <Layout path={this.props.path}>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return <div key={node.fields.slug}>{title}</div>
@@ -54,3 +55,9 @@ export const blogListQuery = graphql`
     }
   }
 `
+BlogList.propTypes = {
+  pageContext: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
+}
+export default BlogList

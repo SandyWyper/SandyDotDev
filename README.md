@@ -137,9 +137,32 @@ The blog landing pages must be created dynamically to accomodate pagination if t
   })
 ```
 
-Then that landing page will recieve the nesseccary variable to query for the relevant articles.
+Then that landing page will recieve the nesseccary variable to query for the relevant articles. Neccessary variables are passed to each template through 'context' and appear as props in the templates. Here we pass variables to allow the correct articles to be queried by the template, and information about which page we are on, to allow us to render navigation between these pages. Then in the template....
 
-Blog landing page query looks like this. More frontmatter can be queried, bu the takeaway is the way we are selecting which articles to display.
+```
+    // render navigation between blog-listing pages if there are more then one.
+    const { currentPage, numBlogPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numBlogPages
+    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+    const nextPage = (currentPage + 1).toString()
+    // -------then
+    return(
+      {!isFirst && (
+        <Link to={`/blog/${prevPage}`} rel="prev">
+          ← Previous Page
+        </Link>
+      )}
+      {!isLast && (
+        <Link to={`/blog/${nextPage}`} rel="next">
+          Next Page →
+        </Link>
+      )}
+    )
+
+```
+
+Blog landing page graphql query looks like this. More frontmatter can be added, but the takeaway is the way we are selecting which articles to display.
 
 ```
 export const blogListQuery = graphql`
@@ -164,3 +187,9 @@ export const blogListQuery = graphql`
   }
 `
 ```
+
+#### The Nav
+
+I want the nav to be different on the home page to the rest of the site. So rather than making it twice, I want it to know what location path the user is currently on. Gatsby by default comes with some methods that allow us to know this, but only applies to the <Link> component. You just add activeClassName or activeStyle to the component and it will check the location pathname. Trouble being that i want to toggle classes on the whole nav, not just the <Link> component.
+
+In Gatsby, location.pathname is prop of the root Components of any page, but not the children. So I drilled the prop down from the root page Components through <Layout> to <Nav>. The <Nav> component can now use this as one of it's props to determine how it wants to be displayed.
