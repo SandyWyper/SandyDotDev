@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Sandy Dot Dev`,
-    description: `A portfolio and blog site for me. Built up from the Gatsby Default Starter.`,
+    description: `A portfolio and blog site for me. Built up from Gatsby's Default Starter theme.`,
     author: `Sandy Wyper`,
   },
   plugins: [
@@ -32,7 +32,18 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
-        plugins: [],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1500,
+              withWebp: true,
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,

@@ -1,5 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
 const LatestProject = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +19,11 @@ const LatestProject = () => {
               posttype
               description
               cover {
-                relativePath
+                childImageSharp {
+                  fluid(maxWidth: 1500) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
             fields {
@@ -29,13 +34,15 @@ const LatestProject = () => {
       }
     }
   `)
-  const latestProject = data.allMarkdownRemark.edges[0].node
+  const projectDetails = data.allMarkdownRemark.edges[0].node.frontmatter
+  const projectPath = data.allMarkdownRemark.edges[0].node.fields.slug
   return (
     <section style={{ border: "1px solid grey" }}>
-      {console.log(latestProject)}
-      <h2>{latestProject.frontmatter.title}</h2>
-      <date>{latestProject.frontmatter.date}</date>
-      <p>{latestProject.frontmatter.description}</p>
+      <h2>{projectDetails.title}</h2>
+      <p>{projectDetails.date}</p>
+      <p>{projectDetails.description}</p>
+      <Img fluid={projectDetails.cover.childImageSharp.fluid} />
+      <Link to={projectPath}>Read more...</Link>
     </section>
   )
 }

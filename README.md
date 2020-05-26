@@ -193,3 +193,47 @@ export const blogListQuery = graphql`
 I want the nav to be different on the home page to the rest of the site. So rather than making it twice, I want it to know what location path the user is currently on. Gatsby by default comes with some methods that allow us to know this, but only applies to the <Link> component. You just add activeClassName or activeStyle to the component and it will check the location pathname. Trouble being that i want to toggle classes on the whole nav, not just the <Link> component.
 
 In Gatsby, location.pathname is prop of the root Components of any page, but not the children. So I drilled the prop down from the root page Components through <Layout> to <Nav>. The <Nav> component can now use this as one of it's props to determine how it wants to be displayed.
+
+#### Home page
+
+This page will contain a top-fold title and description, hopefully with easy sign-posting. Then a 'latest project' section, followed by 'latest-article' section. Each containing a wee image, title, description, (tags maybe) and link to the article/project.
+
+Each of these page sections are components that will take the content from the markdown files in the root. Latest porject queries for articles with '/projects/' in the slug, sorts them by date and only returns 1 result. Here's the grahql query from LatestProject component.
+
+```
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/projects/" } } }
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date(formatString: "DD/MM/YYYY")
+              tags
+              posttype
+              description
+              cover {
+                childImageSharp {
+                  fluid(maxWidth: 1500) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  const projectDetails = data.allMarkdownRemark.edges[0].node.frontmatter
+  const projectPath = data.allMarkdownRemark.edges[0].node.fields.slug
+```
+
+This is all inside a functional component that then returns jsx. Image is processed by 'gatsby-image' again.
