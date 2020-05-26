@@ -1,6 +1,5 @@
 ---
 posttype: "blog"
-slug: "/blog/some-blog-article"
 date: "2019-05-01"
 title: "Some Blog Article"
 category: "Stuff"

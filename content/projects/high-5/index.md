@@ -1,8 +1,8 @@
 ---
 posttype: "projects"
-slug: "/projects/high-5"
 date: "2019-09-01"
 title: "High-5!"
+description: "This project is about blah blah blah"
 category: "Side Project"
 cover: "./0001_lowres.jpg"
 tags:
