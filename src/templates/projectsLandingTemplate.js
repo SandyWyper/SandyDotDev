@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
+import ArticleCard from "../components/articleCard"
 
 const ProjectList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -14,10 +15,13 @@ const ProjectList = props => {
 
   return (
     <Layout path={props.path}>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return <div key={node.fields.slug}>{title}</div>
-      })}
+      {posts.map(({ node }) => (
+        <ArticleCard
+          key={node.id}
+          articleDetails={node.frontmatter}
+          path={node.fields.slug}
+        />
+      ))}
       {!isFirst && (
         <Link to={`/projects/${prevPage}`} rel="prev">
           ← Previous Page
@@ -42,11 +46,23 @@ export const projectListQuery = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-          }
+          id
           frontmatter {
             title
+            date(formatString: "DD/MM/YYYY")
+            tags
+            posttype
+            description
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 1500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          fields {
+            slug
           }
         }
       }

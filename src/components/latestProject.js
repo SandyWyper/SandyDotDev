@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import ArticleCard from "./articleCard"
 
 const LatestProject = () => {
   const data = useStaticQuery(graphql`
@@ -43,16 +43,7 @@ const LatestProject = () => {
           <h3>Projects</h3>
         </Link>
       </header>
-      <h2>{projectDetails.title}</h2>
-      <p>{projectDetails.date}</p>
-      <p>{projectDetails.description}</p>
-      <Img fluid={projectDetails.cover.childImageSharp.fluid} />
-      <ul>
-        {projectDetails.tags.map(item => {
-          return <li key={item}>{item}</li>
-        })}
-      </ul>
-      <Link to={projectPath}>Read more...</Link>
+      <ArticleCard articleDetails={projectDetails} path={projectPath} />
     </section>
   )
 }

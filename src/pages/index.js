@@ -10,7 +10,7 @@ import LatestProject from "../components/latestProject"
 import LatestBlogPost from "../components/latestBlogPost"
 
 const IndexPage = props => (
-  <Layout path={props.location.pathname}>
+  <Layout path={props.path}>
     <SEO title="Home" />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
