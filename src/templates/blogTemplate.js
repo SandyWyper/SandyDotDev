@@ -7,18 +7,13 @@ const BlogTemplate = props => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout path={props.path}>
-      {console.log(props)}
-      <div className="blog-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-        <Link to="/">Home</Link>
-      </div>
+      <h1>{frontmatter.title}</h1>
+      <h2>{frontmatter.date}</h2>
+      <div
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+      <Link to="/">Home</Link>
     </Layout>
   )
 }

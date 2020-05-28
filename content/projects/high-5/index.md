@@ -2,13 +2,110 @@
 posttype: "projects"
 date: "2019-09-01"
 title: "High-5!"
-description: "This project is about blah blah blah"
+description: "Use the Google Maps APIs to search for specific businesses within a given search radius and rank them by user rating.  This web-app utilises the maps, places and goecode libraries. Also the autocomplete api from the places library for text input."
 category: "Side Project"
 cover: "./44.jpg"
 tags:
   - "app"
   - "iOS"
   - "Android"
+repository: "https://github.com/SandyWyper/mop-chop"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# High-5! [^1]
+
+> Use the Google Maps APIs to search for specific businesses within a given search radius and rank them by user rating.
+
+### Goals
+
+- Use Google's Map APIs to request specific data, sort that data and display accoringly.
+
+- Use the user's location via the Navigator.geolocation web API or take an input and get location from Googles geocode library.
+- Request place details via the Places API set to a specific business type, as [categorised by google](https://developers.google.com/places/supported_types).
+- User can set the search radius.
+- Present the top 5 user-reviewed places, with all revelant details and place a marker on a map of the searched area accordingly.
+
+Of course, you could just type into google what you are looking for and be presented with the same information. This is more an exercise in utilising and customising all the peices of the puzzle.
+
+---
+
+[someimage]
+
+Building this taught me a lot, and to go through every step could get a little laborius, so I'll just break it down into a few key takeaways.
+
+### Customising the styling of a google map.
+
+There is [this](https://mapstyle.withgoogle.com/) fantastic resource from google. It has a nifty interface that lets you tweek all the colours and determine how detailed you want your map to be; ie. the quanity of roads, labels and landmarks that are displayed. Without this tool, you would need to have an intimate knowlege of the settings and make numerous API calls while you edit them. You then just export the settings in JSON, and include them as one of the options with your map request API call.
+
+### The Places API
+
+When you make the initial call to the Maps API, you pass an object with some key value pairs. In there is your API key and a list of any other libraries that you may want to utilise. The Places library lets you query all the information that google has on businesses, local landmarks and the precise location of... well, everything. Google is just about omipitent, so it's understating the fact to call this a powerful tool. In this project I use the Places Autocomplete fuctionality, which seems to instantly update the text input with place name suggestions. I set this to UK suggestions only to improve the likelihood of a match.
+When you init a Google Maps instance, other method become available. You can then query for 'places' a certain search radius from a location of a certain business type. In the example below, 'searchRadius' and 'establishmentType' are variables set from the user input.
+
+```javascript
+let latitude = parseFloat(location.coords.lat)
+let longitude = parseFloat(location.coords.lng)
+let coords = new google.maps.LatLng(latitude, longitude)
+// sets parameters for places service search
+const request = {
+  location: coords, //   center of search coordinates
+  radius: searchRadius, //   radius of the search in meters
+  type: establishmentType, //   type of establishment to search for
+}
+let service = new google.maps.places.PlacesService(map)
+service.nearbySearch(request, searchPlaces)
+```
+
+The data received contains a lot of what we need, but not all of it. First though, we can extract the average rating, and number of ratings. We use to top 5 rated, out of a possible 60, so long as it has more than 5 reviews. Then we can then perform another method on the Place library, `getDetails()` on only the 5 business we want details for using each ones unique place id.
+
+```javascript
+topFive.forEach(function (shop) {
+  let request = {
+    placeId: shop.placeId,
+    fields: [
+      "name",
+      "place_id",
+      "formatted_address",
+      "geometry",
+      "photo",
+      "user_ratings_total",
+      "formatted_phone_number",
+      "opening_hours",
+      "website",
+      "rating",
+      "review",
+    ],
+  }
+  service.getDetails(request, addResultToArray)
+})
+```
+
+The results of this don't always come back in the order they were sent, as it's not asyncronous. Better to send them all, wait till they are all in, sort again, and only then display the results.
+
+- Search for 'hair-care', 'beauty-salon', 'cafe', 'restaurant', 'meal-takeaway' or 'rv-park' within a certain radius of a given location.
+- Results are sorted by rating, but places with < 5 ratings are ignored.
+- a map of the location is shown with a marker for top 5 results.
+- Names, ratings and additional information of the locations is displayed.
+- address
+- phone number
+- photos
+- reviews
+- link to their website
+- opening hours
+
+---
+
+### Technologies Used
+
+This was the first time I have used the **Google maps platform**. This web-app utilises the **maps**, **places** and **goecode** libraries. Also the **autocomplete** api from the places library for text input.
+
+This is also my first time using:
+
+- **Webpack** and modular javascript
+- **Lodash** for array manipulation
+
+[^1]: Originally called 'Mop-Chop-Shop', it used to only query for 'hair-care' locations.
+
+```
+
+```
