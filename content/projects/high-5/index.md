@@ -6,10 +6,12 @@ description: "Use the Google Maps APIs to search for specific businesses within 
 category: "Side Project"
 cover: "./44.jpg"
 tags:
-  - "app"
-  - "iOS"
-  - "Android"
+  - "JavaScript"
+  - "WebPack"
+  - "LoDash"
+  - "Google Maps"
 repository: "https://github.com/SandyWyper/mop-chop"
+live: "https://sandywyper.github.io/mop-chop/"
 ---
 
 # High-5! [^1]
@@ -56,7 +58,7 @@ let service = new google.maps.places.PlacesService(map)
 service.nearbySearch(request, searchPlaces)
 ```
 
-The data received contains a lot of what we need, but not all of it. First though, we can extract the average rating, and number of ratings. We use to top 5 rated, out of a possible 60, so long as it has more than 5 reviews. Then we can then perform another method on the Place library, `getDetails()` on only the 5 business we want details for using each ones unique place id.
+The data received contains a lot of what we need, but not all of it. First though, we can extract the average rating, and number of ratings. We use to top 5 rated, out of a possible 60, so long as it has more than 5 reviews. Then we can then perform another method on the Place library, `getDetails()` on only the 5 business we want details for using each one's unique place id.
 
 ```javascript
 topFive.forEach(function (shop) {
@@ -80,29 +82,13 @@ topFive.forEach(function (shop) {
 })
 ```
 
-The results of this don't always come back in the order they were sent, as it's not asyncronous. Better to send them all, wait till they are all in, sort again, and only then display the results.
-
-- Search for 'hair-care', 'beauty-salon', 'cafe', 'restaurant', 'meal-takeaway' or 'rv-park' within a certain radius of a given location.
-- Results are sorted by rating, but places with < 5 ratings are ignored.
-- a map of the location is shown with a marker for top 5 results.
-- Names, ratings and additional information of the locations is displayed.
-- address
-- phone number
-- photos
-- reviews
-- link to their website
-- opening hours
+The results of this don't always come back in the order they were sent, because each request is just sent out there one after another and then returned when they have been processed. So you have to send them all, wait till they are all in, sort again, and only then display the results. (perhaps you could `await` each call before sending the next, but I feel this could slow it down a touch.)
 
 ---
 
-### Technologies Used
+### Conclusions
 
-This was the first time I have used the **Google maps platform**. This web-app utilises the **maps**, **places** and **goecode** libraries. Also the **autocomplete** api from the places library for text input.
-
-This is also my first time using:
-
-- **Webpack** and modular javascript
-- **Lodash** for array manipulation
+The power of Google is rediculous, and if you can imagine a way to utilise the technology, the tools that Google provide make it possible. An area for improvement for this app would be to use the 'Directions' library, so when the user selects the place they want to visit, they can find there way there. Of course the more of these tools you add, it just becomes a Google search. In a real world scenario you'd probably streamline the data requested, so for example, a store locator, and directions to it.
 
 [^1]: Originally called 'Mop-Chop-Shop', it used to only query for 'hair-care' locations.
 
