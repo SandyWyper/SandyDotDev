@@ -4,7 +4,7 @@ date: "2019-01-01"
 title: "A Roman Numeral Coverter"
 description: "Convert Roman numerals to numbers, or vice versa.  This is a progressive web app (PWA) and can be installed to your phone or desktop computer.  Although it is served via a traditional URL through a browser, you can then use it when off-line and it takes the appearance of a native app rather than a web page in a browser."
 category: "Side Project"
-cover: "./0058_lowres.jpg"
+cover: "./julius-cesar.png"
 tags:
   - "JavaScript"
   - "PWA"
