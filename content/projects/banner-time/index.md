@@ -28,6 +28,9 @@ Lets say you have an e-commerce site, or for example a football team's website. 
 4. We need to be able to declare a start and finish time for each instance.
 5. The code must be self contained and not affect the rest of the site.
 
+![banner time image](/banner-time.jpg)
+![banner-time-demo](/banner-time-demo.gif)
+
 ### Set the foundations
 
 In the world of front-end development, most websites (huge sweeping generalisation) include JQuery. This code requires it as a dependency, so all you have to do is make sure this pluging is loaded after JQuery.

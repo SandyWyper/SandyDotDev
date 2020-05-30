@@ -18,12 +18,8 @@ const TopFoldImage = () => {
     query {
       file(relativePath: { eq: "me_PORTRAIT.jpg" }) {
         childImageSharp {
-          fluid(
-            maxWidth: 1600
-            duotone: { highlight: "#b3f542", shadow: "#091345", opacity: 20 }
-            traceSVG: { color: "#A7DEF6" }
-          ) {
-            ...GatsbyImageSharpFluid_tracedSVG
+          fluid(duotone: { highlight: "#b3f542", shadow: "#091345" }) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

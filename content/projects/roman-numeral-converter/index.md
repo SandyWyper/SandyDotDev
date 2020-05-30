@@ -43,7 +43,7 @@ In addition to this, there is a listener for the "Install to homescreen" prompt.
 
 ### JavaScript logic
 
-Converting from numbers to numerals is fairly straight forward. If `num` is greater than 1000, add `M` to an array and subtract 1000 from the num total. Continue down that road, join the array together and you have your conversion. However, for numbers larger that 4000 you can use a [Vinculum](<https://en.wikipedia.org/wiki/Vinculum_(symbol)>) which in roman numerals means that you muliply that number by 1000. So V(5) with an overline becomes 5000. For this reason, I split the answers array into 2, so that when rendering in the DOM I could add an overline to those numerals for numbers larger than 3999.
+Converting from numbers to numerals is fairly straight forward. If **num** is greater than 1000, add **M** to an array and subtract 1000 from the num total. Continue down that road, join the array together and you have your conversion. However, for numbers larger that 4000 you can use a [Vinculum](<https://en.wikipedia.org/wiki/Vinculum_(symbol)>) which in roman numerals means that you muliply that number by 1000. So V(5) with an overline becomes 5000. For this reason, I split the answers array into 2, so that when rendering in the DOM I could add an overline to those numerals for numbers larger than 3999.
 
 ```javascript
 function switchToNumerals(num) {
