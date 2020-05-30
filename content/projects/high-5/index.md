@@ -91,7 +91,3 @@ The results of this don't always come back in the order they were sent, because 
 The power of Google is rediculous, and if you can imagine a way to utilise the technology, the tools that Google provide make it possible. An area for improvement for this app would be to use the 'Directions' library, so when the user selects the place they want to visit, they can find there way there. Of course the more of these tools you add, it just becomes a Google search. In a real world scenario you'd probably streamline the data requested, so for example, a store locator, and directions to it.
 
 [^1]: Originally called 'Mop-Chop-Shop', it used to only query for 'hair-care' locations.
-
-```
-
-```
