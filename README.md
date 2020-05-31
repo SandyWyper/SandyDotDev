@@ -236,3 +236,117 @@ const projectPath = data.allMarkdownRemark.edges[0].node.fields.slug
 ```
 
 This is all inside a functional component that then returns jsx. Image is processed by 'gatsby-image' again.
+
+### Media in markdown
+
+To enable images to be responsive picture elements in markdown, all you have to do is install a node module.
+
+`npm install --save gatsby-remark-images`
+
+then in gatsby-config.js
+
+```javascript
+ {
+    resolve: `gatsby-remark-images`,
+    options: {
+      // It's important to specify the maxWidth (in pixels) of
+      // the content container as this plugin uses this as the
+      // base for generating different widths of each image.
+      maxWidth: 1500,
+      withWebp: true,
+    },
+  },
+```
+
+That's it. Then you just reference images as you would have before = `![alt tag for image](./relative-image-path.jpg)`.
+
+GIFs are included in the markdown syntax in the exact same way, but to get them to render you need another Gatsby plugin.
+
+`npm install --save gatsby-remark-copy-linked-files`
+
+This plugin works for GIFs like images, but there's no responsive sizing by Sharp, so whatever size that gif is, that's what every user gets. Also you need to configure the plugin so that it doesn't handle any images in the same way. You can either put all your gif in one folder and set the **destinationDir** to handle things referenced in that directory, or allow it to use any directory, but ignore certain file types.
+
+```javascript
+{
+  resolve: `gatsby-remark-copy-linked-files`,
+  options: {
+    // destinationDir: `path/to/dir`,
+    ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+  },
+},
+```
+
+This extention also allows for linking to PDFs and other media.
+`[checkout this information pack](./path/to/file.pdf)`
+
+[Prismjs](https://prismjs.com/#examples) is a syntax highlighting package that also has a Gatsby plugin
+
+`npm install --save gatsby-remark-prismjs prismjs`
+
+Of course you also need **gatsby-transformer-remark** already installed. And it is enabled as a plugin of that plugin. [Look at the docs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/) for reference. The style of syntax highlighting can be customise yourself, or you include on the standard ones in **gatsby-browser.js** like this `require("prismjs/themes/prism-tomorrow.css")`. If you're wondering where those styles are coming from, it's in the node_modules folder from when you installed prismjs.
+
+### Tailwind integration
+
+1. Install Tailwind as a development dependency.
+   `npm install tailwindcss --save-dev'
+2. To be able to use Tailwind classes in your SCSS files, add the tailwindcss package into the postCSSPlugins parameter in your gatsby-config.js.
+   gatsby-config.js
+
+```javascript
+plugins: [
+  {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          require("autoprefixer"),
+        ],
+      },
+    },
+  },
+],
+```
+
+I also installed autoprefixer, however i have not tested this to see if it's deffinitely working.
+
+3.Create you SCSS folder structure how you like it. I went for '/src/styles/index.scss'. And in that file you include you tailwind references, followed by your SCSS partials.
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "base";
+@import "typography";
+```
+
+Then you just need to include your root style sheet in **gatsby-browser.js**.
+`import "./src/styles/index.scss"`
+
+4. Check it's working by letting the tailwind fill your metaphorical styling sails.
+
+```css
+.test-class {
+  @apply bg-gray-400 p-1 flex justify-end;
+}
+```
+
+5. By default, Tailwind is a very large library because it includes every combination of every class you might think of. Most of these you won’t need, so we use PurgeCSS to remove any unused classes.
+   `npm i gatsby-plugin-purgecss`
+
+```javascript
+{
+  resolve: `gatsby-plugin-purgecss`,
+  options: {
+    printRejected: true,
+    develop: true, // Enable while using `gatsby develop`
+    tailwind: true, // Enable tailwindcss support
+    ignore: ["prismjs/"],
+  },
+},
+```
+
+Note that you need to ignore Prismjs as the class names that are injected into the code to style the sytax can't be read in the purge process, so we just ignore all of those. Also, if you want to use any styled add-ons, you'd add them here. ReactStrap for example.
+
+Develop should be set to false when developing, but can be set to true to test that the pruge wont turn anything off you need when you build.
