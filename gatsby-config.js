@@ -153,7 +153,7 @@ module.exports = {
         tailwind: true, // Enable tailwindcss support
         ignore: [
           "prismjs/themes/prism-tomorrow.css",
-          "src/styles/myStyles/index.scss",
+          "src/styles/myStyles/*.scss",
         ],
       },
     },
