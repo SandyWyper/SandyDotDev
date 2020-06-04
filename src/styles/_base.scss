@@ -20,4 +20,11 @@
   }
 }
 
-// // ---------------------------   Container Class End
+// // ---------------------------   Code blocks
+
+.gatsby-highlight {
+  @apply my-8;
+}
+code[class*="language-"] {
+  font-size: 0.8rem;
+}

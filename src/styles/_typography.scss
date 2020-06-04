@@ -50,6 +50,20 @@ blockquote {
   font-weight: normal;
   font-style: italic;
 }
+ol {
+  @apply ml-6 my-4;
+  li {
+    @apply list-decimal list-inside;
+    font-family: "Raleway";
+  }
+}
+ul {
+  @apply ml-6 my-4;
+  li {
+    @apply list-disc list-inside;
+    font-family: "Raleway";
+  }
+}
 .font-zilla {
   font-family: "ZillaSlabHighlight", "Times New Roman", serif;
   line-height: 2;
@@ -57,8 +71,8 @@ blockquote {
 }
 .section-header {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
+  // width: -webkit-max-content;
+  // width: -moz-max-content; is it there?
   width: max-content;
   z-index: 1;
 }
