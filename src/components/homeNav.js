@@ -5,7 +5,7 @@ const HomeNav = () => {
   return (
     <nav className="home-nav this-is-home-nav">
       <ul>
-        <li className="hidden md:block this-is-home-nav">
+        <li className="hidden md:block this-is-inside-the-home-nav">
           <Link to="/projects">Projects</Link>
         </li>
         <li className="hidden md:block">

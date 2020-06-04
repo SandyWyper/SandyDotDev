@@ -5,7 +5,7 @@ import GitHubLink from "./gitHubLink"
 
 const TopNav = () => {
   return (
-    <nav className="top-nav this-is-top-nav">
+    <nav className="top-nav this-is-top-nav-from-a-different-component">
       <div className="flex items-center w-full p-3 bg-green-600 shadow-md">
         <Link to="/" className="nav-title ">
           SandyDotDev

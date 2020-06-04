@@ -7,13 +7,19 @@
   h2,
   h3,
   h4 {
-    @apply mb-4 mt-6 leading-none;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    line-height: 1;
   }
   img {
     @apply my-6;
   }
   blockquote {
-    @apply p-4 relative text-lg;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    position: relative;
+    font-size: 1.125rem;
   }
   blockquote:before {
     @apply bg-green-600;
@@ -25,21 +31,28 @@
     bottom: 0;
   }
   ul {
-    @apply ml-6 my-4;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     li {
-      @apply list-disc list-inside;
+      list-style-type: disc;
+      list-style-position: inside;
       font-family: "Raleway";
     }
   }
   ol {
-    @apply ml-6 my-4;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     li {
-      @apply list-decimal list-inside;
+      list-style-type: decimal;
+      list-style-position: inside;
       font-family: "Raleway";
     }
   }
   .gatsby-highlight {
-    @apply my-8;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   code[class*="language-"] {
     font-size: 0.8rem;
