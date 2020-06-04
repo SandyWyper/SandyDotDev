@@ -14,9 +14,12 @@ const HomeNav = () => {
         <li className="hidden md:block">
           <Link to="/contact">Contact</Link>
         </li>
-        <button class="hamburger hamburger--collapse md:hidden" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
+        <button
+          className="hamburger hamburger--collapse md:hidden"
+          type="button"
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
           </span>
         </button>
       </ul>

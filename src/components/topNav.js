@@ -41,9 +41,12 @@ const TopNav = () => {
             <GitHubLink />
           </li>
         </ul>
-        <button class="hamburger  hamburger--collapse md:hidden" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
+        <button
+          className="hamburger hamburger--collapse md:hidden"
+          type="button"
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
           </span>
         </button>
       </div>

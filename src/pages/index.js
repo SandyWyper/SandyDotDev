@@ -8,6 +8,7 @@ import LatestBlogPost from "../components/latestBlogPost"
 
 const IndexPage = props => (
   <Layout path={props.path}>
+    {console.log(props)}
     <SEO title="Home" />
 
     <HomeTopFold />
