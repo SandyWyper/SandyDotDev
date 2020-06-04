@@ -21,7 +21,7 @@ const BlogList = props => {
   return (
     <Layout path={props.path}>
       <section className="container">
-        <div className="lg:justify-between lg:flex">
+        <div className="">
           <h1 className="">Blog</h1>
         </div>
         {isFirst && (

@@ -68,7 +68,7 @@ const ProjectTemplate = props => {
           </div>
         </div>
 
-        <div
+        <article
           className="max-w-xl mx-auto article-styles"
           dangerouslySetInnerHTML={{ __html: html }}
         />

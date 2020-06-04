@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 
@@ -34,7 +34,7 @@ const BlogTemplate = props => {
           </div>
         </div>
 
-        <div
+        <article
           className="max-w-xl mx-auto article-styles"
           dangerouslySetInnerHTML={{ __html: html }}
         />
