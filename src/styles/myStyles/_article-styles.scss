@@ -28,14 +28,14 @@
     @apply ml-6 my-4;
     li {
       @apply list-disc list-inside;
-      font-family: "Raleway", "Times New Roman", serif;
+      font-family: "Raleway";
     }
   }
   ol {
     @apply ml-6 my-4;
     li {
       @apply list-decimal list-inside;
-      font-family: "Raleway", "Times New Roman", serif;
+      font-family: "Raleway";
     }
   }
   .gatsby-highlight {
