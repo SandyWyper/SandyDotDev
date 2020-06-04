@@ -30,6 +30,7 @@ const Layout = props => {
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
 
       <Nav path={props.path} />
+      {console.log(props.path)}
       <div>
         <main>{props.children}</main>
         <footer className="container mx-auto">
