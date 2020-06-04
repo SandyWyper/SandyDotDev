@@ -4,6 +4,19 @@
   @screen md {
     @apply px-0;
   }
+  ol {
+    @apply ml-6 my-4;
+    li {
+      @apply list-decimal list-inside;
+      font-family: "Raleway";
+    }
+  }
+  .gatsby-highlight {
+    @apply my-8;
+  }
+  code[class*="language-"] {
+    font-size: 0.8rem;
+  }
   h2,
   h3,
   h4 {
@@ -30,18 +43,5 @@
       @apply list-disc list-inside;
       font-family: "Raleway";
     }
-  }
-  ol {
-    @apply ml-6 my-4;
-    li {
-      @apply list-decimal list-inside;
-      font-family: "Raleway";
-    }
-  }
-  .gatsby-highlight {
-    @apply my-8;
-  }
-  code[class*="language-"] {
-    font-size: 0.8rem;
   }
 }
