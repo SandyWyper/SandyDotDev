@@ -8,6 +8,7 @@ const BlogTemplate = props => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout path={props.path}>
+      {console.log(props)}
       <section className="container">
         <div className="">
           <div className="max-w-md mx-auto mt-8">

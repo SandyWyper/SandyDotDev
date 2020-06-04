@@ -20,6 +20,7 @@ const BlogList = props => {
 
   return (
     <Layout path={props.path}>
+      {console.log(props)}
       <section className="container">
         <div className="">
           <h1 className="">Blog</h1>

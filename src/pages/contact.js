@@ -6,6 +6,7 @@ import GitHubLink from "../components/gitHubLink"
 const Contact = props => {
   return (
     <Layout path={props.path}>
+      {console.log(props)}
       <section className="container mx-auto">
         <h1 className="mb-6">Contact</h1>
         <form

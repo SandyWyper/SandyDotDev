@@ -20,6 +20,7 @@ const ProjectList = props => {
 
   return (
     <Layout path={props.path}>
+      {console.log(props)}
       <section className="container">
         <div className="lg:justify-between lg:flex">
           <h1 className="side">Projects</h1>
