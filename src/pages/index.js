@@ -4,14 +4,16 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Nav from "../components/nav"
 
 import HomeTopFold from "../components/homeTopFold"
 import LatestProject from "../components/latestProject"
 import LatestBlogPost from "../components/latestBlogPost"
 
 const IndexPage = props => (
-  <Layout path={props.path}>
+  <Layout>
     <SEO title="Home" />
+    <Nav path={props.path} />
     <HomeTopFold />
     <LatestProject />
     <LatestBlogPost />

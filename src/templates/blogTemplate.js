@@ -2,12 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-
+import Nav from "../components/nav"
 const BlogTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout path={props.path}>
+    <Layout>
+      <Nav path={props.path} />
       <section className="container">
         <div className="">
           <div className="max-w-md mx-auto mt-8">

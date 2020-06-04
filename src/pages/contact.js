@@ -2,10 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
+import Nav from "../components/nav"
 
 export default function Contact(props) {
   return (
-    <Layout path={props.path}>
+    <Layout>
+      <Nav path={props.path} />
       <section className="container mx-auto">
         <h1 className="mb-6">Contact</h1>
         <form
