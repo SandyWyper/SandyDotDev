@@ -6,18 +6,34 @@ import Img from "gatsby-image"
 const ArticleCard = props => {
   const data = props.articleDetails
   return (
-    <div>
-      <h2>{data.title}</h2>
-      <p>{data.date}</p>
-      <p>{data.description}</p>
-      <Img fluid={data.cover.childImageSharp.fluid} />
-      <ul>
-        {data.tags.map(item => {
-          return <li key={item}>{item}</li>
-        })}
-      </ul>
-      <Link to={props.path}>Read more...</Link>
-    </div>
+    <Link to={props.path}>
+      <div className="p-4 my-8 bg-gray-300 shadow-md card-hover">
+        <div className="mb-2 md:flex">
+          <div className="scale-div">
+            <Img
+              className="w-40 h-32 rounded-md shadow"
+              fluid={data.cover.childImageSharp.fluid}
+            />
+          </div>
+          <div className="pr-4 md:ml-4">
+            <h3 class="leading-none">{data.title}</h3>
+            <p className="mb-1 text-xs">{data.date}</p>
+            <p className="mb-1">{data.description}</p>
+          </div>
+        </div>
+        <div className="">
+          <ul className="flex flex-wrap justify-end pr-4 space-x-2">
+            {data.tags.map(item => {
+              return (
+                <li key={item} className="text-sm">
+                  {item}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+    </Link>
   )
 }
 

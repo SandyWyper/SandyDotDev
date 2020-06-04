@@ -20,7 +20,7 @@ const LatestProject = () => {
               description
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 1500) {
+                  fluid(maxWidth: 500) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -37,13 +37,15 @@ const LatestProject = () => {
   const projectDetails = data.allMarkdownRemark.edges[0].node.frontmatter
   const projectPath = data.allMarkdownRemark.edges[0].node.fields.slug
   return (
-    <section style={{ border: "1px solid grey" }}>
-      <header>
-        <Link to="/projects">
-          <h3>Projects</h3>
-        </Link>
-      </header>
-      <ArticleCard articleDetails={projectDetails} path={projectPath} />
+    <section className="latest-project">
+      <div>
+        <header className="mt-4">
+          <Link to="/projects" className="relative">
+            <h2 className="section-header">Projects</h2>
+          </Link>
+        </header>
+        <ArticleCard articleDetails={projectDetails} path={projectPath} />
+      </div>
     </section>
   )
 }

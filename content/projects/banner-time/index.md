@@ -14,8 +14,6 @@ repository: "https://github.com/SandyWyper/Banner-Time"
 live: "https://codepen.io/SandyWyper/pen/yLLGzOx?editors=0010"
 ---
 
-# Banner Time
-
 > A JQuery plugin that injects a sale or announcement banner for a scheduled start and finish time.
 
 ### Objective
@@ -28,7 +26,6 @@ Lets say you have an e-commerce site, or for example a football team's website. 
 4. We need to be able to declare a start and finish time for each instance.
 5. The code must be self contained and not affect the rest of the site.
 
-![banner time image](/banner-time.jpg)
 ![banner-time-demo](/banner-time-demo.gif)
 
 ### Set the foundations

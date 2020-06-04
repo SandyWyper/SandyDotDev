@@ -349,6 +349,4 @@ Then you just need to include your root style sheet in **gatsby-browser.js**.
 
 Note that you need to ignore Prismjs as the class names that are injected into the code to style the sytax can't be read in the purge process, so we just ignore all of those. Also, if you want to use any styled add-ons, you'd add them here. ReactStrap for example.
 
-Develop should be set to false when developing, but can be set to true to test that the pruge wont turn anything off you need when you build.
-
-Because I am using the purgeCSS plugin, in the tailwind.config.js I have set 'purge: false' so that it doesn't try to purge the css twice.
+Develop should be set to false when developing, but can be set to true to test that the pruge wont turn anything off you need when you build. Because I am using the purgeCSS plugin, in the tailwind.config.js I have set 'purge: false' so that it doesn't try to purge the css twice.

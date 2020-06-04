@@ -25,17 +25,11 @@ const Layout = props => {
   // `)
 
   return (
-    <>
+    <div className="layout">
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
 
       <Nav path={props.path} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div>
         <main>{props.children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
@@ -43,7 +37,7 @@ const Layout = props => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

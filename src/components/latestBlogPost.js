@@ -37,13 +37,15 @@ const LatestBlogPost = () => {
   const postDetails = data.allMarkdownRemark.edges[0].node.frontmatter
   const postPath = data.allMarkdownRemark.edges[0].node.fields.slug
   return (
-    <section style={{ border: "1px solid grey" }}>
-      <header>
-        <Link to="/blog">
-          <h3>Blog</h3>
-        </Link>
-      </header>
-      <ArticleCard articleDetails={postDetails} path={postPath} />
+    <section className="latest-blog">
+      <div>
+        <header className="mt-4">
+          <Link to="/blog">
+            <h3 className="section-header">Blog</h3>
+          </Link>
+        </header>
+        <ArticleCard articleDetails={postDetails} path={postPath} />
+      </div>
     </section>
   )
 }

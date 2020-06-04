@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 
 const BlogTemplate = props => {
@@ -7,13 +8,38 @@ const BlogTemplate = props => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout path={props.path}>
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-      <Link to="/">Home</Link>
+      <section className="container">
+        <div className="">
+          <div className="max-w-md mx-auto mt-8">
+            <Img
+              className="mb-4"
+              fluid={frontmatter.cover.childImageSharp.fluid}
+            />
+            <div className="flex flex-col flex-wrap px-2 sm:flex-row sm:items-center sm:px-0">
+              <h2 className="mb-2 leading-none sm:mb-4">{frontmatter.title}</h2>
+
+              <div className="w-full sm:flex">
+                <p className="text-sm">{frontmatter.date}</p>
+                <ul className="flex flex-wrap space-x-2 sm:ml-auto">
+                  {frontmatter.tags.map(item => {
+                    return (
+                      <li key={item} className="text-sm">
+                        {item}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="max-w-xl mx-auto article-styles"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        {/* Maybe a link to the next article */}
+      </section>
     </Layout>
   )
 }

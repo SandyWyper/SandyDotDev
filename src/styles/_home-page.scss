@@ -1,0 +1,50 @@
+.top-fold {
+  height: 95vh;
+  div {
+    // @extend .container;
+
+    @screen sm {
+    }
+    @screen md {
+    }
+
+    h1 {
+      font-family: "Megrim", "Courier", sans-serif;
+      font-size: 2rem;
+      @apply leading-tight text-gray-300;
+      @screen md {
+        font-size: 2.6rem;
+      }
+    }
+    h2 {
+      font-family: "Raleway", "Times New Roman", serif;
+      font-size: 2.5rem;
+      @screen md {
+        font-size: 3rem;
+      }
+    }
+    h4 {
+      @apply max-w-lg mb-8;
+      font-size: 1.5rem;
+      @screen md {
+        font-size: 2rem;
+      }
+    }
+    ul {
+      @apply flex;
+      li a svg {
+        @apply w-16 h-16 pr-8 fill-current text-black;
+      }
+    }
+  }
+}
+.latest-project,
+.latest-blog {
+  @apply px-4;
+  @screen md {
+    @apply px-0 grid grid-cols-6  w-full;
+    div {
+      @apply col-start-2 col-end-6;
+    }
+  }
+}

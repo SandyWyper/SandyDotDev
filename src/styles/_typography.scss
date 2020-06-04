@@ -1,0 +1,102 @@
+html {
+  font-size: 18px;
+  font-family: "DarkerGrotesque", "Times New Roman", serif;
+}
+
+h1 {
+  font-family: "Raleway", "Times New Roman", serif;
+  font-size: 3.5rem;
+  @screen md {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-family: "DarkerGrotesque", "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  @screen md {
+    font-size: 3rem;
+  }
+}
+h3 {
+  font-family: "DarkerGrotesque", "Times New Roman", serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  @screen md {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-family: "DarkerGrotesque", "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: lighter;
+  @apply leading-tight;
+  @screen md {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-family: "Raleway", "Times New Roman", serif;
+  font-size: 1rem;
+  @screen md {
+    font-size: 1rem;
+  }
+}
+blockquote {
+  font-family: "Raleway", "Times New Roman", serif;
+  font-weight: normal;
+  font-style: italic;
+}
+.font-zilla {
+  font-family: "ZillaSlabHighlight", "Times New Roman", serif;
+  line-height: 2;
+  @apply text-green-600;
+}
+.section-header {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 1;
+}
+.section-header:before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #48a169;
+  z-index: -1;
+  left: -10px;
+  bottom: -2px;
+  transition: width 200ms linear;
+}
+.section-header:hover:before {
+  width: calc(100% + 10px);
+}
+.lead {
+  font-size: 1.2rem;
+}
+.side {
+  margin-left: 1.2rem;
+  position: relative;
+  height: max-content;
+}
+.side:before {
+  display: block;
+  position: absolute;
+  content: "SIDE";
+  font-size: 1.2rem;
+  transform: rotate(-90deg);
+  z-index: -1;
+  left: -1.7rem;
+  bottom: 1.7rem;
+  @screen md {
+    left: -2rem;
+    font-size: 1.4rem;
+    bottom: 2rem;
+  }
+}

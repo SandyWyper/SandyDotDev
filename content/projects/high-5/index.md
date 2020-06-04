@@ -14,8 +14,6 @@ repository: "https://github.com/SandyWyper/mop-chop"
 live: "https://sandywyper.github.io/mop-chop/"
 ---
 
-# High-5! [^1]
-
 > Use the Google Maps APIs to search for specific businesses within a given search radius and rank them by user rating.
 
 ### Goals
@@ -29,9 +27,7 @@ live: "https://sandywyper.github.io/mop-chop/"
 
 Of course, you could just type into google what you are looking for and be presented with the same information. This is more an exercise in utilising and customising all the peices of the puzzle.
 
----
-
-[someimage]
+![High-5 in action](/high-5-demo.gif)
 
 Building this taught me a lot, and to go through every step could get a little laborius, so I'll just break it down into a few key takeaways.
 
@@ -84,10 +80,6 @@ topFive.forEach(function (shop) {
 
 The results of this don't always come back in the order they were sent, because each request is just sent out there one after another and then returned when they have been processed. So you have to send them all, wait till they are all in, sort again, and only then display the results. (perhaps you could `await` each call before sending the next, but I feel this could slow it down a touch.)
 
----
-
 ### Conclusions
 
 The power of Google is rediculous, and if you can imagine a way to utilise the technology, the tools that Google provide make it possible. An area for improvement for this app would be to use the 'Directions' library, so when the user selects the place they want to visit, they can find there way there. Of course the more of these tools you add, it just becomes a Google search. In a real world scenario you'd probably streamline the data requested, so for example, a store locator, and directions to it.
-
-[^1]: Originally called 'Mop-Chop-Shop', it used to only query for 'hair-care' locations.

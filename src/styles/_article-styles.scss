@@ -1,0 +1,47 @@
+.article-styles {
+  @apply mt-8 px-2 mb-40;
+
+  @screen md {
+    @apply px-0;
+  }
+  h2,
+  h3,
+  h4 {
+    @apply mb-4 mt-6 leading-none;
+  }
+  img {
+    @apply my-6;
+  }
+  blockquote {
+    @apply p-4 relative text-lg;
+  }
+  blockquote:before {
+    @apply bg-green-600;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    left: 0;
+    bottom: 0;
+  }
+  ul {
+    @apply ml-6 my-4;
+    li {
+      @apply list-disc list-inside;
+      font-family: "Raleway", "Times New Roman", serif;
+    }
+  }
+  ol {
+    @apply ml-6 my-4;
+    li {
+      @apply list-decimal list-inside;
+      font-family: "Raleway", "Times New Roman", serif;
+    }
+  }
+  .gatsby-highlight {
+    @apply my-8;
+  }
+  code[class*="language-"] {
+    font-size: 0.8rem;
+  }
+}

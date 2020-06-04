@@ -1,6 +1,6 @@
 ---
 posttype: "projects"
-date: "2020-03-04"
+date: "2018-03-04"
 title: "MERN Stack Lists Web App"
 description: ""
 category: "Side Project"
