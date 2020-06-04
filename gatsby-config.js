@@ -157,8 +157,9 @@ module.exports = {
           "article-styles ol",
           "article-styles ol li",
         ], // Don't remove this selector
-        whitelistPatterns: [/^language-/],
+        whitelistPatterns: [/language-/],
         ignore: ["prismjs/themes/prism-tomorrow.css"],
+        debug: true,
       },
     },
   ],
