@@ -16,7 +16,7 @@ const ArticleCard = props => {
             />
           </div>
           <div className="pr-4 md:ml-4">
-            <h3 class="leading-none">{data.title}</h3>
+            <h3 className="leading-none">{data.title}</h3>
             <p className="mb-1 text-xs">{data.date}</p>
             <p className="mb-1">{data.description}</p>
           </div>
