@@ -1,11 +1,9 @@
-/* purgecss start ignore */
 .article-styles {
   @apply mt-8 px-2 mb-40;
 
   @screen md {
     @apply px-0;
   }
-
   h2,
   h3,
   h4 {
@@ -26,5 +24,24 @@
     left: 0;
     bottom: 0;
   }
+  ul {
+    @apply ml-6 my-4;
+    li {
+      @apply list-disc list-inside;
+      font-family: "Raleway";
+    }
+  }
+  ol {
+    @apply ml-6 my-4;
+    li {
+      @apply list-decimal list-inside;
+      font-family: "Raleway";
+    }
+  }
+  .gatsby-highlight {
+    @apply my-8;
+  }
+  code[class*="language-"] {
+    font-size: 0.8rem;
+  }
 }
-/* purgecss end ignore */
