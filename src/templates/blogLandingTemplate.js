@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
-import Nav from "../components/nav"
 
 const BlogList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -20,8 +19,7 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <Layout>
-      <Nav path={props.path} />
+    <Layout path={props.path}>
       <section className="container">
         <div className="">
           <h1 className="">Blog</h1>
