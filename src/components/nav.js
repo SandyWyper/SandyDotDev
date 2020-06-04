@@ -13,7 +13,7 @@ const Nav = props => {
         <nav className="home-nav this-is-home-nav">
           {console.log("from nav.js - path is = ", props.path, isHomePage)}
           <ul>
-            <li className="hidden md:block">
+            <li className="hidden md:block this-is-home-nav">
               <Link to="/projects">Projects</Link>
             </li>
             <li className="hidden md:block">
