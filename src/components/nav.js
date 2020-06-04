@@ -10,7 +10,7 @@ const Nav = props => {
   return (
     <div>
       {isHomePage ? (
-        <nav className="home-nav">
+        <nav className="home-nav this-is-home-nav">
           {console.log("from nav.js - path is = ", props.path, isHomePage)}
           <ul>
             <li className="hidden md:block">
@@ -33,9 +33,9 @@ const Nav = props => {
           </ul>
         </nav>
       ) : (
-        <nav className="top-nav">
+        <nav className="top-nav this-is-top-nav">
           <div className="flex items-center w-full p-3 bg-green-600 shadow-md">
-            <Link to="/" className="nav-title">
+            <Link to="/" className="nav-title ">
               SandyDotDev
             </Link>
             <ul className="flex items-center justify-end w-full">
