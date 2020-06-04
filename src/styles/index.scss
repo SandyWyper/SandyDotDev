@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 @import "/hamburgers/hamburgers";
-
-@import "/myStyles/index";
+@import "fonts";
+/* purgecss start ignore */
+@import "typography";
+@import "base";
+@import "nav";
+@import "home-page";
+@import "utility";
+@import "article-styles";
+/* purgecss end ignore */
