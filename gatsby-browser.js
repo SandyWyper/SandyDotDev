@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-require("./src/styles/index.scss")
+import "./src/styles/index.scss"
 
 require("prismjs/themes/prism-tomorrow.css")
 // require("prismjs/themes/prism-solarizedlight.css")

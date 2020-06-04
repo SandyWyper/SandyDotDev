@@ -12,6 +12,7 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 // import "../styles/index.scss"
 import Nav from "./nav"
+import "../styles/index.scss"
 
 const Layout = props => {
   // const data = useStaticQuery(graphql`
@@ -31,7 +32,7 @@ const Layout = props => {
       <Nav path={props.path} />
       <div>
         <main>{props.children}</main>
-        <footer>
+        <footer className="container mx-auto">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
