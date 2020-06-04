@@ -9,6 +9,8 @@ import HomeTopFold from "../components/homeTopFold"
 import LatestProject from "../components/latestProject"
 import LatestBlogPost from "../components/latestBlogPost"
 
+import "../styles/index.scss"
+
 const IndexPage = props => (
   <Layout path={props.path}>
     <SEO title="Home" />
