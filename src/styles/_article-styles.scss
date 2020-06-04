@@ -30,22 +30,22 @@
     bottom: 0;
   }
   ul {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     li {
       list-style-type: disc;
-      list-style-position: inside;
+      list-style-position: outside;
       font-family: "Raleway";
     }
   }
   ol {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     li {
       list-style-type: decimal;
-      list-style-position: inside;
+      list-style-position: outside;
       font-family: "Raleway";
     }
   }
