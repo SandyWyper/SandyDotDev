@@ -1,9 +1,11 @@
+/* purgecss start ignore */
 .article-styles {
   @apply mt-8 px-2 mb-40;
 
   @screen md {
     @apply px-0;
   }
+
   ol {
     @apply ml-6 my-4;
     li {
@@ -45,3 +47,4 @@
     }
   }
 }
+/* purgecss end ignore */
