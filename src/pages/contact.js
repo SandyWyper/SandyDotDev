@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
 
-export default function Contact(props) {
+const Contact = props => {
   return (
     <Layout path={props.path}>
       <section className="container mx-auto">
@@ -104,3 +104,5 @@ export default function Contact(props) {
     </Layout>
   )
 }
+
+export default Contact
