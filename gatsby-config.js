@@ -151,7 +151,7 @@ module.exports = {
         printRejected: true,
         develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
-        whitelist: ["article-styles"], // Don't remove this selector
+        whitelist: ["article-styles", "gatsby-highlight", "code"], // Don't remove this selector
         ignore: ["prismjs/themes/prism-tomorrow.css"],
       },
     },
