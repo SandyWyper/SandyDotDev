@@ -11,6 +11,7 @@ const Nav = props => {
     <div>
       {isHomePage ? (
         <nav className="home-nav">
+          {console.log("from nav.js - path is = ", props.path, isHomePage)}
           <ul>
             <li className="hidden md:block">
               <Link to="/projects">Projects</Link>
