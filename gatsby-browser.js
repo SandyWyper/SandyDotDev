@@ -8,7 +8,7 @@
 
 require("prismjs/themes/prism-tomorrow.css")
 require("./src/styles/index.scss")
-
+require("./src/styles/article-styles.scss")
 // require("prismjs/themes/prism-solarizedlight.css")
 // require("prismjs/themes/prism-coy.css")
 // require("prismjs/themes/prism-dark.css")
