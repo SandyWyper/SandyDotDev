@@ -11,7 +11,6 @@ const IndexPage = () => (
   <Layout>
     <HomeNav />
     <SEO title="Home" />
-
     <HomeTopFold />
     <LatestProject />
     <LatestBlogPost />

@@ -1,10 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
-import TopNav from "../components/topNav"
 
 const ProjectList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -20,51 +18,48 @@ const ProjectList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <Layout>
-      <TopNav />
-      <section className="container">
-        <div className="lg:justify-between lg:flex">
-          <h1 className="side">Projects</h1>
-          <div className="max-w-md">
-            <div className="relative px-8 py-8 lg:px-0">
-              <blockquote className="z-10 text-xl">
-                “For the things we have to learn before we can do them, we learn
-                by doing them.”
-              </blockquote>
-              <p>- Aristotle</p>
-              {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
+    <section className="container">
+      <div className="lg:justify-between lg:flex">
+        <h1 className="side">Projects</h1>
+        <div className="max-w-md">
+          <div className="relative px-8 py-8 lg:px-0">
+            <blockquote className="z-10 text-xl">
+              “For the things we have to learn before we can do them, we learn
+              by doing them.”
+            </blockquote>
+            <p>- Aristotle</p>
+            {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
                 <AristotleImage />
               </div> */}
-            </div>
           </div>
         </div>
-        {isFirst && (
-          <FeaturedArticle
-            articleDetails={featuredPost.frontmatter}
-            path={featuredPost.fields.slug}
+      </div>
+      {isFirst && (
+        <FeaturedArticle
+          articleDetails={featuredPost.frontmatter}
+          path={featuredPost.fields.slug}
+        />
+      )}
+      <div className="max-w-4xl px-4 mx-auto xl:px-0">
+        {posts.map(({ node }) => (
+          <ArticleCard
+            key={node.id}
+            articleDetails={node.frontmatter}
+            path={node.fields.slug}
           />
+        ))}
+        {!isFirst && (
+          <Link to={`/projects/${prevPage}`} rel="prev">
+            ← Previous Page
+          </Link>
         )}
-        <div className="max-w-4xl px-4 mx-auto xl:px-0">
-          {posts.map(({ node }) => (
-            <ArticleCard
-              key={node.id}
-              articleDetails={node.frontmatter}
-              path={node.fields.slug}
-            />
-          ))}
-          {!isFirst && (
-            <Link to={`/projects/${prevPage}`} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={`/projects/${nextPage}`} rel="next">
-              Next Page →
-            </Link>
-          )}
-        </div>
-      </section>
-    </Layout>
+        {!isLast && (
+          <Link to={`/projects/${nextPage}`} rel="next">
+            Next Page →
+          </Link>
+        )}
+      </div>
+    </section>
   )
 }
 

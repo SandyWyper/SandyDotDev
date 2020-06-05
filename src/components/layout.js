@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
-// import Header from "./header"
+import Footer from "./footer"
 
 // import Nav from "./nav"
 
@@ -30,11 +30,7 @@ const Layout = props => {
       {/* <Nav path={props.path} /> */}
 
       <main>{props.children}</main>
-      <footer className="container mx-auto">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -350,3 +350,83 @@ Then you just need to include your root style sheet in **gatsby-browser.js**.
 Note that you need to ignore Prismjs as the class names that are injected into the code to style the sytax can't be read in the purge process, so we just ignore all of those. Also, if you want to use any styled add-ons, you'd add them here. ReactStrap for example.
 
 Develop should be set to false when developing, but can be set to true to test that the pruge wont turn anything off you need when you build. Because I am using the purgeCSS plugin, in the tailwind.config.js I have set 'purge: false' so that it doesn't try to purge the css twice.
+
+### Adding page transitions
+
+As fast as Gatsby is, it flashes to the next page when you navigate between them. It's startilingly fast, and is a bit jolty.
+
+I wanted the transitions between all pages that aren't the home page to fade, without the top nav fading in and out. Trouble being that in Gatsby the page unmounts and remounts between navigation.
+
+```javascript
+<Root>
+  <PageElement>
+    {/* layout will rerender each time the page template changes */}
+    <Layout>{/* page content here */}</Layout>
+  </PageElement>
+</Root>
+```
+
+To get around this you need to install.....wait for it..... another plugun! Hoorah!
+`npm install --save gatsby-plugin-layout`
+
+This impliments a different highrarchy, similar to (aparently) the one use in Gatsby V1. Like this...
+
+```javascript
+<Root>
+  <Layout>
+    {/* layout is not affected when the page template changes */}
+    <PageElement>{/* page content here */}</PageElement>
+  </Layout>
+</Root>
+```
+
+So then, I installed 'gatsby-plugin-transitions'
+`npm install --save gatsby-plugin-transitions gatsby-plugin-layout react-spring react react-dom`
+
+This uses React-Spring to create physics based transitions when navigating between pages.
+
+Created a new file 'src/layouts/index.js' which is then the basis for all routes. I put a new value into the context of each page..... by making some edits to gatsby-node.js and inserting this little bit of code.
+
+```javascript
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  deletePage(page)
+  createPage({
+    ...page,
+    context: {
+      ...page.context,
+      homeLayout: page.path.match(/^\/$/) ? true : false,
+    },
+  })
+}
+```
+
+So for every default page created (ie. pages that are created by just existing in the 'pages' directory), delete them and make them again, with an extra value passed to the 'pageContext' property. I also appended that value (to be false) for every other page that i create in 'gatsby-node.js'
+
+Then you can use this value to contionaly render which layout you would like, and in this case, when those transitions take place, and which components you wan them to apply to.
+
+```javascript
+import React from "react"
+import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions"
+
+import Layout from "../components/layout"
+import TopNav from "../components/topNav"
+
+export default ({ pageContext, children, location }) => {
+  if (pageContext.homeLayout) {
+    return (
+      <TransitionProvider location={location}>
+        <TransitionViews>{children}</TransitionViews>
+      </TransitionProvider>
+    )
+  }
+  return (
+    <Layout>
+      <TopNav />
+      <TransitionProvider location={location}>
+        <TransitionViews>{children}</TransitionViews>
+      </TransitionProvider>
+    </Layout>
+  )
+}
+```

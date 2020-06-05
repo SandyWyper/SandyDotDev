@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
+
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
-import TopNav from "../components/topNav"
 
 const BlogList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -20,39 +19,36 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <Layout>
-      <TopNav />
-      <section className="container">
-        <div className="">
-          <h1 className="">Blog</h1>
-        </div>
-        {isFirst && (
-          <FeaturedArticle
-            articleDetails={featuredPost.frontmatter}
-            path={featuredPost.fields.slug}
+    <section className="container">
+      <div className="">
+        <h1 className="">Blog</h1>
+      </div>
+      {isFirst && (
+        <FeaturedArticle
+          articleDetails={featuredPost.frontmatter}
+          path={featuredPost.fields.slug}
+        />
+      )}
+      <div className="max-w-4xl px-4 mx-auto xl:px-0">
+        {posts.map(({ node }) => (
+          <ArticleCard
+            key={node.id}
+            articleDetails={node.frontmatter}
+            path={node.fields.slug}
           />
+        ))}
+        {!isFirst && (
+          <Link to={`/projects/${prevPage}`} rel="prev">
+            ← Previous Page
+          </Link>
         )}
-        <div className="max-w-4xl px-4 mx-auto xl:px-0">
-          {posts.map(({ node }) => (
-            <ArticleCard
-              key={node.id}
-              articleDetails={node.frontmatter}
-              path={node.fields.slug}
-            />
-          ))}
-          {!isFirst && (
-            <Link to={`/projects/${prevPage}`} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={`/projects/${nextPage}`} rel="next">
-              Next Page →
-            </Link>
-          )}
-        </div>
-      </section>
-    </Layout>
+        {!isLast && (
+          <Link to={`/projects/${nextPage}`} rel="next">
+            Next Page →
+          </Link>
+        )}
+      </div>
+    </section>
   )
 }
 

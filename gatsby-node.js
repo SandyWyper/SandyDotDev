@@ -24,6 +24,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 // ------------------------------------------------------------------------------------------------------------ ///////
 
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  deletePage(page)
+  createPage({
+    ...page,
+    context: {
+      ...page.context,
+      homeLayout: page.path.match(/^\/$/) ? true : false,
+    },
+  })
+}
+
 /// --------------------  Create pages for folders contained in 'content' directory ---------------------------- //////
 /// -- Order the results by date, declared in frontmatter [ is this nessecary, does it matter what order the pages are created in? ]
 /// -- If the slug created in the node conatins 'projects' then feed the contents of that page to the projects template
@@ -72,6 +84,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         context: {
           // additional data can be passed via context
           slug: node.fields.slug,
+          homeLayout: false,
         },
       })
     } else {
@@ -81,6 +94,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         context: {
           // additional data can be passed via context
           slug: node.fields.slug,
+          homeLayout: false,
         },
       })
     }
@@ -131,6 +145,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         skip: i * blogPostsPerPage,
         numBlogPages,
         currentPage: i + 1,
+        homeLayout: false,
       },
     })
   })
@@ -176,6 +191,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         skip: i * projectsPostsPerPage,
         numProjectPages,
         currentPage: i + 1,
+        homeLayout: false,
       },
     })
   })
