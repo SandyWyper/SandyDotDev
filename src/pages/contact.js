@@ -50,7 +50,7 @@ class Contact extends Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
-            action="/thank-you/"
+            action="/thankyou/"
           >
             <input type="hidden" name="bot-field" value="SandyDotDev-Contact" />
 
