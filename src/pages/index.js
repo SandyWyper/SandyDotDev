@@ -5,10 +5,11 @@ import SEO from "../components/seo"
 import HomeTopFold from "../components/homeTopFold"
 import LatestProject from "../components/latestProject"
 import LatestBlogPost from "../components/latestBlogPost"
+import HomeNav from "../components/homeNav"
 
-const IndexPage = props => (
-  <Layout path={props.path}>
-    {console.log(props)}
+const IndexPage = () => (
+  <Layout>
+    <HomeNav />
     <SEO title="Home" />
 
     <HomeTopFold />

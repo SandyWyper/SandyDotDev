@@ -2,11 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
+import TopNav from "../components/topNav"
 
-const Contact = props => {
+const Contact = () => {
   return (
-    <Layout path={props.path}>
-      {console.log(props)}
+    <Layout>
+      <TopNav />
       <section className="container mx-auto">
         <h1 className="mb-6">Contact</h1>
         <form
