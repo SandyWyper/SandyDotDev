@@ -172,21 +172,7 @@ function pairNumerals(arr) {
 4. `checkNumeralOrder()` Things get a little more complex now. We've grouped that characters to take account for the 9's and 4's, but you can't have them one after another. The logic is based on order, and can be boiled down into some reapting patterns. So I wrote some expressions that accept arguments and check with corresponding arrays to check wither or not they are odered correctly. Make sense?
 
 ```javascript
-const romanArrSmall = [
-  "M",
-  "CM",
-  "D",
-  "CD",
-  "C",
-  "XC",
-  "L",
-  "XL",
-  "X",
-  "IX",
-  "V",
-  "IV",
-  "I",
-]
+const romanArrSmall = [ "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV","I",]
 const numberArrSmall = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 
 //-----------------------------------------------------------------

@@ -13,6 +13,7 @@
 .scale-hover-2:hover {
   transform: scale(1.05);
 }
+
 .text-shadow {
   text-shadow: -2px 2px 4px rgba(150, 150, 150, 0.42);
 }
@@ -23,6 +24,7 @@
     transition-delay: 100ms;
   }
 }
+
 .card-hover:hover {
   .scale-div {
     transform: scale(1.05);

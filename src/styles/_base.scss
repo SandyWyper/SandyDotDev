@@ -1,20 +1,25 @@
 .layout {
   @apply relative overflow-hidden;
 }
+
 // // ---------------------------   Container Class
 .container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
   @screen sm {
     max-width: 576px;
   }
+
   @screen md {
     max-width: 768px;
   }
+
   @screen lg {
     max-width: 992px;
   }
+
   @screen xl {
     max-width: 1200px;
   }

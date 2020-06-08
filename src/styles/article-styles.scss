@@ -4,6 +4,7 @@
   @screen md {
     @apply px-0;
   }
+
   h2,
   h3,
   h4 {
@@ -11,15 +12,17 @@
     margin-top: 1.5rem;
     line-height: 1;
   }
+
   img {
     @apply my-6;
   }
+
   blockquote {
     padding: 1rem;
     font-size: 1.125rem;
     position: relative;
-    font-size: 1.125rem;
   }
+
   blockquote:before {
     @apply bg-green-600;
     content: "";
@@ -29,30 +32,37 @@
     left: 0;
     bottom: 0;
   }
+
   ul {
     padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
     li {
       list-style-type: disc;
       list-style-position: outside;
-      font-family: "Raleway";
+      font-family: "Raleway", "Times New Roman", serif;
     }
   }
+
   ol {
     padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
     li {
       list-style-type: decimal;
       list-style-position: outside;
-      font-family: "Raleway";
+      font-family: "Raleway", "Times New Roman", serif;
+
     }
   }
+
   .gatsby-highlight {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
   code[class*="language-"] {
     font-size: 0.8rem;
   }
