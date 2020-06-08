@@ -26,12 +26,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
+
   deletePage(page)
   createPage({
     ...page,
     context: {
       ...page.context,
       homeLayout: page.path.match(/^\/$/) ? true : false,
+      navTitle: page.path.split("/")[1],
     },
   })
 }
@@ -85,6 +87,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           // additional data can be passed via context
           slug: node.fields.slug,
           homeLayout: false,
+          navTitle: "projects",
         },
       })
     } else {
@@ -95,6 +98,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           // additional data can be passed via context
           slug: node.fields.slug,
           homeLayout: false,
+          navTitle: "blog",
         },
       })
     }
@@ -146,6 +150,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         numBlogPages,
         currentPage: i + 1,
         homeLayout: false,
+        navTitle: "blog",
       },
     })
   })
@@ -192,6 +197,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         numProjectPages,
         currentPage: i + 1,
         homeLayout: false,
+        navTitle: "projects",
       },
     })
   })

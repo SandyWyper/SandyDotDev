@@ -14,7 +14,7 @@ export default ({ pageContext, children, location }) => {
   }
   return (
     <Layout>
-      <TopNav />
+      <TopNav title={pageContext.navTitle} />
       <TransitionProvider location={location}>
         <TransitionViews>{children}</TransitionViews>
       </TransitionProvider>

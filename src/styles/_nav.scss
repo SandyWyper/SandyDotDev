@@ -51,13 +51,13 @@
 }
 
 .top-nav {
-  @apply mt-2 border;
+  @apply mt-2 border relative;
   @extend .container;
 
   .nav-title {
     font-family: "Megrim", "Courier", sans-serif;
     font-size: 1.8rem;
-    @apply leading-none font-bold;
+    @apply leading-none font-bold absolute bg-green-600;
 
     // @screen md {}
 

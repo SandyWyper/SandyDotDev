@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
-import TopNav from "../components/topNav"
+// import TopNav from "../components/topNav"
 
 const NotFoundPage = () => (
   <>
