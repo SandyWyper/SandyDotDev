@@ -37,8 +37,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <section className="container mx-auto">
-        <h1 className="mb-6">Contact</h1>
+      <section className="container min-h-screen mx-auto mt-16">
+        {/* <h1 className="mb-6">Contact</h1> */}
         <form
           className="w-full max-w-lg px-4"
           method="post"

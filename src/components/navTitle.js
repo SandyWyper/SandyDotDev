@@ -30,7 +30,6 @@ const NavTitle = props => {
   const contactSpring = useSpring({
     opacity: activeTitle === "contact" ? 1 : 0,
     display: activeTitle === "contact" ? "block" : "none",
-
     transform: `perspective(200px) rotateX(${
       activeTitle !== "contact" ? 180 : 0
     }deg)`,
@@ -39,7 +38,9 @@ const NavTitle = props => {
   return (
     <>
       <animated.div className="nav-title" style={projectSpring}>
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects" className="side">
+          Projects
+        </Link>
       </animated.div>
       <animated.div className="nav-title" style={blogSpring}>
         <Link to="/blog">Blog</Link>

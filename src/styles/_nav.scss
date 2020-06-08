@@ -51,13 +51,13 @@
 }
 
 .top-nav {
-  @apply mt-2 border relative;
+  @apply mt-2;
   @extend .container;
 
   .nav-title {
     font-family: "Megrim", "Courier", sans-serif;
-    font-size: 1.8rem;
-    @apply leading-none font-bold absolute bg-green-600;
+    font-size: 2.7rem;
+    @apply leading-none font-bold absolute;
 
     // @screen md {}
 
@@ -82,7 +82,18 @@
 }
 
 .hamburger {
-
+  z-index: 151;
   // margin-left: auto;
   // @screen md {}
+}
+
+.z-69 {
+  z-index: 69;
+}
+
+/// to be applied to the body liberally when mobile nav opens
+.nav-open {
+  margin: 0;
+  height: 101vh;
+  overflow: hidden
 }

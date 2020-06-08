@@ -20,7 +20,7 @@ const ProjectList = props => {
   return (
     <section className="container">
       <div className="lg:justify-between lg:flex">
-        <h1 className="side">Projects</h1>
+        {/* <h1 className="side">Projects</h1> */}
         <div className="max-w-md">
           <div className="relative px-8 py-8 lg:px-0">
             <blockquote className="z-10 text-xl">

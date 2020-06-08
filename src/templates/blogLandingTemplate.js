@@ -19,10 +19,8 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <section className="container">
-      <div className="">
-        <h1 className="">Blog</h1>
-      </div>
+    <section className="container mt-16">
+      <div className="">{/* <h1 className="">Blog</h1> */}</div>
       {isFirst && (
         <FeaturedArticle
           articleDetails={featuredPost.frontmatter}
