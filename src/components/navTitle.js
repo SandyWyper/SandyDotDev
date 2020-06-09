@@ -11,6 +11,14 @@ const NavTitle = props => {
   }, [props.title])
 
   const projectSpring = useSpring({
+    immediate: false,
+    from: {
+      transform: `perspective(200px) rotateX(${
+        activeTitle !== "projects" ? 0 : 180
+      }deg)`,
+      opacity: activeTitle === "projects" ? 0 : 1,
+      display: activeTitle === "projects" ? "none" : "block",
+    },
     opacity: activeTitle === "projects" ? 1 : 0,
     display: activeTitle === "projects" ? "block" : "none",
     transform: `perspective(200px) rotateX(${
@@ -19,6 +27,14 @@ const NavTitle = props => {
     config: { mass: 5, tension: 500, friction: 80 },
   })
   const blogSpring = useSpring({
+    immediate: false,
+    from: {
+      transform: `perspective(200px) rotateX(${
+        activeTitle !== "projects" ? 0 : 180
+      }deg)`,
+      opacity: activeTitle === "projects" ? 0 : 1,
+      display: activeTitle === "projects" ? "none" : "block",
+    },
     opacity: activeTitle === "blog" ? 1 : 0,
     display: activeTitle === "blog" ? "block" : "none",
 
@@ -28,6 +44,14 @@ const NavTitle = props => {
     config: { mass: 5, tension: 500, friction: 80 },
   })
   const contactSpring = useSpring({
+    immediate: false,
+    from: {
+      transform: `perspective(200px) rotateX(${
+        activeTitle !== "projects" ? 0 : 180
+      }deg)`,
+      opacity: activeTitle === "projects" ? 0 : 1,
+      display: activeTitle === "projects" ? "none" : "block",
+    },
     opacity: activeTitle === "contact" ? 1 : 0,
     display: activeTitle === "contact" ? "block" : "none",
     transform: `perspective(200px) rotateX(${

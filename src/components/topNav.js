@@ -5,39 +5,30 @@ import GitHubLink from "./gitHubLink"
 import PropTypes from "prop-types"
 import NavTitle from "./navTitle"
 import HomeLinkIcon from "./homeLinkIcon"
-// import MobileNav from "./mobileNav"
 
 const TopNav = props => {
   return (
-    <nav className="top-nav">
-      <div className="flex items-center w-full p-3 shadow-md">
+    <nav className="z-30 shadow-md top-nav bg-custom-blue">
+      <div className="container flex items-center w-full p-3 mx-auto top-nav-content">
         <NavTitle title={props.title} />
         <ul className="flex items-center justify-end w-full">
           <li className="hidden md:block">
-            <HomeLinkIcon />
-          </li>
-          <li className="hidden md:block">
-            <Link
-              to="/projects"
-              activeClassName="uppercase"
-              partiallyActive={true}
-            >
+            <Link to="/projects" activeClassName="" partiallyActive={true}>
               Projects
             </Link>
           </li>
           <li className="hidden md:block">
-            <Link to="/blog" activeClassName="uppercase" partiallyActive={true}>
+            <Link to="/blog" activeClassName="" partiallyActive={true}>
               Blog
             </Link>
           </li>
           <li className="hidden md:block">
-            <Link
-              to="/contact"
-              activeClassName="uppercase"
-              partiallyActive={true}
-            >
+            <Link to="/contact" activeClassName="" partiallyActive={true}>
               Contact
             </Link>
+          </li>
+          <li className="hidden w-12 md:block">
+            <HomeLinkIcon />
           </li>
           <li className="hidden w-12 md:block">
             <LinkedInLink />
@@ -46,7 +37,6 @@ const TopNav = props => {
             <GitHubLink />
           </li>
         </ul>
-        {/* <MobileNav /> */}
       </div>
     </nav>
   )

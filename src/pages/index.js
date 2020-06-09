@@ -1,23 +1,17 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import HomeTopFold from "../components/homeTopFold"
 import LatestProject from "../components/latestProject"
 import LatestBlogPost from "../components/latestBlogPost"
-import HomeNav from "../components/homeNav"
 
 const IndexPage = () => (
-  // <Layout>
-  //   <HomeNav />
-  <>
+  <div className="bg-custom-mono-2">
     <SEO title="Home" />
     <HomeTopFold />
     <LatestProject />
 
     <LatestBlogPost />
-  </>
-  // </Layout>
+  </div>
 )
 
 export default IndexPage

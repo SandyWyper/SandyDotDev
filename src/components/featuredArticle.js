@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 const FeaturedArticle = props => {
   const data = props.articleDetails
   return (
-    <section className="max-w-2xl mx-auto">
+    <section className="max-w-2xl mx-auto mb-16 rounded-lg">
       <div className="flex flex-col items-center">
         <Img
           fluid={data.cover.childImageSharp.fluid}
@@ -20,7 +20,7 @@ const FeaturedArticle = props => {
             <ul className="flex justify-end w-full pr-4 space-x-2">
               {data.tags.map(item => {
                 return (
-                  <li key={item} className="text-sm">
+                  <li key={item} className="text-sm font-zilla">
                     {item}
                   </li>
                 )

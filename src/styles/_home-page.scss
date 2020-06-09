@@ -1,11 +1,37 @@
 .top-fold {
-  height: 95vh;
-
+  height: 85vh;
+  position: relative;
   background: hsla(173, 55, 74, 1);
-  background: linear-gradient(0deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
-  // background: -moz-linear-gradient(0deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
-  // background: -webkit-linear-gradient(0deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
+  background: linear-gradient(-45deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
+  background: -moz-linear-gradient(-45deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
+  background: -webkit-linear-gradient(-45deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
   filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr="#99E1D9", endColorstr="#70ABAF", GradientType=1)";
+  z-index: 2;
+
+
+  // .down-arrow {
+  //   position: absolute;
+  //   width: 200px;
+  //   height: 200px;
+  //   transform: rotate(45deg);
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   @apply bg-custom-turq;
+  //   z-index: 0;
+  // }
+
+  .down-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto -4.5rem auto;
+
+
+  }
 
   div {
     // @extend .container;
@@ -26,7 +52,7 @@
 
     h2 {
       font-family: "Raleway", "Times New Roman", serif;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
 
       @screen md {
         font-size: 3rem;
@@ -35,7 +61,7 @@
 
     h4 {
       @apply max-w-lg mb-8;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
 
       @screen md {
         font-size: 2rem;
@@ -54,12 +80,16 @@
 
 .latest-project,
 .latest-blog {
-  @apply px-4;
+  @apply px-4 py-16;
 
   @screen md {
     @apply px-0 grid grid-cols-6 w-full;
 
     div {
+      @apply col-start-2 col-end-6;
+    }
+
+    hr {
       @apply col-start-2 col-end-6;
     }
   }

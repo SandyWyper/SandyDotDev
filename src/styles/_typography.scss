@@ -1,7 +1,8 @@
 html {
   font-size: 18px;
-  font-family: "DarkerGrotesque", "Times New Roman", serif;
-  @apply text-custom-black;
+  font-family: "Inconsolata", Helvetica, sans-serif;
+  @apply text-custom-black bg-custom-gray;
+
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font-family: "DarkerGrotesque", "Times New Roman", serif;
+  font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 3rem;
   font-weight: bold;
 
@@ -24,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-family: "DarkerGrotesque", "Times New Roman", serif;
+  font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 2.4rem;
   font-weight: bold;
 
@@ -34,18 +35,29 @@ h3 {
 }
 
 h4 {
-  font-family: "DarkerGrotesque", "Times New Roman", serif;
-  font-size: 2rem;
-  font-weight: lighter;
+  font-family: "Inconsolata", "Times New Roman", serif;
+  font-size: 2.3rem;
+  // font-weight: lighter;
   @apply leading-tight;
 
   @screen md {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+}
+
+h5 {
+  font-family: "Inconsolata", "Times New Roman", serif;
+  font-size: 1.6rem;
+
+  @apply leading-tight;
+
+  @screen md {
+    font-size: 1.6rem;
   }
 }
 
 p {
-  font-family: "Raleway", "Times New Roman", serif;
+  font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 1rem;
 
   @screen md {
@@ -54,7 +66,7 @@ p {
 }
 
 blockquote {
-  font-family: "Raleway", "Times New Roman", serif;
+  font-family: "Inconsolata", "Times New Roman", serif;
   font-weight: normal;
   font-style: italic;
 }
@@ -62,7 +74,7 @@ blockquote {
 .font-zilla {
   font-family: "ZillaSlabHighlight", "Times New Roman", serif;
   line-height: 2;
-  @apply text-green-600;
+  @apply text-custom-blue;
 }
 
 .section-header {
@@ -81,7 +93,7 @@ blockquote {
   left: -10px;
   bottom: -2px;
   transition: width 200ms linear;
-  @apply bg-custom-turq;
+  @apply bg-custom-blue;
 }
 
 .section-header:hover:before {
@@ -113,4 +125,8 @@ blockquote {
     font-size: 1rem;
     bottom: 1rem;
   }
+}
+
+.focus\:shadow-outline:focus {
+  box-shadow: 0 0 0 3px rgb(104, 183, 195);
 }

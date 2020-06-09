@@ -45,8 +45,13 @@
 }
 
 .top-nav {
-  @apply mt-2;
-  @extend .container;
+
+
+  .top-nav-content {
+    min-height: 5rem
+  }
+
+
 
   .nav-title {
     font-family: "Megrim", "Courier", sans-serif;
@@ -65,7 +70,7 @@
     li {
       @screen md {
         @apply px-3;
-        font-family: "Raleway", "Times New Roman", serif;
+        font-family: "Inconsolata", "Times New Roman", serif;
         font-weight: bold;
 
       }
@@ -117,4 +122,21 @@ button:focus {
   margin: 0;
   height: 100vh;
   overflow: hidden
+}
+
+.post {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.post:before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  left: -1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  @apply bg-custom-turq;
 }

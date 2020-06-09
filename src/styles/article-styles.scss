@@ -1,5 +1,5 @@
 .article-styles {
-  @apply mt-8 px-2 mb-40;
+  @apply mt-8 px-2 pb-40;
 
   @screen md {
     @apply px-0;
@@ -8,8 +8,8 @@
   h2,
   h3,
   h4 {
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
     line-height: 1;
   }
 
@@ -21,10 +21,11 @@
     padding: 1rem;
     font-size: 1.125rem;
     position: relative;
+    margin: 2rem 0 2rem 0;
   }
 
   blockquote:before {
-    @apply bg-green-600;
+    @apply bg-custom-blue;
     content: "";
     position: absolute;
     height: 100%;
@@ -41,21 +42,23 @@
     li {
       list-style-type: disc;
       list-style-position: outside;
-      font-family: "Raleway", "Times New Roman", serif;
+      font-family: "Inconsolata", Helvetica, sans-serif;
     }
-  }
 
-  ol {
-    padding-left: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    ol {
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
 
-    li {
-      list-style-type: decimal;
-      list-style-position: outside;
-      font-family: "Raleway", "Times New Roman", serif;
+      li {
+        list-style-type: decimal;
+        list-style-position: outside;
+        font-family: "Inconsolata", Helvetica, sans-serif;
 
+      }
     }
+
+
   }
 
   .gatsby-highlight {
@@ -66,4 +69,28 @@
   code[class*="language-"] {
     font-size: 0.8rem;
   }
+}
+
+hr:not([class]) {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  max-width: 300px;
+  @apply bg-custom-blue;
+  border: 0;
+  margin: 3.63636rem auto !important;
+}
+
+hr:not([class]):before {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: " ";
+  background-color: #70abaf;
+  border: 2px solid #f0f7f4;
+  box-shadow: 0 0 0 6px #f0f7f4;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }

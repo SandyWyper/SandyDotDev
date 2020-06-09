@@ -18,46 +18,51 @@ const ProjectList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <section className="container">
-      <div className="lg:justify-between lg:flex">
-        {/* <h1 className="side">Projects</h1> */}
-        <div className="max-w-md">
-          <div className="relative px-8 py-8 lg:px-0">
-            <blockquote className="z-10 text-xl">
-              “For the things we have to learn before we can do them, we learn
-              by doing them.”
-            </blockquote>
-            <p>- Aristotle</p>
-            {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
+    <section className="bg-custom-mono-1">
+      <div className="container mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
+        <div className="lg:justify-between lg:flex">
+          {/* <h1 className="side">Projects</h1> */}
+          <div className="max-w-lg ml-auto">
+            <div className="relative p-6 text-right">
+              <blockquote className="z-10 text-xl">
+                “For the things we have to learn before we can do them, we learn
+                by doing them.”
+              </blockquote>
+              <p>- Aristotle</p>
+              {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
                 <AristotleImage />
               </div> */}
+            </div>
           </div>
         </div>
-      </div>
-      {isFirst && (
-        <FeaturedArticle
-          articleDetails={featuredPost.frontmatter}
-          path={featuredPost.fields.slug}
-        />
-      )}
-      <div className="max-w-4xl px-4 mx-auto xl:px-0">
-        {posts.map(({ node }) => (
-          <ArticleCard
-            key={node.id}
-            articleDetails={node.frontmatter}
-            path={node.fields.slug}
+        {isFirst && (
+          <FeaturedArticle
+            articleDetails={featuredPost.frontmatter}
+            path={featuredPost.fields.slug}
           />
-        ))}
-        {!isFirst && (
-          <Link to={`/projects/${prevPage}`} rel="prev">
-            ← Previous Page
-          </Link>
         )}
-        {!isLast && (
-          <Link to={`/projects/${nextPage}`} rel="next">
-            Next Page →
-          </Link>
-        )}
+        <div className="max-w-4xl px-4 pt-1 mx-auto xl:px-0">
+          {posts.map(({ node }, index) => (
+            <>
+              <ArticleCard
+                key={node.id}
+                articleDetails={node.frontmatter}
+                path={node.fields.slug}
+              />
+              {index !== posts.length - 1 && <hr />}
+            </>
+          ))}
+          {!isFirst && (
+            <Link to={`/projects/${prevPage}`} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={`/projects/${nextPage}`} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   )

@@ -19,32 +19,33 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <section className="container mt-16">
-      <div className="">{/* <h1 className="">Blog</h1> */}</div>
-      {isFirst && (
-        <FeaturedArticle
-          articleDetails={featuredPost.frontmatter}
-          path={featuredPost.fields.slug}
-        />
-      )}
-      <div className="max-w-4xl px-4 mx-auto xl:px-0">
-        {posts.map(({ node }) => (
-          <ArticleCard
-            key={node.id}
-            articleDetails={node.frontmatter}
-            path={node.fields.slug}
+    <section className="bg-custom-mono-1">
+      <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
+        {isFirst && (
+          <FeaturedArticle
+            articleDetails={featuredPost.frontmatter}
+            path={featuredPost.fields.slug}
           />
-        ))}
-        {!isFirst && (
-          <Link to={`/projects/${prevPage}`} rel="prev">
-            ← Previous Page
-          </Link>
         )}
-        {!isLast && (
-          <Link to={`/projects/${nextPage}`} rel="next">
-            Next Page →
-          </Link>
-        )}
+        <div className="max-w-4xl px-4 mx-auto xl:px-0">
+          {posts.map(({ node }) => (
+            <ArticleCard
+              key={node.id}
+              articleDetails={node.frontmatter}
+              path={node.fields.slug}
+            />
+          ))}
+          {!isFirst && (
+            <Link to={`/projects/${prevPage}`} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={`/projects/${nextPage}`} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   )

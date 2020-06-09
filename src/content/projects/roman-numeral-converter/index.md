@@ -1,7 +1,7 @@
 ---
 posttype: "projects"
 date: "2019-01-01"
-title: "A Roman Numeral Coverter"
+title: "Roman Numeral Coverter PWA"
 description: "Convert Roman numerals to numbers, or vice versa.  This is a progressive web app (PWA) and can be installed to your phone or desktop computer.  Although it is served via a traditional URL through a browser, you can then use it when off-line and it takes the appearance of a native app rather than a web page in a browser."
 category: "Side Project"
 cover: "./julius-cesar.png"
@@ -12,8 +12,6 @@ tags:
 repository: "https://github.com/SandyWyper/Roman-Numeral-PWA"
 live: "https://sandywyper.github.io/Roman-Numeral-PWA/"
 ---
-
-# Roman Numeral Converter
 
 This web app takes an input of either numbers or Roman numerals, and coverts that input to the other type. There is error handling and will inform the user of an incorrect input value, and will let them know what was wrong with the input. For example; wrong numeral ordering, incorrect characters, combo of numbers and letters, etc.
 

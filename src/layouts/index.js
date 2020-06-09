@@ -34,7 +34,23 @@ export default ({ pageContext, children, location }) => {
       ) : (
         <>
           <TopNav title={pageContext.navTitle} />
-          <TransitionProvider location={location}>
+          <TransitionProvider
+            location={location}
+            mode="successive"
+            enter={{
+              opacity: 0,
+            }}
+            usual={{
+              opacity: 1,
+            }}
+            leave={{
+              opacity: 0,
+
+              config: {
+                duration: 100,
+              },
+            }}
+          >
             <TransitionViews>{children}</TransitionViews>
           </TransitionProvider>
         </>
