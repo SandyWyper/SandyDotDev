@@ -18,7 +18,6 @@ h2 {
   font-size: 3rem;
   font-weight: bold;
 
-
   @screen md {
     font-size: 3rem;
   }
@@ -49,7 +48,6 @@ p {
   font-family: "Raleway", "Times New Roman", serif;
   font-size: 1rem;
 
-
   @screen md {
     font-size: 1rem;
   }
@@ -79,7 +77,6 @@ blockquote {
   content: "";
   width: 30px;
   height: 30px;
-
   z-index: -1;
   left: -10px;
   bottom: -2px;
