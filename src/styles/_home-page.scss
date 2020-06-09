@@ -1,6 +1,12 @@
 .top-fold {
   height: 95vh;
 
+  background: hsla(173, 55, 74, 1);
+  background: linear-gradient(0deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
+  // background: -moz-linear-gradient(0deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
+  // background: -webkit-linear-gradient(0deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
+  filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr="#99E1D9", endColorstr="#70ABAF", GradientType=1)";
+
   div {
     // @extend .container;
 
@@ -11,7 +17,7 @@
     h1 {
       font-family: "Megrim", "Courier", sans-serif;
       font-size: 2rem;
-      @apply leading-tight text-gray-300;
+      @apply leading-tight text-custom-gray;
 
       @screen md {
         font-size: 2.6rem;
@@ -40,7 +46,7 @@
       @apply flex;
 
       li a svg {
-        @apply w-16 h-16 pr-8 fill-current text-black;
+        @apply w-16 h-16 pr-8;
       }
     }
   }

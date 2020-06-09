@@ -30,3 +30,9 @@
     transform: scale(1.05);
   }
 }
+
+.bg-opactity {
+  &-95 {
+    --bg-opacity: 0.95;
+  }
+}

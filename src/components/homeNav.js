@@ -4,24 +4,16 @@ import { Link } from "gatsby"
 const HomeNav = () => {
   return (
     <nav className="home-nav">
-      <ul>
-        <li className="hidden md:block">
+      <ul className="hidden md:flex md:h-screen md:flex-col links">
+        <li className="">
           <Link to="/projects">Projects</Link>
         </li>
-        <li className="hidden md:block">
+        <li className="">
           <Link to="/blog">Blog</Link>
         </li>
-        <li className="hidden md:block">
+        <li className="">
           <Link to="/contact">Contact</Link>
         </li>
-        <button
-          className="hamburger hamburger--collapse md:hidden"
-          type="button"
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
       </ul>
     </nav>
   )

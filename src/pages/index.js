@@ -8,13 +8,16 @@ import LatestBlogPost from "../components/latestBlogPost"
 import HomeNav from "../components/homeNav"
 
 const IndexPage = () => (
-  <Layout>
-    <HomeNav />
+  // <Layout>
+  //   <HomeNav />
+  <>
     <SEO title="Home" />
     <HomeTopFold />
     <LatestProject />
+
     <LatestBlogPost />
-  </Layout>
+  </>
+  // </Layout>
 )
 
 export default IndexPage

@@ -1,6 +1,7 @@
 html {
   font-size: 18px;
   font-family: "DarkerGrotesque", "Times New Roman", serif;
+  @apply text-custom-black;
 }
 
 h1 {
@@ -48,6 +49,7 @@ p {
   font-family: "Raleway", "Times New Roman", serif;
   font-size: 1rem;
 
+
   @screen md {
     font-size: 1rem;
   }
@@ -77,11 +79,12 @@ blockquote {
   content: "";
   width: 30px;
   height: 30px;
-  background-color: #48a169;
+
   z-index: -1;
   left: -10px;
   bottom: -2px;
   transition: width 200ms linear;
+  @apply bg-custom-turq;
 }
 
 .section-header:hover:before {

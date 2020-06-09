@@ -4,12 +4,7 @@ import { Link } from "gatsby"
 const HomeLinkIcon = () => {
   return (
     <Link to="/">
-      <svg
-        className="w-5 fill-current"
-        x="0px"
-        y="0px"
-        viewBox="0 0 63.699 63.699"
-      >
+      <svg className="fill-current" x="0px" y="0px" viewBox="0 0 63.699 63.699">
         <g>
           <path
             d="M63.663,29.424c-0.143-1.093-0.701-2.065-1.575-2.737l-11.715-9.021V8.608c0-2.275-1.851-4.126-4.125-4.126

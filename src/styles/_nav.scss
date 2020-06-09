@@ -16,12 +16,7 @@
   }
 
 
-  ul {
-    @screen md {
-      @apply flex h-screen flex-col;
-    }
-
-    // text-shadow: 6px 6px 5px #4a4a4a;
+  .links {
 
     li {
       @apply my-3 text-xl lowercase text-right;
@@ -29,7 +24,6 @@
       transform: rotate(-15deg);
       transition: transform 200ms cubic-bezier(0.84, 0.08, 0.73, 0.99);
 
-      // a {}
     }
 
     li:hover {
@@ -69,22 +63,49 @@
     font-size: 1.1rem;
 
     li {
-      @apply px-3;
-      font-family: "Raleway", "Times New Roman", serif;
-      font-weight: bold;
-      // transition: transform 120ms linear;
+      @screen md {
+        @apply px-3;
+        font-family: "Raleway", "Times New Roman", serif;
+        font-weight: bold;
+
+      }
     }
 
-    li:hover {
-      // border: 1px dotted black;
-    }
+    // li:hover {
+    //   // border: 1px dotted black;
+    // }
   }
+}
+
+button:focus {
+  outline: none
 }
 
 .hamburger {
   z-index: 151;
-  // margin-left: auto;
-  // @screen md {}
+
+  &:hover,
+  &.is-active:hover {
+    opacity: 1;
+  }
+
+  .hamburger-inner:before,
+  .hamburger-inner:after,
+  .hamburger-inner {
+    @apply bg-custom-black;
+
+  }
+
+  &.is-active {
+    color: white;
+
+    .hamburger-inner:before,
+    .hamburger-inner:after,
+    .hamburger-inner {
+      background-color: white;
+      --bg-opacity: 1;
+    }
+  }
 }
 
 .z-69 {
@@ -94,6 +115,6 @@
 /// to be applied to the body liberally when mobile nav opens
 .nav-open {
   margin: 0;
-  height: 101vh;
+  height: 100vh;
   overflow: hidden
 }

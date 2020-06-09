@@ -5,7 +5,7 @@ import GitHubLink from "./gitHubLink"
 import PropTypes from "prop-types"
 import NavTitle from "./navTitle"
 import HomeLinkIcon from "./homeLinkIcon"
-import MobileNav from "./mobileNav"
+// import MobileNav from "./mobileNav"
 
 const TopNav = props => {
   return (
@@ -46,7 +46,7 @@ const TopNav = props => {
             <GitHubLink />
           </li>
         </ul>
-        <MobileNav />
+        {/* <MobileNav /> */}
       </div>
     </nav>
   )

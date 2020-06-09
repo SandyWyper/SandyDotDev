@@ -41,7 +41,7 @@ const LatestProject = () => {
       <div>
         <header className="mt-4">
           <Link to="/projects" className="relative">
-            <h2 className="section-header">Projects</h2>
+            <h3 className="section-header">Projects</h3>
           </Link>
         </header>
         <ArticleCard articleDetails={projectDetails} path={projectPath} />
