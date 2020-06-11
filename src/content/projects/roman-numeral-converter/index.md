@@ -1,7 +1,7 @@
 ---
 posttype: "projects"
 date: "2019-01-01"
-title: "Roman Numeral Coverter PWA"
+title: "Roman Numeral Converter PWA"
 description: "Convert Roman numerals to numbers, or vice versa.  This is a progressive web app (PWA) and can be installed to your phone or desktop computer.  Although it is served via a traditional URL through a browser, you can then use it when off-line and it takes the appearance of a native app rather than a web page in a browser."
 category: "Side Project"
 cover: "./julius-cesar.png"
@@ -13,9 +13,9 @@ repository: "https://github.com/SandyWyper/Roman-Numeral-PWA"
 live: "https://sandywyper.github.io/Roman-Numeral-PWA/"
 ---
 
-This web app takes an input of either numbers or Roman numerals, and coverts that input to the other type. There is error handling and will inform the user of an incorrect input value, and will let them know what was wrong with the input. For example; wrong numeral ordering, incorrect characters, combo of numbers and letters, etc.
+This web app takes an input of either numbers or Roman numerals, and converts that input to the other type. There is error handling and will inform the user of an incorrect input value, and will let them know what was wrong with the input. For example; wrong numeral ordering, incorrect characters, combo of numbers and letters, etc.
 
-All conversion functionality was written from scratch in javascript.
+All conversion functionality was written from scratch in JavaScript.
 
 ---
 
@@ -41,7 +41,7 @@ In addition to this, there is a listener for the "Install to homescreen" prompt.
 
 ### JavaScript logic
 
-Converting from numbers to numerals is fairly straight forward. If **num** is greater than 1000, add **M** to an array and subtract 1000 from the num total. Continue down that road, join the array together and you have your conversion. However, for numbers larger that 4000 you can use a [Vinculum](<https://en.wikipedia.org/wiki/Vinculum_(symbol)>) which in roman numerals means that you muliply that number by 1000. So V(5) with an overline becomes 5000. For this reason, I split the answers array into 2, so that when rendering in the DOM I could add an overline to those numerals for numbers larger than 3999.
+Converting from numbers to numerals is fairly straight forward. If **num** is greater than 1000, add **M** to an array and subtract 1000 from the num total. Continue down that road, join the array together and you have your conversion. However, for numbers larger that 4000 you can use a [Vinculum](<https://en.wikipedia.org/wiki/Vinculum_(symbol)>) which in roman numerals means that you muliply that number by 1000. So V(5) with an over-line becomes 5000. For this reason, I split the answers array into 2, so that when rendering in the DOM I could add an over-line to those numerals for numbers larger than 3999.
 
 ```javascript
 function switchToNumerals(num) {
@@ -76,7 +76,7 @@ function showResult1(number, result) {
 
 Converting numerals back into numbers is a lot more complex. How to determine that IX is 9, and not I(1) + X(10)?
 
-This function sets about the order of proccessing the user submitted string.
+This function sets about the order of processing the user submitted string.
 
 ```javascript
 //controller
@@ -167,7 +167,7 @@ function pairNumerals(arr) {
 }
 ```
 
-4. `checkNumeralOrder()` Things get a little more complex now. We've grouped that characters to take account for the 9's and 4's, but you can't have them one after another. The logic is based on order, and can be boiled down into some reapting patterns. So I wrote some expressions that accept arguments and check with corresponding arrays to check wither or not they are odered correctly. Make sense?
+4. `checkNumeralOrder()` Things get a little more complex now. We've grouped that characters to take account for the 9's and 4's, but you can't have them one after another. The logic is based on order, and can be boiled down into some repeating patterns. So I wrote some expressions that accept arguments and check with corresponding arrays to check wither or not they are ordered correctly. Make sense?
 
 ```javascript
 const romanArrSmall = [ "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV","I",]
@@ -282,10 +282,10 @@ function checkNumeralOrder(rom) {
 }
 ```
 
-5.  Now that all the checks are done all that needs done is swap out every numeral with it's corresponding number that I have set in parralel arrays. The index of each value matches the value at the same index of the other array.
+5.  Now that all the checks are done all that needs done is swap out every numeral with it's corresponding number that I have set in parallel arrays. The index of each value matches the value at the same index of the other array.
 
 ### Conclusions
 
 This was a fantastic way of learning conditional logic, refactoring and making the most of traditional switches and loops. To see the evolution of the logic you can refer to my first [repo for this project](https://github.com/SandyWyper/Roman-Numerals).
 
-PWA's in my opinion are massively under used. I'm not sure why more websites don't use it. You don't have to offer the 'add to homescreen' option, but you can still cache a lot of the script that would then sky rocket your TTI ( time to interactive) speed. If you go full hog and embrace the app-like functionality, then you can send notifications to users just like native apps, by checking for updates in the background. Snazzy!
+PWA's in my opinion are massively under used. I'm not sure why more websites don't use it. You don't have to offer the 'add to home screen' option, but you can still cache a lot of the script that would then sky rocket your TTI ( time to interactive) speed. If you go full hog and embrace the app-like functionality, then you can send notifications to users just like native apps, by checking for updates in the background. Snazzy!

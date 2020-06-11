@@ -13,6 +13,33 @@
     line-height: 1;
   }
 
+  h5 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+
+
+  a {
+    position: relative;
+  }
+
+  a:before {
+    height: 1px;
+    content: "";
+    bottom: -4px;
+    @apply bg-custom-blue left-0 right-0 absolute w-full;
+    transition: height 200ms ease-in-out;
+  }
+
+  a:hover:before {
+    height: 3px;
+  }
+
   img {
     @apply my-6;
   }
@@ -45,20 +72,21 @@
       font-family: "Inconsolata", Helvetica, sans-serif;
     }
 
-    ol {
-      padding-left: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
 
-      li {
-        list-style-type: decimal;
-        list-style-position: outside;
-        font-family: "Inconsolata", Helvetica, sans-serif;
 
-      }
+  }
+
+  ol {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    li {
+      list-style-type: decimal;
+      list-style-position: outside;
+      font-family: "Inconsolata", Helvetica, sans-serif;
+
     }
-
-
   }
 
   .gatsby-highlight {
@@ -68,6 +96,10 @@
 
   code[class*="language-"] {
     font-size: 0.8rem;
+  }
+
+  code.language-text {
+    padding: 3px 6px;
   }
 }
 

@@ -19,9 +19,8 @@ const ProjectList = props => {
 
   return (
     <section className="bg-custom-mono-1">
-      <div className="container mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
+      <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
         <div className="lg:justify-between lg:flex">
-          {/* <h1 className="side">Projects</h1> */}
           <div className="max-w-lg ml-auto">
             <div className="relative p-6 text-right">
               <blockquote className="z-10 text-xl">
@@ -35,12 +34,14 @@ const ProjectList = props => {
             </div>
           </div>
         </div>
+
         {isFirst && (
           <FeaturedArticle
             articleDetails={featuredPost.frontmatter}
             path={featuredPost.fields.slug}
           />
         )}
+
         <div className="max-w-4xl px-4 pt-1 mx-auto xl:px-0">
           {posts.map(({ node }, index) => (
             <>

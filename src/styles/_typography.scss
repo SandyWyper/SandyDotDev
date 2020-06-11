@@ -79,11 +79,12 @@ blockquote {
 
 .section-header {
   position: relative;
-  width: max-content;
+  width: fit-content;
   z-index: 1;
 }
 
 .section-header:before {
+
   display: block;
   position: absolute;
   content: "";

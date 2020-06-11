@@ -20,7 +20,7 @@ const BlogList = props => {
 
   return (
     <section className="bg-custom-mono-1">
-      <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
+      <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
         {isFirst && (
           <FeaturedArticle
             articleDetails={featuredPost.frontmatter}

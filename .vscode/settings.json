@@ -5,5 +5,13 @@
   // disables nativ vscode error detection which is now configured with the stylelint dev dependency.
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "spellright.language": [
+    "English (British)"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }

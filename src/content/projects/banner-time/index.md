@@ -14,7 +14,7 @@ repository: "https://github.com/SandyWyper/Banner-Time"
 live: "https://codepen.io/SandyWyper/pen/yLLGzOx?editors=0010"
 ---
 
-> A JQuery plugin that injects a sale or announcement banner for a scheduled start and finish time.
+> A JQuery plug-in that injects a sale or announcement banner for a scheduled start and finish time.
 
 ### Objective
 
@@ -30,9 +30,9 @@ Lets say you have an e-commerce site, or for example a football team's website. 
 
 ### Set the foundations
 
-In the world of front-end development, most websites (huge sweeping generalisation) include JQuery. This code requires it as a dependency, so all you have to do is make sure this pluging is loaded after JQuery.
+In the world of front-end development, most websites (huge sweeping generalisation) include JQuery. This code requires it as a dependency, so all you have to do is make sure this plug-in is loaded after JQuery.
 
-I took the stucture for this project from a [lesson by Ken Wheeler](https://scotch.io/tutorials/building-your-own-javascript-modal-plugin), that sets about writing your own pop-up modal plugin. Ken Wheeler also wrote [Slick Slider](https://kenwheeler.github.io/slick/) which is a widely used image carousel plugin, so I based the repository structure on that. I build this to be open-source, so others could contribute and improve the plugin (at the time of writing this..... no takers).
+I took the structure for this project from a [lesson by Ken Wheeler](https://scotch.io/tutorials/building-your-own-javascript-modal-plugin), that sets about writing your own pop-up modal plug-in. Ken Wheeler also wrote [Slick Slider](https://kenwheeler.github.io/slick/) which is a widely used image carousel plugin, so I based the repository structure on that. I build this to be open-source, so others could contribute and improve the plugin (at the time of writing this..... no takers).
 
 ### Get going
 
@@ -45,7 +45,7 @@ Say you want to show some sale banners at the top of your site like [this](https
 <script src="bannerTime.js"></script>
 ```
 
-**Then** intiate your banners
+**Then** initiate your banners
 
 ```html
 <script>
@@ -78,8 +78,14 @@ Say you want to show some sale banners at the top of your site like [this](https
 </script>
 ```
 
-That's it. The banners should appear on the correct day, fade transtion between each message slide, and stop showing on Christmas day. You can futher customise the slides by following the intructions in the [repo readme](https://github.com/SandyWyper/Banner-Time/blob/master/README.md). Change; the slide transition type, the transition speed and interval, the styles(CSS) of the banner, the timezone, and add a link to the banner element.
+That's it. The banners should appear on the correct day, fade transition between each message slide, and stop showing on Christmas day. You can further customise the slides by following the instructions in the [repo readme](https://github.com/SandyWyper/Banner-Time/blob/master/README.md). Change; the slide transition type, the transition speed and interval, the styles(CSS) of the banner, the time zone, and add a link to the banner element.
 
 ### Conclusion
 
-While builing this..... something about timezones and daylight savings.... need to weigh up the benefits of the bloat, potentially use moment.js as a dependency for reliance on time zones and daylight savings.
+While building this, I came to learn about how to handle time on the web. JavaScript comes pre-packed with methods that allow us to use time, like the [UTC()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC) (universal coordinated time).
+
+> The UTC() method returns the number of milliseconds between a specified date and midnight of January 1, 1970, according to universal time.
+
+The timing functionality of _Banner-Time_ uses UTC to calculate, wherever in the world the user is, what time it is and compares it to the time that the banners are scheduled to show for. However, if I set up a banner in the UK to change at midnight in the summer time, it will in fact change at 1am. This is because UTC is set to GMT, and doesn't take into account daylight savings.
+
+A possible solution to this would be to integrate [moment.js](https://momentjs.com/) as a dependency, however this would increase the package size to 25k from 6.5k. That's 4x the size, which I think, considering it's just a simple message banner, probably overkill. _Banner-Time_ does allow you to adjust the time zone, so as long as you keep in mind about the DLS issue it can still be a useful tool.

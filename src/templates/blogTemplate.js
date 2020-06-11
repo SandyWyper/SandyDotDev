@@ -9,7 +9,7 @@ const BlogTemplate = props => {
     <section className="bg-custom-mono-1">
       <div className="container mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
         <div>
-          <div className="max-w-md pt-8 mx-auto">
+          <div className="max-w-md pt-8 mx-auto mb-12">
             <Img
               className="mb-4"
               fluid={frontmatter.cover.childImageSharp.fluid}
@@ -22,7 +22,7 @@ const BlogTemplate = props => {
                 <ul className="flex flex-wrap space-x-2 sm:ml-auto">
                   {frontmatter.tags.map(item => {
                     return (
-                      <li key={item} className="text-sm">
+                      <li key={item} className="text-sm font-zilla ">
                         {item}
                       </li>
                     )
@@ -34,7 +34,7 @@ const BlogTemplate = props => {
         </div>
 
         <article
-          className="max-w-xl mx-auto article-styles"
+          className="max-w-2xl mx-auto article-styles"
           dangerouslySetInnerHTML={{ __html: html }}
         />
         {/* Maybe a link to the next article */}

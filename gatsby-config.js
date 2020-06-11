@@ -42,13 +42,14 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 1500,
               withWebp: true,
+              linkImagesToOriginal: false,
             },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               // destinationDir: `path/to/dir`,
-              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+              // ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
             },
           },
           {
