@@ -14,7 +14,7 @@ tags:
 
 It makes sense right? You want to limit the file size that you upload to Shopify, and that way your users wont use up all their data browsing your product catalogue. If only it were that simple.
 
-Shopify are massive..... they've got your back
+Shopify are massive. You don't have to be working in silicone valley to know that they are dominating e-commerce worldwide. So when you sign up to use them, you can trust that the services they provide, like image hosting, are going to be top notch.
 
 When you upload an image to Shopify they recommend sizing them accordingly....
 

@@ -126,3 +126,25 @@ hr:not([class]):before {
   -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
   transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #32292f#70abaf;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #70abaf;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f0f7f4;
+  border-radius: 4px;
+  border: 3px solid #70abaf;
+}
