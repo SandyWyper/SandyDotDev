@@ -37,7 +37,7 @@ other optimisation criteria:
 - address bar theme colour
 - configuration for a splash screen
 
-In addition to this, there is a listener for the "Install to homescreen" prompt. When launched as an app it preforms just as you would expect a native app to function.
+In addition to this, there is a listener for the "Install to home screen" prompt. When launched as an app it preforms just as you would expect a native app to function.
 
 ### JavaScript logic
 

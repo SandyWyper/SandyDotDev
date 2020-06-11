@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import ArticleCard from "./articleCard"
-
+import DownArrow from "./downArrow"
 const LatestProject = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -38,6 +38,7 @@ const LatestProject = () => {
   const projectPath = data.allMarkdownRemark.edges[0].node.fields.slug
   return (
     <section className="latest-project">
+      <DownArrow />
       <div>
         <header className="mt-4">
           <Link to="/projects">

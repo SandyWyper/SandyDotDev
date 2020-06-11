@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { useSpring, animated } from "react-spring"
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -63,6 +64,14 @@ const MobileNav = () => {
     }
   `)
 
+  const spring = useSpring({
+    to: {
+      opacity: !isOpen ? 0 : 1,
+      width: !isOpen ? "0%" : "100%",
+      height: !isOpen ? "0%" : "100%",
+    },
+  })
+
   return (
     <div className="absolute top-0 right-0 m-4 md:hidden">
       <button
@@ -76,10 +85,16 @@ const MobileNav = () => {
           <span className="hamburger-inner"></span>
         </span>
       </button>
-      <div
+      {/* <div
         className={`bg-gray-900 fixed z-69 overflow-hidden top-0 left-0 ${
           !isOpen ? "w-0 h-0" : "bg-opacity-95 h-screen w-screen"
         }`}
+        
+      > */}
+
+      <animated.div
+        className="fixed top-0 right-0 overflow-hidden bg-gray-900 z-69"
+        style={spring}
       >
         <div className="relative flex flex-col justify-center w-screen h-screen p-10 text-white">
           <ul className="flex justify-around px-8 mb-8">
@@ -182,7 +197,7 @@ const MobileNav = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </animated.div>
     </div>
   )
 }

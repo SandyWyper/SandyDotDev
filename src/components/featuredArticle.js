@@ -7,10 +7,10 @@ const FeaturedArticle = props => {
   const data = props.articleDetails
   return (
     <section className="max-w-2xl mx-auto mb-16 rounded-lg">
-      <div className="flex flex-col items-center">
+      <div className="flex-col items-center md:flex">
         <Img
           fluid={data.cover.childImageSharp.fluid}
-          className="w-9/12 m-4 md:w-2/3"
+          className="w-10/12 m-4 mx-auto md:w-2/3"
         />
         <Link to={props.path}>
           <div className="px-4 lg:px-0">
@@ -28,9 +28,6 @@ const FeaturedArticle = props => {
             </ul>
           </div>
         </Link>
-
-        {/* <hr className="w-full mb-1" />
-        <hr className="w-full mb-8" /> */}
       </div>
     </section>
   )

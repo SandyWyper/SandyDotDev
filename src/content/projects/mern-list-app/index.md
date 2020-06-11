@@ -2,7 +2,7 @@
 posttype: "projects"
 date: "2020-05-04"
 title: "MERN Stack Lists App"
-description: "First project for me with a lot of the pieces of this puzzle.  MongoDB Altas database, with CRUD actions handled by a Node.JS back-end, using Express and Mongoose.  Client side code is built up from create-react-app, react-strap components and all glued together with Redux.  This web-app uses Json Web Token and bcrypt.js for user login and authentication, so you can write, edit and read your lists from anywhere."
+description: "First project for me with a lot of the pieces of this puzzle.  MongoDB Atlas database, with CRUD actions handled by a Node.JS back-end, using Express and Mongoose.  Client side code is built up from create-react-app, react-strap components and all glued together with Redux.  This web-app uses Json Web Token and bcrypt.js for user login and authentication, so you can write, edit and read your lists from anywhere."
 category: "Side Project"
 cover: "./list.jpg"
 tags:
@@ -19,7 +19,7 @@ repository: "https://github.com/SandyWyper/mern-shopping-list"
 live: "https://safe-tor-04832.herokuapp.com/"
 ---
 
-First project for me with a lot of the pieces of this puzzle. MongoDB Altas database, with CRUD actions handled by a Node.JS back-end, using Express and Mongoose. Client side code is built up from create-react-app, react-strap components and all glued together with Redux.
+First project for me with a lot of the pieces of this puzzle. MongoDB Atlas database, with CRUD actions handled by a Node.JS back-end, using Express and Mongoose. Client side code is built up from create-react-app, react-strap components and all glued together with Redux.
 
 This web-app uses Json Web Token and bcrypt.js for user login and authentication, so you can write, edit and read your lists from anywhere.
 
@@ -42,7 +42,7 @@ At first I didn't see the reason for having the CRUD actions (_Create, Read, Upd
 
 ### Mongoose
 
-> Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+> Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
 
 The beauty of MongDB is that it stores it's data in an object, which is key to JavaScript so makes perfect sense to me. Below is the _user-model_ that is used every time you want to create a new user. The information is sent to the sever from the user, parsed using the _Schema()_ method provided by mongoose, then sent to MongoDB Atlas.
 

@@ -148,3 +148,15 @@ hr:not([class]):before {
   border-radius: 4px;
   border: 3px solid #70abaf;
 }
+
+::selection {
+  background: #99e1d9;
+  color: #32292f;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  color: #32292f;
+  background: #99e1d9;
+  /* Gecko Browsers */
+}

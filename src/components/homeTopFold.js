@@ -3,14 +3,12 @@ import LinkedInLink from "./linkedInLink"
 import GitHubLink from "./gitHubLink"
 import HomeNav from "./homeNav"
 import DownArrow from "./downArrow"
-// import { useSpring, animated } from "react-spring"
 
 const HomeTopFold = () => {
   return (
     <section className="w-full p-8 shadow-md sm:p-16 md:p-0 md:grid md:grid-cols-6 top-fold">
       <HomeNav />
-      <div className="flex flex-col justify-center h-full md:col-end-6 md:col-start-2 ">
-        {/* <h1>SandyDotDev</h1> */}
+      <div className="flex flex-col justify-center h-full md:col-end-6 md:col-start-2">
         <svg
           className="w-56 fill-current text-custom-gray"
           viewBox="0 0 237 36"
@@ -32,9 +30,7 @@ const HomeTopFold = () => {
           </li>
         </ul>
       </div>
-      {/* <animated.div style={spring}> */}
       <DownArrow />
-      {/* </animated.div> */}
     </section>
   )
 }

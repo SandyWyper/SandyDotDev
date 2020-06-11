@@ -44,14 +44,13 @@ const ProjectList = props => {
 
         <div className="max-w-4xl px-4 pt-1 mx-auto xl:px-0">
           {posts.map(({ node }, index) => (
-            <>
+            <div key={node.id}>
               <ArticleCard
-                key={node.id}
                 articleDetails={node.frontmatter}
                 path={node.fields.slug}
               />
-              {index !== posts.length - 1 && <hr />}
-            </>
+              {index !== posts.length - 1 && <hr key={`${node.id}-hr`} />}
+            </div>
           ))}
           {!isFirst && (
             <Link to={`/projects/${prevPage}`} rel="prev">
