@@ -44,7 +44,9 @@ const LatestBlogPost = () => {
             <h3 className="section-header">Blog</h3>
           </Link>
         </header>
-        <ArticleCard articleDetails={postDetails} path={postPath} />
+        <div className="latest-article">
+          <ArticleCard articleDetails={postDetails} path={postPath} />
+        </div>
       </div>
     </section>
   )

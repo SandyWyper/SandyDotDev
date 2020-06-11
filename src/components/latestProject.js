@@ -40,11 +40,13 @@ const LatestProject = () => {
     <section className="latest-project">
       <div>
         <header className="mt-4">
-          <Link to="/projects" className="relative">
+          <Link to="/projects">
             <h3 className="section-header">Projects</h3>
           </Link>
         </header>
-        <ArticleCard articleDetails={projectDetails} path={projectPath} />
+        <div className="latest-article">
+          <ArticleCard articleDetails={projectDetails} path={projectPath} />
+        </div>
       </div>
     </section>
   )

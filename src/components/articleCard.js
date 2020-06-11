@@ -7,7 +7,7 @@ const ArticleCard = props => {
   const data = props.articleDetails
   return (
     <Link to={props.path}>
-      <div className="p-4 my-8 card-hover">
+      <div className="relative z-10 p-4 my-8 card-hover">
         <div className="mb-2 md:flex">
           <div className="scale-div">
             <Img

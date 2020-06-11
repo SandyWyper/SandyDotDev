@@ -94,3 +94,18 @@
     }
   }
 }
+
+.latest-article {
+  @apply relative;
+}
+
+.latest-article:after {
+  @apply absolute right-0 top-0 rounded-lg text-right p-4 w-full h-full z-0 -mt-8;
+  content: "latest";
+
+  background: hsl(0, 0, 100);
+  background: linear-gradient(75deg, hsla(0, 0, 100, 0) 69%, hsla(154, 30, 95, 0.5) 100%);
+  background: -moz-linear-gradient(75deg, hsla(0, 0, 100, 0) 69%, hsla(154, 30, 95, 0.5) 100%);
+  background: -webkit-linear-gradient(75deg, hsla(0, 0, 100, 0) 69%, hsla(154, 30, 95, 0.5) 100%);
+  filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#99E1D9", GradientType=1 )";
+}
