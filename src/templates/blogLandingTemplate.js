@@ -28,12 +28,15 @@ const BlogList = props => {
           />
         )}
         <div className="max-w-4xl px-4 mx-auto xl:px-0">
-          {posts.map(({ node }) => (
-            <ArticleCard
-              key={node.id}
-              articleDetails={node.frontmatter}
-              path={node.fields.slug}
-            />
+          {posts.map(({ node }, index) => (
+            <>
+              <ArticleCard
+                key={node.id}
+                articleDetails={node.frontmatter}
+                path={node.fields.slug}
+              />
+              {index !== posts.length - 1 && <hr />}
+            </>
           ))}
           {!isFirst && (
             <Link to={`/projects/${prevPage}`} rel="prev">
