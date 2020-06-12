@@ -17,7 +17,7 @@ const FeaturedArticle = props => {
             <h3 className="section-header">{data.title}</h3>
             <p className="mb-1 text-xs">{data.date}</p>
             <p className="mb-1">{data.description}</p>
-            <ul className="flex justify-end w-full pr-4 space-x-2">
+            <ul className="flex flex-wrap justify-end w-full pr-4 space-x-2">
               {data.tags.map(item => {
                 return (
                   <li key={item} className="text-sm font-zilla">

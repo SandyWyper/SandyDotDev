@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Spring } from "react-spring/renderprops"
-// import { scrollHeight } from "../lib/returnScrollHeight"
-// import { useWindowPosition } from "../lib/returnScrollHeight"
+
 const DownArrow = () => {
   const [scrollPosition, setPosition] = useState(0)
   const setScrollHeight = () => {
@@ -18,7 +17,7 @@ const DownArrow = () => {
         setScrollHeight()
 
         // The checkScroll will execute at a rate of
-      }, 300)
+      }, 200)
     }
   }
   useEffect(() => {
@@ -37,7 +36,7 @@ const DownArrow = () => {
         right: 0,
         left: 0,
       }}
-      config={{ tension: 100, friction: 19, mass: 4, delay: 300 }}
+      config={{ tension: 100, friction: 19, mass: 4, delay: 200 }}
     >
       {props => (
         <div style={props}>
