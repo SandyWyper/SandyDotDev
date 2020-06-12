@@ -9,7 +9,6 @@ const ProjectTemplate = props => {
   return (
     <section className="bg-custom-mono-1">
       <SEO title="Projects" />
-
       <div className="container mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
         <div>
           <div className="max-w-md pt-8 mx-auto">

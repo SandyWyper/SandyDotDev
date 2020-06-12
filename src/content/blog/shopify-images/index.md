@@ -30,7 +30,7 @@ You see all the clever compression without losing quality that Photoshop offers 
 
 The moral of the story is. Give Shopify the best image you can, regardless of file size. The clever bit happens later.
 
-#### [No Big Sizes](link to ratcliff spoof)
+#### [No Big Sizes](https://www.youtube.com/watch?v=zA4jOgMYaS0)
 
 Shopify's CDN (Content Delivery Network) is top notch, but to understand how it works is key to using it properly.
 
@@ -61,4 +61,4 @@ Something like this...
 />
 ```
 
-If you want to know how to implement this from a developers point of view you can [read my other post on the subject here](adresss......).
+If you want to know how to implement this from a developers point of view you can [read my other post on the subject here](https://sandywyper.dev/blog/shopify-image-snippet/).
