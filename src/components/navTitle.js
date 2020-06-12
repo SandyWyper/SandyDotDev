@@ -17,27 +17,30 @@ const NavTitle = props => {
         activeTitle !== "projects" ? 0 : 180
       }deg)`,
       opacity: activeTitle === "projects" ? 0 : 1,
-      display: activeTitle === "projects" ? "none" : "block",
+      // display: activeTitle === "projects" ? "none" : "block",
+      marginTop: activeTitle === "projects" ? "-200px" : "0px",
     },
     opacity: activeTitle === "projects" ? 1 : 0,
-    display: activeTitle === "projects" ? "block" : "none",
+    // display: activeTitle === "projects" ? "block" : "none",
     transform: `perspective(200px) rotateX(${
       activeTitle !== "projects" ? 180 : 0
     }deg)`,
+    marginTop: activeTitle !== "projects" ? "-200px" : "0px",
     config: { mass: 5, tension: 500, friction: 80 },
   })
   const blogSpring = useSpring({
     immediate: false,
     from: {
       transform: `perspective(200px) rotateX(${
-        activeTitle !== "projects" ? 0 : 180
+        activeTitle !== "blog" ? 0 : 180
       }deg)`,
-      opacity: activeTitle === "projects" ? 0 : 1,
-      display: activeTitle === "projects" ? "none" : "block",
+      opacity: activeTitle === "blog" ? 0 : 1,
+      // display: activeTitle === "blog" ? "none" : "block",
+      marginTop: activeTitle === "blog" ? "-200px" : "0px",
     },
     opacity: activeTitle === "blog" ? 1 : 0,
-    display: activeTitle === "blog" ? "block" : "none",
-
+    // display: activeTitle === "blog" ? "block" : "none",
+    marginTop: activeTitle !== "blog" ? "-200px" : "0px",
     transform: `perspective(200px) rotateX(${
       activeTitle !== "blog" ? 180 : 0
     }deg)`,
@@ -47,16 +50,18 @@ const NavTitle = props => {
     immediate: false,
     from: {
       transform: `perspective(200px) rotateX(${
-        activeTitle !== "projects" ? 0 : 180
+        activeTitle !== "contact" ? 0 : 180
       }deg)`,
-      opacity: activeTitle === "projects" ? 0 : 1,
-      display: activeTitle === "projects" ? "none" : "block",
+      opacity: activeTitle === "contact" ? 0 : 1,
+      // display: activeTitle === "contact" ? "none" : "block",
+      marginTop: activeTitle === "contact" ? "-200px" : "0px",
     },
     opacity: activeTitle === "contact" ? 1 : 0,
-    display: activeTitle === "contact" ? "block" : "none",
+    // display: activeTitle === "contact" ? "block" : "none",
     transform: `perspective(200px) rotateX(${
       activeTitle !== "contact" ? 180 : 0
     }deg)`,
+    marginTop: activeTitle !== "contact" ? "-200px" : "0px",
     config: { mass: 5, tension: 500, friction: 80 },
   })
   return (
