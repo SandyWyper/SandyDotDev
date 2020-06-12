@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 const BlogTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
   return (
     <section className="bg-custom-mono-1">
+      <SEO title="Blog" />
       <div className="container mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
         <div>
           <div className="max-w-md pt-8 mx-auto mb-12">

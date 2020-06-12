@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
-
+import SEO from "../components/seo"
 const BlogList = props => {
   // render navigation between blog-listing pages if there are more then one.
   const { currentPage, numBlogPages } = props.pageContext
@@ -20,6 +20,7 @@ const BlogList = props => {
 
   return (
     <section className="bg-custom-mono-1">
+      <SEO title="Blog" />
       <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
         {isFirst && (
           <FeaturedArticle

@@ -1,15 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 const ProjectTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
   return (
     <section className="bg-custom-mono-1">
-      {/* <Link to="/projects">
-          <h1 className="side">Projects</h1>
-        </Link> */}
+      <SEO title="Projects" />
 
       <div className="container mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
         <div>
@@ -56,7 +55,7 @@ const ProjectTemplate = props => {
                   </a>
                 </div>
                 <div className="text-right md:w-1/2 md:flex md:flex-col md:justify-end">
-                  <ul className="flex flex-wrap justify-end pb-2 space-x-3">
+                  <ul className="flex flex-wrap justify-center pb-2 space-x-3 md:justify-end">
                     {/* <li className="underline">tags:</li> */}
                     {frontmatter.tags.map(item => {
                       return (

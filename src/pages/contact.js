@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { navigate } from "gatsby"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
+import SEO from "../components/seo"
 
 const encode = data => {
   return Object.keys(data)
@@ -38,6 +39,7 @@ class Contact extends Component {
   render() {
     return (
       <section className=" bg-custom-mono-1">
+        <SEO title="Contact" />
         <div className="container min-h-screen pt-12 mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
           <div className="mt-8 lg:flex">
             <div className="w-full px-6 mb-8 lg:w-1/2">

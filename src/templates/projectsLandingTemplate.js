@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
+import SEO from "../components/seo"
 
 const ProjectList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -19,6 +20,7 @@ const ProjectList = props => {
 
   return (
     <section className="bg-custom-mono-1">
+      <SEO title="Projects" />
       <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
         <div className="lg:justify-between lg:flex">
           <div className="max-w-lg ml-auto">
