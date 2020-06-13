@@ -9,7 +9,11 @@ export default ({ pageContext, children, location }) => {
   return (
     <Layout>
       <MobileNav />
-      {!pageContext.homeLayout ? (
+      {pageContext.homeLayout ? (
+        <TransitionProvider location={location}>
+          <TransitionViews>{children}</TransitionViews>
+        </TransitionProvider>
+      ) : (
         <>
           <TopNav title={pageContext.navTitle} />
           <TransitionProvider
@@ -32,10 +36,6 @@ export default ({ pageContext, children, location }) => {
             <TransitionViews>{children}</TransitionViews>
           </TransitionProvider>
         </>
-      ) : (
-        <TransitionProvider location={location}>
-          <TransitionViews>{children}</TransitionViews>
-        </TransitionProvider>
       )}
     </Layout>
   )
