@@ -6,32 +6,10 @@ import TopNav from "../components/topNav"
 import MobileNav from "../components/mobileNav"
 
 export default ({ pageContext, children, location }) => {
-  // if (pageContext.homeLayout) {
-  //   return (
-  //     <Layout>
-  //       <HomeNav />
-  //       <TransitionProvider location={location}>
-  //         <TransitionViews>{children}</TransitionViews>
-  //       </TransitionProvider>
-  //     </Layout>
-  //   )
-  // }
-  // return (
-  //   <Layout>
-  // <TopNav title={pageContext.navTitle} />
-  // <TransitionProvider location={location}>
-  //   <TransitionViews>{children}</TransitionViews>
-  // </TransitionProvider>
-  //   </Layout>
-  // )
   return (
     <Layout>
       <MobileNav />
-      {pageContext.homeLayout ? (
-        <TransitionProvider location={location}>
-          <TransitionViews>{children}</TransitionViews>
-        </TransitionProvider>
-      ) : (
+      {!pageContext.homeLayout ? (
         <>
           <TopNav title={pageContext.navTitle} />
           <TransitionProvider
@@ -54,6 +32,10 @@ export default ({ pageContext, children, location }) => {
             <TransitionViews>{children}</TransitionViews>
           </TransitionProvider>
         </>
+      ) : (
+        <TransitionProvider location={location}>
+          <TransitionViews>{children}</TransitionViews>
+        </TransitionProvider>
       )}
     </Layout>
   )
