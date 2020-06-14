@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react"
 import { Spring } from "react-spring/renderprops"
 
 const DownArrow = () => {
-  const [scrollPosition, setPosition] = useState(0)
-  const setScrollHeight = () => {
-    setPosition(window.pageYOffset)
+  const [isArrowVisible, setVisible] = useState(true)
+  const checkScrollHeight = () => {
+    console.log("running function")
+    if (window.scrollY > 350) {
+      setVisible(false)
+      window.removeEventListener("scroll", scrollThrottler)
+    }
   }
   //scroll event throttler to stop the browser from overworking
   let scrollTimeout
@@ -14,7 +18,7 @@ const DownArrow = () => {
     if (!scrollTimeout) {
       scrollTimeout = setTimeout(function () {
         scrollTimeout = null
-        setScrollHeight()
+        checkScrollHeight()
 
         // The checkScroll will execute at a rate of
       }, 200)
@@ -30,7 +34,7 @@ const DownArrow = () => {
     <Spring
       from={{ opacity: 0, bottom: -30, position: "absolute" }}
       to={{
-        opacity: scrollPosition < 300 ? 1 : 0,
+        opacity: isArrowVisible ? 1 : 0,
         bottom: -80,
         position: "absolute",
         right: 0,
