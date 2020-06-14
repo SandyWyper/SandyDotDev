@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useLayoutEffect } from "react"
 import { Spring } from "react-spring/renderprops"
 
 const DownArrow = () => {
@@ -24,7 +24,8 @@ const DownArrow = () => {
       }, 200)
     }
   }
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     window.addEventListener("scroll", scrollThrottler)
     return function cleanup() {
       window.removeEventListener("scroll", scrollThrottler)
