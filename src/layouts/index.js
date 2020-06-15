@@ -10,7 +10,7 @@ const Layout = ({ pageContext, children, location }) => {
   // if (isBrowser) {
   return (
     <div className="relative overflow-hidden">
-      {console.log("layout render")}
+      {console.log("layout render", isBrowser)}
       <MobileNav />
       {pageContext.homeLayout ? (
         <TransitionProvider location={location}>
