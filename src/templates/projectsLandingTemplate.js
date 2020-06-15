@@ -19,54 +19,56 @@ const ProjectList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <section className="bg-custom-mono-1">
+    <>
       <SEO title="Projects" />
-      <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
-        <div className="lg:justify-between lg:flex">
-          <div className="max-w-lg ml-auto">
-            <div className="relative p-6 text-right">
-              <blockquote className="z-10 text-xl">
-                “For the things we have to learn before we can do them, we learn
-                by doing them.”
-              </blockquote>
-              <p>- Aristotle</p>
-              {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
+      <section className="bg-custom-mono-1">
+        <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
+          <div className="lg:justify-between lg:flex">
+            <div className="max-w-lg ml-auto">
+              <div className="relative p-6 text-right">
+                <blockquote className="z-10 text-xl">
+                  “For the things we have to learn before we can do them, we
+                  learn by doing them.”
+                </blockquote>
+                <p>- Aristotle</p>
+                {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
                 <AristotleImage />
               </div> */}
+              </div>
             </div>
           </div>
-        </div>
 
-        {isFirst && (
-          <FeaturedArticle
-            articleDetails={featuredPost.frontmatter}
-            path={featuredPost.fields.slug}
-          />
-        )}
+          {isFirst && (
+            <FeaturedArticle
+              articleDetails={featuredPost.frontmatter}
+              path={featuredPost.fields.slug}
+            />
+          )}
 
-        <div className="max-w-4xl px-4 pt-1 mx-auto xl:px-0">
-          {posts.map(({ node }, index) => (
-            <div key={node.id}>
-              <ArticleCard
-                articleDetails={node.frontmatter}
-                path={node.fields.slug}
-              />
-              {index !== posts.length - 1 && <hr key={`${node.id}-hr`} />}
-            </div>
-          ))}
-          {!isFirst && (
-            <Link to={`/projects/${prevPage}`} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={`/projects/${nextPage}`} rel="next">
-              Next Page →
-            </Link>
-          )}
+          <div className="max-w-4xl px-4 pt-1 mx-auto xl:px-0">
+            {posts.map(({ node }, index) => (
+              <div key={node.id}>
+                <ArticleCard
+                  articleDetails={node.frontmatter}
+                  path={node.fields.slug}
+                />
+                {index !== posts.length - 1 && <hr key={`${node.id}-hr`} />}
+              </div>
+            ))}
+            {!isFirst && (
+              <Link to={`/projects/${prevPage}`} rel="prev">
+                ← Previous Page
+              </Link>
+            )}
+            {!isLast && (
+              <Link to={`/projects/${nextPage}`} rel="next">
+                Next Page →
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 

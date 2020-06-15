@@ -5,13 +5,15 @@ import LatestProject from "../components/latestProject"
 import LatestBlogPost from "../components/latestBlogPost"
 
 const IndexPage = () => (
-  <div className="bg-custom-mono-2">
+  <>
     <SEO title="Home" />
-    <HomeTopFold />
-    <LatestProject />
+    <div className="bg-custom-mono-2">
+      <HomeTopFold />
+      <LatestProject />
 
-    <LatestBlogPost />
-  </div>
+      <LatestBlogPost />
+    </div>
+  </>
 )
 
 export default IndexPage

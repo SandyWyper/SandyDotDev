@@ -19,38 +19,40 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <section className="bg-custom-mono-1">
+    <>
       <SEO title="Blog" />
-      <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
-        {isFirst && (
-          <FeaturedArticle
-            articleDetails={featuredPost.frontmatter}
-            path={featuredPost.fields.slug}
-          />
-        )}
-        <div className="max-w-4xl px-4 mx-auto xl:px-0">
-          {posts.map(({ node }, index) => (
-            <div key={node.id}>
-              <ArticleCard
-                articleDetails={node.frontmatter}
-                path={node.fields.slug}
-              />
-              {index !== posts.length - 1 && <hr key={`${node.id}-hr`} />}
-            </div>
-          ))}
-          {!isFirst && (
-            <Link to={`/projects/${prevPage}`} rel="prev">
-              ← Previous Page
-            </Link>
+      <section className="bg-custom-mono-1">
+        <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
+          {isFirst && (
+            <FeaturedArticle
+              articleDetails={featuredPost.frontmatter}
+              path={featuredPost.fields.slug}
+            />
           )}
-          {!isLast && (
-            <Link to={`/projects/${nextPage}`} rel="next">
-              Next Page →
-            </Link>
-          )}
+          <div className="max-w-4xl px-4 mx-auto xl:px-0">
+            {posts.map(({ node }, index) => (
+              <div key={node.id}>
+                <ArticleCard
+                  articleDetails={node.frontmatter}
+                  path={node.fields.slug}
+                />
+                {index !== posts.length - 1 && <hr key={`${node.id}-hr`} />}
+              </div>
+            ))}
+            {!isFirst && (
+              <Link to={`/projects/${prevPage}`} rel="prev">
+                ← Previous Page
+              </Link>
+            )}
+            {!isLast && (
+              <Link to={`/projects/${nextPage}`} rel="next">
+                Next Page →
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 
