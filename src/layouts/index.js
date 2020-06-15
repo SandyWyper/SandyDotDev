@@ -8,6 +8,7 @@ import PropTypes from "prop-types"
 const Layout = ({ pageContext, children, location }) => {
   const isBrowser = typeof window !== `undefined`
   // if (isBrowser) {
+  console.log("outside return", isBrowser)
   return (
     <div className="relative overflow-hidden">
       {console.log("layout render", isBrowser)}
