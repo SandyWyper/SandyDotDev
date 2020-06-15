@@ -1,13 +1,13 @@
 import React from "react"
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions"
-
-import Layout from "../components/layout"
+import Footer from "../components/footer"
 import TopNav from "../components/topNav"
 import MobileNav from "../components/mobileNav"
+import PropTypes from "prop-types"
 
-export default ({ pageContext, children, location }) => {
+const Layout = ({ pageContext, children, location }) => {
   return (
-    <Layout>
+    <div className="relative overflow-hidden">
       <MobileNav />
       {pageContext.homeLayout ? (
         <TransitionProvider location={location}>
@@ -37,6 +37,14 @@ export default ({ pageContext, children, location }) => {
           </TransitionProvider>
         </>
       )}
-    </Layout>
+      <Footer />
+    </div>
   )
 }
+
+Layout.propTypes = {
+  pageContext: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
+}
+export default Layout
