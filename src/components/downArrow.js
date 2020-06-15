@@ -3,15 +3,17 @@ import { Spring } from "react-spring/renderprops"
 
 const DownArrow = () => {
   const [isArrowVisible, setVisible] = useState(true)
+
+  //scroll event throttler to stop the browser from overworking
+  let scrollTimeout
+
   const checkScrollHeight = () => {
-    console.log("running function")
     if (window.scrollY > 350) {
       setVisible(false)
       window.removeEventListener("scroll", scrollThrottler)
+      window.clearTimeout(scrollTimeout)
     }
   }
-  //scroll event throttler to stop the browser from overworking
-  let scrollTimeout
 
   function scrollThrottler() {
     // ignore scroll events as long as an checkScroll execution is in the queue
