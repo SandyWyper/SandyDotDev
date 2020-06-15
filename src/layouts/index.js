@@ -6,12 +6,8 @@ import MobileNav from "../components/mobileNav"
 import PropTypes from "prop-types"
 
 const Layout = ({ pageContext, children, location }) => {
-  const isBrowser = typeof window !== `undefined`
-  // if (isBrowser) {
-  console.log("outside return", isBrowser)
   return (
     <div className="relative overflow-hidden">
-      {console.log("layout render", isBrowser)}
       <MobileNav />
       {pageContext.homeLayout ? (
         <TransitionProvider location={location}>
@@ -44,10 +40,6 @@ const Layout = ({ pageContext, children, location }) => {
       <Footer />
     </div>
   )
-  // }
-  // return (
-  //   <div className="min-w-full min-h-screen border bg-custom-blue border-custom-black"></div>
-  // )
 }
 
 Layout.propTypes = {
