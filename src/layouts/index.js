@@ -6,44 +6,44 @@ import MobileNav from "../components/mobileNav"
 import PropTypes from "prop-types"
 
 const Layout = ({ pageContext, children, location }) => {
-  const isBrowser = typeof window !== `undefined`
-  if (isBrowser) {
-    return (
-      <div className="relative overflow-hidden">
-        <MobileNav />
-        {pageContext.homeLayout ? (
-          <TransitionProvider location={location}>
+  // const isBrowser = typeof window !== `undefined`
+  // if (isBrowser) {
+  return (
+    <span className="relative overflow-hidden">
+      <MobileNav />
+      {pageContext.homeLayout ? (
+        <TransitionProvider location={location}>
+          <TransitionViews>{children}</TransitionViews>
+        </TransitionProvider>
+      ) : (
+        <>
+          <TopNav title={pageContext.navTitle} />
+          <TransitionProvider
+            location={location}
+            mode="successive"
+            enter={{
+              opacity: 0,
+            }}
+            usual={{
+              opacity: 1,
+            }}
+            leave={{
+              opacity: 0,
+
+              config: {
+                duration: 100,
+              },
+            }}
+          >
             <TransitionViews>{children}</TransitionViews>
           </TransitionProvider>
-        ) : (
-          <>
-            <TopNav title={pageContext.navTitle} />
-            <TransitionProvider
-              location={location}
-              mode="successive"
-              enter={{
-                opacity: 0,
-              }}
-              usual={{
-                opacity: 1,
-              }}
-              leave={{
-                opacity: 0,
-
-                config: {
-                  duration: 100,
-                },
-              }}
-            >
-              <TransitionViews>{children}</TransitionViews>
-            </TransitionProvider>
-          </>
-        )}
-        <Footer />
-      </div>
-    )
-  }
-  return
+        </>
+      )}
+      <Footer />
+    </span>
+  )
+  // }
+  // return
 }
 
 Layout.propTypes = {
