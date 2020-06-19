@@ -1,8 +1,8 @@
 html {
   font-size: 18px;
   font-family: "Inconsolata", Helvetica, sans-serif;
-  @apply text-custom-black bg-custom-gray;
-
+  background: var(--background);
+  color: var(--text);
 }
 
 h1 {
@@ -37,7 +37,6 @@ h3 {
 h4 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 2.3rem;
-  // font-weight: lighter;
   @apply leading-tight;
 
   @screen md {
@@ -74,7 +73,7 @@ blockquote {
 .font-zilla {
   font-family: "ZillaSlabHighlight", "Times New Roman", serif;
   line-height: 2;
-  @apply text-custom-blue;
+  color: var(--primary);
 }
 
 .section-header {
@@ -94,7 +93,7 @@ blockquote {
   left: -10px;
   bottom: -2px;
   transition: width 200ms linear;
-  @apply bg-custom-blue;
+  background: var(--primary);
 }
 
 .section-header:hover:before {

@@ -93,12 +93,12 @@ const MobileNav = () => {
       > */}
 
       <animated.div
-        className="fixed top-0 right-0 overflow-hidden bg-gray-900 z-69"
+        className="fixed top-0 right-0 overflow-hidden background-contrast z-69"
         style={spring}
       >
-        <div className="relative flex flex-col justify-center w-screen h-screen p-10 text-white">
+        <div className="relative flex flex-col justify-center w-screen h-screen p-10 text-contrast">
           <ul className="flex justify-around px-8 mb-8">
-            <li className="w-8 h-8 text-custom-turq">
+            <li className="w-8 h-8 text-secondary">
               <Link to="/" onClick={toggle} onKeyDown={handleKeyDown}>
                 <svg className="fill-current" viewBox="0 0 63.699 63.699">
                   <g>
@@ -158,7 +158,7 @@ const MobileNav = () => {
             </li>
           </ul>
           <ul>
-            <li className="text-3xl text-custom-turq">
+            <li className="text-3xl text-secondary">
               <Link to="/projects" onClick={toggle} onKeyDown={handleKeyDown}>
                 Projects
               </Link>
@@ -174,7 +174,7 @@ const MobileNav = () => {
                 </Link>
               </li>
             ))}
-            <li className="pt-2 text-3xl text-custom-turq">
+            <li className="pt-2 text-3xl text-secondary">
               <Link to="/blog" onClick={toggle} onKeyDown={handleKeyDown}>
                 Blog
               </Link>
@@ -190,7 +190,7 @@ const MobileNav = () => {
                 </Link>
               </li>
             ))}
-            <li className="pt-2 text-3xl text-custom-turq">
+            <li className="pt-2 text-3xl text-secondary">
               <Link to="/contact" onClick={toggle} onKeyDown={handleKeyDown}>
                 Contact
               </Link>

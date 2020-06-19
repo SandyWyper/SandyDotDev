@@ -9,41 +9,23 @@
   z-index: 2;
 
 
-  // .down-arrow {
-  //   position: absolute;
-  //   width: 200px;
-  //   height: 200px;
-  //   transform: rotate(45deg);
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   @apply bg-custom-turq;
-  //   z-index: 0;
-  // }
-
   .down-arrow {
     position: absolute;
     left: 0;
     right: 0;
 
-    // margin: 0 auto -4.5rem auto;
+
 
 
   }
 
   div {
-    // @extend .container;
 
-    @screen sm {}
-
-    @screen md {}
 
     h1 {
       font-family: "Megrim", "Courier", sans-serif;
       font-size: 2rem;
-      @apply leading-tight text-custom-gray;
+      @apply leading-tight;
 
       @screen md {
         font-size: 2.6rem;

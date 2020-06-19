@@ -48,7 +48,7 @@ const DownArrow = () => {
       {props => (
         <div style={props}>
           <svg
-            className="w-10 h-10 mx-auto fill-currenttext-custom-black md:w-16 md:h-16"
+            className="w-10 h-10 mx-auto fill-current text md:w-16 md:h-16"
             viewBox="0 0 490.688 490.688"
           >
             <g>

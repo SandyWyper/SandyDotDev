@@ -1,9 +1,6 @@
 module.exports = {
   purge: false,
   theme: {
-    // container: {
-    //   center: true,
-    // },
     extend: {
       colors: {
         "custom-black": "#32292f",

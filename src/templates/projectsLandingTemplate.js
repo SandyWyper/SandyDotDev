@@ -21,7 +21,7 @@ const ProjectList = props => {
   return (
     <>
       <SEO title="Projects" />
-      <section className="bg-custom-mono-1">
+      <section className="background">
         <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
           <div className="lg:justify-between lg:flex">
             <div className="max-w-lg ml-auto">

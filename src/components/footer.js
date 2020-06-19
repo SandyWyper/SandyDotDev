@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer className="border-t border-grad-4 bg-custom-blue text-custom-gray">
+    <footer className="border-t border-grad-4 background-primary text-contrast">
       <div className="container mx-auto">
         <div className="flex justify-center">
           © {new Date().getFullYear()}, Built with

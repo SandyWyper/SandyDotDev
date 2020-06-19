@@ -40,8 +40,8 @@ class Contact extends Component {
     return (
       <>
         <SEO title="Contact" />
-        <section className="bg-custom-mono-1">
-          <div className="container min-h-screen pt-12 mx-auto border-l border-r border-solid border-custom-mono-2 bg-custom-mono-1">
+        <section className="background">
+          <div className="container min-h-screen pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
             <div className="mt-8 lg:flex">
               <div className="w-full px-6 mb-8 lg:w-1/2">
                 <h4>Get in touch!</h4>

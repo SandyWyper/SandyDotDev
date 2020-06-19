@@ -135,7 +135,7 @@ module.exports = {
         name: `SandyDotDev`,
         short_name: `SandyDev`,
         start_url: `/`,
-        background_color: `#32292f`,
+        background_color: `#70abaf`,
         theme_color: `#70abaf`,
         display: `fullscreen`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
@@ -158,7 +158,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
-        develop: false, // Enable while using `gatsby develop`
+        develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
         // purgeOnly: ["tailwindcss/"],
         // whitelist: [
@@ -170,7 +170,7 @@ module.exports = {
         // whitelistPatterns: [/language-/],
         ignore: [
           "prismjs/themes/prism-tomorrow.css",
-          "/src/styles/article-styles.scss",
+          "/src/styles/unpurged.scss",
         ],
       },
     },

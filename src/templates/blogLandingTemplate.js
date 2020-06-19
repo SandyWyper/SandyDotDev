@@ -21,7 +21,7 @@ const BlogList = props => {
   return (
     <>
       <SEO title="Blog" />
-      <section className="bg-custom-mono-1">
+      <section className="background">
         <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
           {isFirst && (
             <FeaturedArticle
