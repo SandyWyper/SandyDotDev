@@ -10,9 +10,9 @@ const BlogTemplate = props => {
     <>
       <SEO title="Blog" />
       <section className="background">
-        <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
+        <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div>
-            <div className="max-w-md pt-8 mx-auto mb-12">
+            <div className="max-w-md px-4 pt-8 mx-auto">
               <Img
                 className="mb-4"
                 fluid={frontmatter.cover.childImageSharp.fluid}
@@ -27,7 +27,7 @@ const BlogTemplate = props => {
                   <ul className="flex flex-wrap space-x-2 sm:ml-auto">
                     {frontmatter.tags.map(item => {
                       return (
-                        <li key={item} className="text-sm font-zilla ">
+                        <li key={item} className="my-2 text-sm font-zilla">
                           {item}
                         </li>
                       )
@@ -39,7 +39,7 @@ const BlogTemplate = props => {
           </div>
 
           <article
-            className="max-w-2xl mx-auto article-styles"
+            className="max-w-xl px-4 pb-40 mx-auto mt-8 md:px-0 article-styles"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           {/* Maybe a link to the next article */}

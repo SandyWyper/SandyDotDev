@@ -1,9 +1,5 @@
 .article-styles {
-  @apply mt-8 px-2 pb-40;
 
-  @screen md {
-    @apply px-0;
-  }
 
   h2,
   h3,
@@ -92,6 +88,12 @@
   .gatsby-highlight {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    max-height: 460px;
+    overflow-y: auto;
+  }
+
+  pre[class*="language-"] {
+    margin: 0;
   }
 
   code[class*="language-"] {
@@ -108,7 +110,7 @@ hr:not([class]) {
   height: 2px;
   position: relative;
   max-width: 300px;
-  @apply bg-custom-blue;
+  background-color: var(--primary);
   border: 0;
   margin: 3.63636rem auto !important;
 }
@@ -120,9 +122,9 @@ hr:not([class]):before {
   width: 10px;
   height: 10px;
   content: " ";
-  background-color: #70abaf;
-  border: 2px solid #f0f7f4;
-  box-shadow: 0 0 0 6px #f0f7f4;
+  background-color: var(--primary);
+  border: 2px solid var(--background);
+  box-shadow: 0 0 0 6px var(--background);
   -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
   transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }

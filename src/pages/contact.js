@@ -41,7 +41,7 @@ class Contact extends Component {
       <>
         <SEO title="Contact" />
         <section className="background">
-          <div className="container min-h-screen pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
+          <div className="container min-h-screen pt-12 mx-auto border-solid md:border-l md:border-r border-color">
             <div className="mt-8 lg:flex">
               <div className="w-full px-6 mb-8 lg:w-1/2">
                 <h4>Get in touch!</h4>
@@ -77,7 +77,7 @@ class Contact extends Component {
                         type="text"
                         name="name"
                         id="name"
-                        className="w-full px-4 py-2 leading-tight bg-gray-300 border-2 rounded appearance-none border-custom-blue focus:outline-none focus:bg-gray-200 focus:border-custom-umber"
+                        className="w-full px-4 py-2 leading-tight border-2 rounded appearance-none border-custom-blue focus:outline-none contact-field-background focus:border-custom-turq"
                         onChange={this.handleChange}
                         required
                       />
@@ -97,7 +97,7 @@ class Contact extends Component {
                         type="text"
                         name="email"
                         id="email"
-                        className="w-full px-4 py-2 leading-tight bg-gray-300 border-2 rounded appearance-none border-custom-blue focus:outline-none focus:bg-gray-200 focus:border-custom-umber"
+                        className="w-full px-4 py-2 leading-tight border-2 rounded appearance-none border-custom-blue focus:outline-none contact-field-background focus:border-custom-turq"
                         onChange={this.handleChange}
                         required
                       />
@@ -117,7 +117,7 @@ class Contact extends Component {
                         name="message"
                         id="message"
                         rows="4"
-                        className="w-full px-4 py-2 leading-tight bg-gray-300 border-2 rounded appearance-none border-custom-blue focus:outline-none focus:bg-gray-200 focus:border-custom-umber"
+                        className="w-full px-4 py-2 leading-tight border-2 rounded appearance-none border-custom-blue focus:outline-none contact-field-background focus:border-custom-turq"
                         onChange={this.handleChange}
                         required
                       ></textarea>
@@ -129,21 +129,21 @@ class Contact extends Component {
                       <input
                         type="submit"
                         value="Send Message"
-                        className="w-full px-4 py-2 font-bold rounded shadow cursor-pointer text-custom-gray bg-custom-blue hover:bg-grad-5 focus:shadow-outline focus:outline-none"
+                        className="w-full px-4 py-2 font-bold rounded shadow-lg cursor-pointer text-custom-gray bg-custom-blue hover:bg-grad-5 focus:shadow-outline focus:outline-none"
                       />
                     </div>
                     <div className="md:ml-2 md:w-1/4">
                       <input
                         type="reset"
                         value="Reset"
-                        className="w-full px-4 py-2 font-bold rounded shadow-lg cursor-pointer text-custom-blue bg-custom-gray hover:opacity-75 focus:shadow-outline focus:outline-none"
+                        className="w-full px-4 py-2 font-bold rounded shadow-md cursor-pointer text-custom-blue bg-custom-gray hover:opacity-75 focus:shadow-outline focus:outline-none"
                       />
                     </div>
                   </div>
                 </form>
                 <div className="flex w-full max-w-xl px-4 mx-auto">
                   <div className="md:w-1/3" />
-                  <div className="flex justify-end w-full md:w-2/3">
+                  <div className="flex justify-end w-full mb-12 md:w-2/3">
                     <div className="w-8 ml-4 scale-hover-2">
                       <LinkedInLink />
                     </div>

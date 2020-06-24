@@ -20,40 +20,106 @@
 
 :root {
   --text: #32292F; //custom-black
+  --textContrast: #b1b2b2;
+  --backgroundContrast: #1A202C; // gray-900 tailwind
   --background: #F0F7F4; // custom-gray
   --primary: #70abaF; // custom-blue
   --secondary: #99E1D9; // custom-turq
-  --contrast: #1A202C; // gray-900 tailwind
+  --layoutBorder: #d0d5d3; // "custom-mono-2"
+}
+
+.perma-dark {
+  color: #32292F;
 }
 
 .text {
   color: var(--text);
+  transition: color 500ms linear;
 }
 
 .background {
-  background: var(--background);
+  background-color: var(--background);
+  transition: background-color 500ms linear;
 }
 
 .background-contrast {
-  background: var(--contrast);
+  background-color: var(--backgroundContrast);
+  transition: background-color 500ms linear;
 }
 
 .background-primary {
-  background: var(--primary);
+  background-color: var(--primary);
+  transition: background-color 500ms linear;
 }
 
 .background-secondary {
-  background: var(--secondary);
+  background-color: var(--secondary);
+  transition: background-color 500ms linear;
 }
 
 .text-primary {
   color: var(--primary);
+  transition: color 500ms linear;
 }
 
 .text-secondary {
   color: var(--secondary);
+  transition: color 500ms linear;
 }
 
 .text-contrast {
-  color: var(--background);
+  color: var(--textContrast);
+  transition: color 500ms linear;
+}
+
+.background-text {
+  background-color: var(--text);
+  transition: background-color 500ms linear;
+}
+
+.mobile-nav-dark-toggle {
+  background-color: var(--textContrast);
+  transition: color 500ms linear;
+}
+
+.border-text-contrast {
+  border-color: var(--textContrast);
+  transition: color 500ms linear;
+}
+
+.toggle__dot {
+  top: -.25rem;
+  left: -.25rem;
+  transition: all 500ms ease-in-out;
+  transition-property: color, transform, background-color;
+}
+
+input:checked~.toggle__dot {
+  transform: translateX(100%);
+  background-color: var(--text);
+}
+
+.border-color {
+  border-color: var(--layoutBorder);
+  transition: color 500ms linear;
+}
+
+.latest-project-background {
+  background-color: var(--layoutBorder);
+  transition: background-color 500ms linear;
+}
+
+.latest-blog-background {
+  background-color: var(--textContrast);
+  transition: background-color 500ms linear;
+}
+
+.contact-field-background {
+  background-color: var(--layoutBorder);
+  transition: background-color 500ms linear;
+}
+
+.contact-field-background:focus {
+  background-color: var(--background);
+  transition: background-color 500ms linear;
 }

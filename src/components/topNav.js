@@ -5,6 +5,7 @@ import GitHubLink from "./gitHubLink"
 import PropTypes from "prop-types"
 import NavTitle from "./navTitle"
 import HomeLinkIcon from "./homeLinkIcon"
+import DarkToggle from "./darkModeToggle"
 
 const TopNav = props => {
   return (
@@ -35,6 +36,9 @@ const TopNav = props => {
           </li>
           <li className="hidden w-12 md:block">
             <GitHubLink />
+          </li>
+          <li className="hidden w-12 mr-2 md:block">
+            <DarkToggle mobileNav={false} />
           </li>
         </ul>
       </div>

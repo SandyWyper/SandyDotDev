@@ -22,7 +22,7 @@ const BlogList = props => {
     <>
       <SEO title="Blog" />
       <section className="background">
-        <div className="container pt-12 mx-auto border-l border-r border-solid border-custom-mono-2">
+        <div className="container pt-12 mx-auto md:border-l md:border-r border-solid border-color">
           {isFirst && (
             <FeaturedArticle
               articleDetails={featuredPost.frontmatter}

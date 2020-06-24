@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
+import DarkToggle from "./darkModeToggle"
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -85,18 +86,17 @@ const MobileNav = () => {
           <span className="hamburger-inner"></span>
         </span>
       </button>
-      {/* <div
-        className={`bg-gray-900 fixed z-69 overflow-hidden top-0 left-0 ${
-          !isOpen ? "w-0 h-0" : "bg-opacity-95 h-screen w-screen"
-        }`}
-        
-      > */}
 
       <animated.div
         className="fixed top-0 right-0 overflow-hidden background-contrast z-69"
         style={spring}
       >
         <div className="relative flex flex-col justify-center w-screen h-screen p-10 text-contrast">
+          {isOpen && (
+            <div className="absolute top-0 left-0 mt-8 ml-8">
+              <DarkToggle mobileNav={true} />
+            </div>
+          )}
           <ul className="flex justify-around px-8 mb-8">
             <li className="w-8 h-8 text-secondary">
               <Link to="/" onClick={toggle} onKeyDown={handleKeyDown}>

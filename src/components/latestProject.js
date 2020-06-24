@@ -37,7 +37,7 @@ const LatestProject = () => {
   const projectDetails = data.allMarkdownRemark.edges[0].node.frontmatter
   const projectPath = data.allMarkdownRemark.edges[0].node.fields.slug
   return (
-    <section className="latest-project">
+    <section className="latest-project text latest-project-background">
       <div>
         <header className="mt-4">
           <Link to="/projects">

@@ -1,8 +1,10 @@
 html {
   font-size: 18px;
   font-family: "Inconsolata", Helvetica, sans-serif;
-  background: var(--background);
+  background-color: var(--background);
   color: var(--text);
+  transition: all 500ms ease-in-out;
+  transition-property: background-color, color;
 }
 
 h1 {
@@ -72,8 +74,9 @@ blockquote {
 
 .font-zilla {
   font-family: "ZillaSlabHighlight", "Times New Roman", serif;
-  line-height: 2;
+  line-height: 1;
   color: var(--primary);
+  background-color: var(--text)
 }
 
 .section-header {

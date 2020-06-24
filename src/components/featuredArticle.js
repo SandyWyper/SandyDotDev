@@ -20,7 +20,7 @@ const FeaturedArticle = props => {
             <ul className="flex flex-wrap justify-end w-full pr-4 space-x-2">
               {data.tags.map(item => {
                 return (
-                  <li key={item} className="text-sm font-zilla">
+                  <li key={item} className="my-2 text-sm font-zilla">
                     {item}
                   </li>
                 )

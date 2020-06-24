@@ -22,7 +22,7 @@ const ProjectList = props => {
     <>
       <SEO title="Projects" />
       <section className="background">
-        <div className="container mx-auto border-l border-r border-solid border-custom-mono-2">
+        <div className="container mx-auto md:border-l md:border-r border-solid border-color">
           <div className="lg:justify-between lg:flex">
             <div className="max-w-lg ml-auto">
               <div className="relative p-6 text-right">

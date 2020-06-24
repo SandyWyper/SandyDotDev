@@ -2,7 +2,7 @@
    that is currently Firefox-only */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #32292f#70abaf;
+  scrollbar-color: var(--text) var(--primary);
 }
 
 /* Works on Chrome/Edge/Safari */
@@ -11,23 +11,23 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #70abaf;
+  background: var(--primary);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #f0f7f4;
+  background-color: var(--background);
   border-radius: 4px;
-  border: 3px solid #70abaf;
+  border: 3px solid var(--primary);
 }
 
 ::selection {
-  background: #99e1d9;
-  color: #32292f;
+  background: var(--secondary);
+  color: var(--text);
   /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  color: #32292f;
-  background: #99e1d9;
+  color: var(--text);
+  background: var(--secondary);
   /* Gecko Browsers */
 }
