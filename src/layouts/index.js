@@ -8,7 +8,7 @@ import { ThemeProvider } from "../components/darkThemeContext"
 
 const Layout = ({ pageContext, children, location }) => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       <ThemeProvider>
         <MobileNav />
         {pageContext.homeLayout ? (
