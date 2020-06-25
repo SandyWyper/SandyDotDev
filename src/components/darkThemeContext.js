@@ -1,21 +1,20 @@
-import React from "react"
+import React, { useState, createContext, useMemo, useEffect } from "react"
 import {
   COLORS,
   COLOR_MODE_KEY,
   INITIAL_COLOR_MODE_CSS_PROP,
 } from "../lib/constants"
 
-export const ThemeContext = React.createContext()
+export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
-  const [colorMode, rawSetColorMode] = React.useState(undefined)
+  const [colorMode, rawSetColorMode] = useState(undefined)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const root = window.document.documentElement
 
-    // Because colors matter so much for the initial page view, we're
-    // doing a lot of the work in gatsby-ssr. That way it can happen before
-    // the React component tree mounts.
+    // Fetch the initial theme state, set by the Gatsby-SSR function
+    // that is injected above the body.
     const initialColorValue = root.style.getPropertyValue(
       INITIAL_COLOR_MODE_CSS_PROP
     )
@@ -23,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
     rawSetColorMode(initialColorValue)
   }, [])
 
-  const contextValue = React.useMemo(() => {
+  const contextValue = useMemo(() => {
     function setColorMode(newValue) {
       const root = window.document.documentElement
 

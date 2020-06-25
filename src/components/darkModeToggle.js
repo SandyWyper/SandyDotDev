@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { ThemeContext } from "./darkThemeContext"
 import Moon from "./moon"
 import PropTypes from "prop-types"
 
 const DarkToggle = props => {
-  const { colorMode, setColorMode } = React.useContext(ThemeContext)
+  const { colorMode, setColorMode } = useContext(ThemeContext)
 
   if (!colorMode) {
     return null
@@ -31,14 +31,12 @@ const DarkToggle = props => {
 
         <div
           className={`absolute inset-y-0 left-0 w-6 h-6 p-1 rounded-full shadow toggle__dot background-text text-contrast ${
-            props.mobileNav && "border-2 border-text-contrast"
+            props.mobileNav ? "border-2 border-text-contrast" : ""
           }`}
         >
           <Moon />
         </div>
       </div>
-
-      {/* <div className="ml-3 font-medium text-gray-700"></div> */}
     </label>
   )
 }
