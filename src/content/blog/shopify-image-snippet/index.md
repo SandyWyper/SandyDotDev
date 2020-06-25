@@ -141,5 +141,3 @@ When using a carousel such as Owl Carousel the `<noscript>` element will count a
   {% endfor %}
 </div>
 ```
-
----

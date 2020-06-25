@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
 import SEO from "../components/seo"
+
 const BlogList = props => {
   // render navigation between blog-listing pages if there are more then one.
   const { currentPage, numBlogPages } = props.pageContext
