@@ -37,7 +37,7 @@ const LatestBlogPost = () => {
   const postDetails = data.allMarkdownRemark.edges[0].node.frontmatter
   const postPath = data.allMarkdownRemark.edges[0].node.fields.slug
   return (
-    <section className="latest-blog latest-blog-background">
+    <section className="latest-blog latest-blog-background text">
       <div>
         <header className="mt-4">
           <Link to="/blog">
