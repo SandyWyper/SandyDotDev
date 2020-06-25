@@ -22,7 +22,7 @@ const ProjectList = props => {
     <>
       <SEO title="Projects" />
       <section className="background">
-        <div className="container mx-auto md:border-l md:border-r border-solid border-color">
+        <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div className="lg:justify-between lg:flex">
             <div className="max-w-lg ml-auto">
               <div className="relative p-6 text-right">
@@ -45,7 +45,7 @@ const ProjectList = props => {
             />
           )}
 
-          <div className="max-w-4xl px-4 pt-1 mx-auto xl:px-0">
+          <div className="max-w-4xl px-4 pt-1 pb-12 mx-auto xl:px-0">
             {posts.map(({ node }, index) => (
               <div key={node.id}>
                 <ArticleCard
