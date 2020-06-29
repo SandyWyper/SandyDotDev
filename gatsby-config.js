@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Sandy Dot Dev`,
-    description: `A portfolio and blog site for me. Built up from Gatsby's Default Starter theme.`,
+    title: `SandyDotDev`,
+    description: `A portfolio and blog site for me. Stuff I've built, things I've learned.`,
     author: `Sandy Wyper`,
   },
   plugins: [

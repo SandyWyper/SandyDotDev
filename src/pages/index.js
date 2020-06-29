@@ -6,7 +6,10 @@ import LatestBlogPost from "../components/latestBlogPost"
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO
+      title="Home"
+      description="A portfolio and blog site for me. Stuff I've built, things I've learned."
+    />
     <div className="bg-custom-mono-2">
       <HomeTopFold />
       <LatestProject />

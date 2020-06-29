@@ -8,7 +8,10 @@ const BlogTemplate = props => {
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      <SEO title="Blog" />
+      <SEO
+        title="Blog"
+        description={`${frontmatter.title} / ${frontmatter.description}`}
+      />
       <section className="background">
         <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div>

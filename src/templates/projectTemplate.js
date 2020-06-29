@@ -8,7 +8,10 @@ const ProjectTemplate = props => {
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      <SEO title="Projects" />
+      <SEO
+        title="Projects"
+        description={`${frontmatter.title} / ${frontmatter.description}`}
+      />
       <section className="background">
         <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div>
@@ -91,6 +94,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
         category
         date(formatString: "D/M/YYYY")
         tags

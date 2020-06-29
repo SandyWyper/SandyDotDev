@@ -20,7 +20,10 @@ const ProjectList = props => {
 
   return (
     <>
-      <SEO title="Projects" />
+      <SEO
+        title="Projects"
+        description="Projects that I have built to learn how to build the things I previously couldn't."
+      />
       <section className="background">
         <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div className="lg:justify-between lg:flex">

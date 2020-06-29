@@ -39,7 +39,10 @@ class Contact extends Component {
   render() {
     return (
       <>
-        <SEO title="Contact" />
+        <SEO
+          title="Contact"
+          description="I would love to hear from you, so please do get in touch."
+        />
         <section className="background">
           <div className="container min-h-screen pt-12 mx-auto border-solid md:border-l md:border-r border-color">
             <div className="mt-8 lg:flex">
