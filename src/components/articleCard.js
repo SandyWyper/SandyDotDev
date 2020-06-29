@@ -12,7 +12,7 @@ const ArticleCard = props => {
           <div className="scale-div">
             <Img
               className="w-40 h-32 rounded-md shadow"
-              fluid={data.cover.childImageSharp.fluid}
+              fluid={{ ...data.cover.childImageSharp.fluid, sizes: "200px" }}
             />
           </div>
           <div className="md:ml-4">

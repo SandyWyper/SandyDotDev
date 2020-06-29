@@ -20,7 +20,10 @@ const LatestBlogPost = () => {
               description
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 1500) {
+                  fluid(
+                    maxWidth: 600
+                    srcSetBreakpoints: [300, 400, 500, 600]
+                  ) {
                     ...GatsbyImageSharpFluid
                   }
                 }

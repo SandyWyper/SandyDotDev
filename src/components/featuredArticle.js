@@ -9,7 +9,10 @@ const FeaturedArticle = props => {
     <section className="max-w-2xl mx-auto mb-16 rounded-lg">
       <div className="flex-col items-center md:flex">
         <Img
-          fluid={data.cover.childImageSharp.fluid}
+          fluid={{
+            ...data.cover.childImageSharp.fluid,
+            sizes: "(min-width: 768px) 505px, 80vw",
+          }}
           className="w-10/12 m-4 mx-auto md:w-2/3"
         />
         <Link to={props.path}>
