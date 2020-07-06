@@ -24,7 +24,7 @@ const LatestBlogPost = () => {
                     maxWidth: 600
                     srcSetBreakpoints: [300, 400, 500, 600]
                   ) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }

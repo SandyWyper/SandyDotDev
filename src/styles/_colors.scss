@@ -23,8 +23,9 @@
   --textContrast: #b1b2b2;
   --backgroundContrast: #1A202C; // gray-900 tailwind
   --background: #F0F7F4; // custom-gray
-  --primary: #70abaF; // custom-blue
-  --secondary: #99E1D9; // custom-turq
+  // --primary: #70abaF; // custom-blue
+  --primary: #99E1D9; // custom-turq
+  --secondary: #70abaF; // custom-turq
   --layoutBorder: #d0d5d3; // "custom-mono-2"
 }
 
@@ -114,12 +115,14 @@ input:checked~.toggle__dot {
   transition: background-color 500ms linear;
 }
 
-.contact-field-background {
+.contact-field {
   background-color: var(--layoutBorder);
-  transition: background-color 500ms linear;
+  border-color: var(--primary);
+  transition: background-color 500ms linear, border-color 500ms linear;
 }
 
-.contact-field-background:focus {
+.contact-field:focus {
   background-color: var(--background);
-  transition: background-color 500ms linear;
+  border-color: var(--secondary);
+  transition: background-color 500ms linear, border-color 500ms linear;
 }

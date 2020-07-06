@@ -5,10 +5,11 @@ import TopNav from "../components/topNav"
 import MobileNav from "../components/mobileNav"
 import PropTypes from "prop-types"
 import { ThemeProvider } from "../components/darkThemeContext"
+import ReturnToTopArrow from "../components/returnToTopArrow"
 
 const Layout = ({ pageContext, children, location }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden" id="wrapper">
       <ThemeProvider>
         <MobileNav />
         {pageContext.homeLayout ? (
@@ -41,6 +42,7 @@ const Layout = ({ pageContext, children, location }) => {
         )}
         <Footer />
       </ThemeProvider>
+      <ReturnToTopArrow />
     </div>
   )
 }

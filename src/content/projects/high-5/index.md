@@ -38,7 +38,7 @@ There is [this](https://mapstyle.withgoogle.com/) fantastic resource from google
 ### The Places API
 
 When you make the initial call to the Maps API, you pass an object with some key value pairs. In there is your API key and a list of any other libraries that you may want to utilise. The Places library lets you query all the information that google has on businesses, local landmarks and the precise location of... well, everything. Google is just about omnipotent, so it's understating the fact to call this a powerful tool. In this project I use the Places Autocomplete functionality, which seems to instantly update the text input with place name suggestions. I set this to UK suggestions only to improve the likelihood of a match.
-When you init a Google Maps instance, other method become available. You can then query for 'places' a certain search radius from a location of a certain business type. In the example below, 'searchRadius' and 'establishmentType' are variables set from the user input.
+When you initiate a Google Maps instance, other methods become available. You can then query for 'places' a certain search radius from a location of a certain business type. In the example below, 'searchRadius' and 'establishmentType' are variables set from the user input.
 
 ```javascript
 let latitude = parseFloat(location.coords.lat)
@@ -54,7 +54,7 @@ let service = new google.maps.places.PlacesService(map)
 service.nearbySearch(request, searchPlaces)
 ```
 
-The data received contains a lot of what we need, but not all of it. First though, we can extract the average rating, and number of ratings. We use to top 5 rated, out of a possible 60, so long as it has more than 5 reviews. Then we can then perform another method on the Place library, `getDetails()` on only the 5 business we want details for using each one's unique place id.
+The data received contains a lot of the data we need, but not all of it. First though, we can extract the average rating, and number of ratings. We use to top 5 rated, out of a possible 60, so long as it has more than 5 reviews. Then we can then perform another method on the Place library, `getDetails()` on only the 5 business we want details for using each one's unique place id.
 
 ```javascript
 topFive.forEach(function (shop) {

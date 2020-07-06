@@ -16,11 +16,11 @@ export const COLORS = {
     dark: "#1a212d",
   },
   primary: {
-    light: "#70abaF",
+    light: "#99E1D9",
     dark: "#186a70",
   },
   secondary: {
-    light: "#99E1D9",
+    light: "#70abaF",
     dark: "#99E1D9",
   },
   layoutBorder: {

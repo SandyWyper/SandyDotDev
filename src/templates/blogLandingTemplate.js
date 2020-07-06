@@ -80,7 +80,7 @@ export const blogListQuery = graphql`
             cover {
               childImageSharp {
                 fluid(maxWidth: 1500) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

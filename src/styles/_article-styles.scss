@@ -28,8 +28,9 @@
     height: 1px;
     content: "";
     bottom: -4px;
-    @apply bg-custom-blue left-0 right-0 absolute w-full;
-    transition: height 200ms ease-in-out;
+    @apply left-0 right-0 absolute w-full;
+    transition: height 200ms ease-in-out, background-color 500ms linear;
+    background-color: var(--primary);
   }
 
   a:hover:before {
@@ -48,7 +49,8 @@
   }
 
   blockquote:before {
-    @apply bg-custom-blue;
+    background-color: var(--primary);
+    transition: background-color 500ms linear;
     content: "";
     position: absolute;
     height: 100%;

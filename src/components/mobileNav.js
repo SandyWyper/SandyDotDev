@@ -98,7 +98,7 @@ const MobileNav = () => {
             </div>
           )}
           <ul className="flex justify-around px-8 mb-8">
-            <li className="w-8 h-8 text-secondary">
+            <li className="w-8 h-8 text-primary">
               <Link to="/" onClick={toggle} onKeyDown={handleKeyDown}>
                 <svg className="fill-current" viewBox="0 0 63.699 63.699">
                   <g>
@@ -158,7 +158,7 @@ const MobileNav = () => {
             </li>
           </ul>
           <ul>
-            <li className="text-3xl text-secondary">
+            <li className="text-3xl text-primary">
               <Link to="/projects" onClick={toggle} onKeyDown={handleKeyDown}>
                 Projects
               </Link>
@@ -174,7 +174,7 @@ const MobileNav = () => {
                 </Link>
               </li>
             ))}
-            <li className="pt-2 text-3xl text-secondary">
+            <li className="pt-2 text-3xl text-primary">
               <Link to="/blog" onClick={toggle} onKeyDown={handleKeyDown}>
                 Blog
               </Link>
@@ -190,7 +190,7 @@ const MobileNav = () => {
                 </Link>
               </li>
             ))}
-            <li className="pt-2 text-3xl text-secondary">
+            <li className="pt-2 text-3xl text-primary">
               <Link to="/contact" onClick={toggle} onKeyDown={handleKeyDown}>
                 Contact
               </Link>
