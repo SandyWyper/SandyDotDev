@@ -5,7 +5,6 @@ import { useSpring, animated } from "react-spring"
 
 const ReturnToTopArrow = () => {
   const [isShown, setIsShown] = useState(false)
-  const rendersCount = useRef(0)
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
