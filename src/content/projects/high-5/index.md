@@ -31,9 +31,9 @@ Of course, you could just type into google what you are looking for and be prese
 
 Building this taught me a lot, and to go through every step could get a little laborious, so I'll just break it down into a few key takeaways.
 
-### Customising the styling of a google map.
+### Styling a google map.
 
-There is [this](https://mapstyle.withgoogle.com/) fantastic resource from google. It has a nifty interface that lets you tweak all the colours and determine how detailed you want your map to be; ie. the quantity of roads, labels and landmarks that are displayed. Without this tool, you would need to have an intimate knowledge of the settings and make numerous API calls while you edit them. You then just export the settings in JSON, and include them as one of the options with your map request API call.
+You can totally customise how the map is presented by passing a JSON array along with your MapsAPI request. I've written a short article about it you [can checkout here](/blog/styling-google-maps).
 
 ### The Places API
 

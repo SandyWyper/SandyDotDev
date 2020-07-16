@@ -7,7 +7,7 @@ cover: "./shopify.jpg"
 tags:
   - "Shopify"
   - "e-commerce"
-  - "image handling"
+  - "images"
 ---
 
 ##### Have you spent hours and hours processing images to reduce file size in order to speed up your Shopify site? Well, you shouldn't!

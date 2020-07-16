@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import useScrollPosition from "../lib/useScrollPosition"
 import { useSpring, animated } from "react-spring"
