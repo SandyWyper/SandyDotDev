@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import LinkedInLink from "./linkedInLink"
-import GitHubLink from "./gitHubLink"
+// import LinkedInLink from "./linkedInLink"
+// import GitHubLink from "./gitHubLink"
 import PropTypes from "prop-types"
 import NavTitle from "./navTitle"
 import HomeLinkIcon from "./homeLinkIcon"
@@ -31,12 +31,12 @@ const TopNav = props => {
           <li className="hidden w-12 md:block">
             <HomeLinkIcon />
           </li>
-          <li className="hidden w-12 md:block">
+          {/* <li className="hidden w-12 md:block">
             <LinkedInLink />
           </li>
           <li className="hidden w-12 md:block">
             <GitHubLink />
-          </li>
+          </li> */}
           <li className="hidden w-12 mr-2 md:block">
             <DarkToggle mobileNav={false} />
           </li>
@@ -45,6 +45,7 @@ const TopNav = props => {
     </nav>
   )
 }
+
 TopNav.propTypes = {
   title: PropTypes.string,
 }
