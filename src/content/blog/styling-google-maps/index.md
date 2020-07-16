@@ -40,7 +40,7 @@ I'm not going to get into initiating the Google client, or how to parse location
 
 Here you can see that I have turned off all additional controls to de-clutter the map window. These can be distracting, and perhaps offer users functionality that they just don't need.
 
-![Cornwall - dark theme map](assasins-creed-cornwall.png)
+![Cornwall - dark theme map](/assassins-creed-cornwall.png)
 
 The final value is **styles**. Here I have referenced a variable that I store in a different file, as it's quite large and would clutter up the code to have it sat there. See below ...
 
