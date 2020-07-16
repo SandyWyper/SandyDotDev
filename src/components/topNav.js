@@ -9,7 +9,7 @@ import DarkToggle from "./darkModeToggle"
 
 const TopNav = props => {
   return (
-    <nav className="z-30 shadow-md top-nav background-primary">
+    <nav className="relative z-30 shadow-md top-nav background-primary">
       <div className="container flex items-center w-full p-3 mx-auto top-nav-content">
         <NavTitle title={props.title} />
         <ul className="flex items-center justify-end w-full">
