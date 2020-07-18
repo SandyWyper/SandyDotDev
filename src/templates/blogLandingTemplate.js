@@ -77,6 +77,7 @@ export const blogListQuery = graphql`
             tags
             posttype
             description
+            coverAlt
             cover {
               childImageSharp {
                 fluid(maxWidth: 1500) {

@@ -4,6 +4,7 @@ title: "Implementing Responsive Images In Shopify"
 description: "Using responsive image source sets shouldn't be a hassle. In fact with this snippet, you'll never have to think about it again. With lazy loading and lazy sizes you can deliver near perfect sized images on any screen."
 category: "Shopify"
 cover: "./framed.jpg"
+coverAlt: "Empty picture frame - Sizing images"
 tags:
   - "Shopify"
   - "e-commerce"

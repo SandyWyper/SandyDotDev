@@ -4,6 +4,7 @@ title: "Styling a Google Map"
 description: "Google Maps will often stick out like a sore thumb on your thoughtfully designed site.  You can tailor it to look and function exactly how you like.  Here's how."
 category: "Google"
 cover: "./map-pins.jpg"
+coverAlt: "Pins on an old map."
 tags:
   - "Google"
   - "Maps"

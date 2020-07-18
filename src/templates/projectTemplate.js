@@ -19,6 +19,7 @@ const ProjectTemplate = props => {
               <Img
                 className="mb-4"
                 fluid={frontmatter.cover.childImageSharp.fluid}
+                alt={frontmatter.coverAlt}
               />
               <div className="flex-col flex-wrap md:flex sm:flex-row sm:items-center sm:px-0 md:w-full">
                 <h2 className="mb-2 leading-none sm:mb-4">
@@ -100,6 +101,7 @@ export const pageQuery = graphql`
         tags
         repository
         live
+        coverAlt
         cover {
           childImageSharp {
             fluid(

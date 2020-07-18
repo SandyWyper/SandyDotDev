@@ -4,6 +4,7 @@ title: "How to handle images in Shopify"
 description: "Have you spent hours and hours processing images to reduce file size in order to speed up your Shopify site?  Well don't."
 category: "Shopify"
 cover: "./shopify.jpg"
+coverAlt: "Shopify logo"
 tags:
   - "Shopify"
   - "e-commerce"

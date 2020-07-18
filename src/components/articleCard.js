@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 const ArticleCard = props => {
   const data = props.articleDetails
+  console.log(data)
   return (
     <Link to={props.path}>
       <div className="relative z-10 p-4 py-8 card-hover">
@@ -13,6 +14,7 @@ const ArticleCard = props => {
             <Img
               className="w-40 h-32 rounded-md shadow"
               fluid={{ ...data.cover.childImageSharp.fluid, sizes: "200px" }}
+              alt={data.coverAlt}
             />
           </div>
           <div className="md:ml-4">

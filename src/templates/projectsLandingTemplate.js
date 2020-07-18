@@ -92,6 +92,7 @@ export const projectListQuery = graphql`
             tags
             posttype
             description
+            coverAlt
             cover {
               childImageSharp {
                 fluid(maxWidth: 1500) {

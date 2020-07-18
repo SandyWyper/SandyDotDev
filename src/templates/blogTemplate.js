@@ -19,6 +19,7 @@ const BlogTemplate = props => {
               <Img
                 className="mb-4"
                 fluid={frontmatter.cover.childImageSharp.fluid}
+                alt={frontmatter.coverAlt}
               />
               <div className="flex flex-col flex-wrap px-2 sm:flex-row sm:items-center sm:px-0">
                 <h2 className="mb-2 leading-none sm:mb-4">
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
         category
         date(formatString: "DD/MM/YYYY")
         tags
+        coverAlt
         cover {
           childImageSharp {
             fluid(maxWidth: 1500, sizes: "(min-width: 600px) 470px, 95vw") {
