@@ -20,6 +20,7 @@ const BlogTemplate = props => {
                 className="mb-4"
                 fluid={frontmatter.cover.childImageSharp.fluid}
                 alt={frontmatter.coverAlt}
+                loading="eager"
               />
               <div className="flex flex-col flex-wrap px-2 sm:flex-row sm:items-center sm:px-0">
                 <h2 className="mb-2 leading-none sm:mb-4">
@@ -64,7 +65,10 @@ export const pageQuery = graphql`
         coverAlt
         cover {
           childImageSharp {
-            fluid(maxWidth: 1500, sizes: "(min-width: 600px) 470px, 95vw") {
+            fluid(
+              sizes: "(max-width: 600px) 95vw, 600px"
+              srcSetBreakpoints: [300, 500, 700, 1000, 1200]
+            ) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
