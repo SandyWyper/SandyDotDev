@@ -105,7 +105,7 @@ export const pageQuery = graphql`
         cover {
           childImageSharp {
             fluid(
-              sizes: "(max-width: 600px) 95vw, 470px"
+              sizes: "(max-width: 600px) 95vw, 600px"
               srcSetBreakpoints: [300, 500, 700, 1000, 1200]
             ) {
               ...GatsbyImageSharpFluid_withWebp
