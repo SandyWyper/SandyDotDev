@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 
 const ArticleCard = props => {
   const data = props.articleDetails
-  console.log(data)
   return (
     <Link to={props.path}>
       <div className="relative z-10 p-4 py-8 card-hover">

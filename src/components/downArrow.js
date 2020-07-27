@@ -8,7 +8,6 @@ const DownArrow = () => {
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const show = currPos.y > -350
-      console.log("show: ", show, "isShown:", isShown, currPos.y)
       if (show !== isShown) setIsShown(show)
     },
     [isShown],
