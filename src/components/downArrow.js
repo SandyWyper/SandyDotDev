@@ -1,43 +1,27 @@
-import React, { useState, useLayoutEffect } from "react"
+import React, { useState } from "react"
 import { Spring } from "react-spring/renderprops"
+import useScrollPosition from "../lib/useScrollPosition"
 
 const DownArrow = () => {
-  const [isArrowVisible, setVisible] = useState(true)
+  const [isShown, setIsShown] = useState(true)
 
-  //scroll event throttler to stop the browser from overworking
-  let scrollTimeout
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      const show = currPos.y > -350
+      console.log("show: ", show, "isShown:", isShown, currPos.y)
+      if (show !== isShown) setIsShown(show)
+    },
+    [isShown],
+    undefined,
+    undefined,
+    400
+  )
 
-  const checkScrollHeight = () => {
-    if (window.scrollY > 350) {
-      setVisible(false)
-      window.removeEventListener("scroll", scrollThrottler)
-      window.clearTimeout(scrollTimeout)
-    }
-  }
-
-  function scrollThrottler() {
-    // ignore scroll events as long as an checkScroll execution is in the queue
-    if (!scrollTimeout) {
-      scrollTimeout = setTimeout(function () {
-        scrollTimeout = null
-        checkScrollHeight()
-
-        // The checkScroll will execute at a rate of
-      }, 200)
-    }
-  }
-
-  useLayoutEffect(() => {
-    window.addEventListener("scroll", scrollThrottler)
-    return function cleanup() {
-      window.removeEventListener("scroll", scrollThrottler)
-    }
-  })
   return (
     <Spring
       from={{ opacity: 0, bottom: -30, position: "absolute" }}
       to={{
-        opacity: isArrowVisible ? 1 : 0,
+        opacity: isShown ? 1 : 0,
         bottom: -80,
         position: "absolute",
         right: 0,

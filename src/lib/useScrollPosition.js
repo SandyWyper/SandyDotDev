@@ -26,7 +26,7 @@ const useScrollPosition = (effect, deps, element, useWindow, wait) => {
     }
     const handleScroll = () => {
       if (wait) {
-        if (throttleTimeout === null) {
+        if (throttleTimeout.current === null) {
           throttleTimeout.current = setTimeout(callBack, wait)
         }
       } else {

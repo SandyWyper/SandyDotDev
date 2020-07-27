@@ -11,7 +11,10 @@ const ReturnToTopArrow = () => {
       const reveal = currPos.y < -1000
       if (reveal !== isShown) setIsShown(reveal)
     },
-    [isShown]
+    [isShown],
+    undefined,
+    undefined,
+    600
   )
 
   const appearSpring = useSpring({
