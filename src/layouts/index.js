@@ -8,7 +8,7 @@ import ReturnToTopArrow from "../components/returnToTopArrow"
 
 const Layout = ({ pageContext, children, location }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden" id="wrapper">
+    <div className="min-h-screen overflow-hidden" id="wrapper">
       <ThemeProvider>
         {pageContext.homeLayout ? (
           <TransitionProvider location={location}>
