@@ -27,8 +27,8 @@ h2 {
 }
 
 h3 {
-  // font-family: "Inconsolata", "Times New Roman", serif;
-  font-family: "Raleway", "Times New Roman", serif;
+  font-family: "Inconsolata", "Times New Roman", serif;
+  // font-family: "Raleway", "Times New Roman", serif;
 
   font-size: 2.4rem;
   font-weight: bold;
@@ -50,11 +50,11 @@ h4 {
 
 h5 {
   font-family: "Inconsolata", "Times New Roman", serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 
   @apply leading-tight;
 
-  @screen md {
+  @screen xsm {
     font-size: 1.6rem;
   }
 }

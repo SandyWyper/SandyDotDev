@@ -74,7 +74,7 @@ const MobileNav = () => {
   })
 
   return (
-    <div className="absolute top-0 right-0 mt-1 md:hidden">
+    <div className="absolute top-0 right-0 mt-2 md:hidden">
       <button
         onClick={toggle}
         className={`hamburger hamburger--collapse md:hidden relative ${

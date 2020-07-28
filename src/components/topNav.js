@@ -15,7 +15,7 @@ const TopNav = props => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const show = currPos.y === 0 || currPos.y > prevPos.y
+      const show = currPos.y > -60 || currPos.y > prevPos.y
       if (show !== isShown) setIsShown(show)
     },
     [isShown],
@@ -25,7 +25,7 @@ const TopNav = props => {
   )
 
   const revealSpring = useSpring({
-    marginTop: isShown ? "0rem" : "-3.3rem",
+    marginTop: isShown ? "0rem" : "-4rem",
     config: { mass: 1, tension: 200, friction: 30 },
   })
 

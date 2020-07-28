@@ -18,7 +18,7 @@ const Layout = ({ pageContext, children, location }) => {
         ) : (
           <>
             <TopNav title={pageContext.navTitle} />
-            <div style={{ height: "3.3rem" }} />
+            <div style={{ height: "3.7rem" }} />
             <TransitionProvider
               location={location}
               mode="successive"

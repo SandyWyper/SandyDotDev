@@ -31,11 +31,11 @@ const HomeTopFold = () => {
           I'm a born again web developer who's into learning things and building
           stuff.
         </h5>
-        <ul>
-          <li className="scale-hover-2">
+        <ul className="flex mt-4">
+          <li className="w-10 h-10 mr-8 scale-hover-2">
             <LinkedInLink />
           </li>
-          <li className="scale-hover-2">
+          <li className="w-10 h-10 scale-hover-2">
             <GitHubLink />
           </li>
         </ul>

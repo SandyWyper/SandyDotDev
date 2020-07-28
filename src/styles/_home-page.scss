@@ -1,20 +1,47 @@
 .top-fold {
+  min-height: 550px;
   height: 85vh;
   position: relative;
   z-index: 2;
   background: hsla(173, 55, 74, 1);
-  background: linear-gradient(-45deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
-  background: -moz-linear-gradient(-45deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
-  background: -webkit-linear-gradient(-45deg, hsla(173, 55, 74, 1) 0%, hsla(184, 28, 56, 0.9) 100%);
-  filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr="#99E1D9", endColorstr="#70ABAF", GradientType=1)";
+  background: linear-gradient(
+    -45deg,
+    hsla(173, 55, 74, 1) 0%,
+    hsla(184, 28, 56, 0.9) 100%
+  );
+  background: -moz-linear-gradient(
+    -45deg,
+    hsla(173, 55, 74, 1) 0%,
+    hsla(184, 28, 56, 0.9) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    hsla(173, 55, 74, 1) 0%,
+    hsla(184, 28, 56, 0.9) 100%
+  );
+  filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr=" #99e1d9
+    ", endColorstr=" #70abaf ", GradientType=1)";
   transition: background-color 500ms linear;
 
   &.dark-theme-background {
     background: hsla(184, 65%, 27%, 1);
-    background: linear-gradient(45deg, hsla(184, 65%, 27%, 1) 0%, hsla(320, 10%, 18%, 1) 100%);
-    background: -moz-linear-gradient(45deg, hsla(184, 65%, 27%, 1) 0%, hsla(320, 10%, 18%, 1) 100%);
-    background: -webkit-linear-gradient(45deg, hsla(184, 65%, 27%, 1) 0%, hsla(320, 10%, 18%, 1) 100%);
-    filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr="#186A70", endColorstr="#32292F", GradientType=1)";
+    background: linear-gradient(
+      45deg,
+      hsla(184, 65%, 27%, 1) 0%,
+      hsla(320, 10%, 18%, 1) 100%
+    );
+    background: -moz-linear-gradient(
+      45deg,
+      hsla(184, 65%, 27%, 1) 0%,
+      hsla(320, 10%, 18%, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      hsla(184, 65%, 27%, 1) 0%,
+      hsla(320, 10%, 18%, 1) 100%
+    );
+    filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr=" #186a70
+      ", endColorstr=" #32292f ", GradientType=1)";
     transition: background-color 500ms linear;
   }
 
@@ -25,8 +52,6 @@
   }
 
   div {
-
-
     h1 {
       font-family: "Megrim", "Courier", sans-serif;
       font-size: 2rem;
@@ -41,7 +66,6 @@
       font-family: "Raleway", "Times New Roman", serif;
       font-size: 2.3rem;
 
-
       @screen md {
         font-size: 3rem;
       }
@@ -53,14 +77,6 @@
 
       @screen md {
         font-size: 2rem;
-      }
-    }
-
-    ul {
-      @apply flex;
-
-      li a svg {
-        @apply w-16 h-16 pr-8;
       }
     }
   }
@@ -90,10 +106,23 @@
 .latest-article:after {
   @apply absolute right-0 top-0 rounded-lg text-right p-4 w-full h-full z-0 -mt-8;
   content: "latest";
-  color: #32292F;
+  color: #32292f;
   background: hsl(0, 0, 100);
-  background: linear-gradient(75deg, hsla(0, 0, 100, 0) 69%, hsla(154, 30, 95, 0.5) 100%);
-  background: -moz-linear-gradient(75deg, hsla(0, 0, 100, 0) 69%, hsla(154, 30, 95, 0.5) 100%);
-  background: -webkit-linear-gradient(75deg, hsla(0, 0, 100, 0) 69%, hsla(154, 30, 95, 0.5) 100%);
-  filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#99E1D9", GradientType=1 )";
+  background: linear-gradient(
+    75deg,
+    hsla(0, 0, 100, 0) 69%,
+    hsla(154, 30, 95, 0.5) 100%
+  );
+  background: -moz-linear-gradient(
+    75deg,
+    hsla(0, 0, 100, 0) 69%,
+    hsla(154, 30, 95, 0.5) 100%
+  );
+  background: -webkit-linear-gradient(
+    75deg,
+    hsla(0, 0, 100, 0) 69%,
+    hsla(154, 30, 95, 0.5) 100%
+  );
+  filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr=" #ffffff
+    ", endColorstr=" #99e1d9 ", GradientType=1 )";
 }

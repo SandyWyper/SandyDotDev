@@ -47,7 +47,7 @@ const ProjectList = props => {
               path={featuredPost.fields.slug}
             />
           )}
-
+          <hr />
           <div className="max-w-4xl px-4 pt-1 pb-12 mx-auto xl:px-0">
             {posts.map(({ node }, index) => (
               <div key={node.id}>

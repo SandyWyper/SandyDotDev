@@ -33,6 +33,7 @@ const BlogList = props => {
               path={featuredPost.fields.slug}
             />
           )}
+          <hr />
           <div className="max-w-4xl px-4 mx-auto xl:px-0">
             {posts.map(({ node }, index) => (
               <div key={node.id}>

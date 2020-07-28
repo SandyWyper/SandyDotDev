@@ -2,6 +2,12 @@ module.exports = {
   purge: false,
   theme: {
     extend: {
+      screens: {
+        xsm: "400px",
+        // md: "768px",
+        // lg: "992px",
+        // xl: "1200px",
+      },
       colors: {
         "custom-black": "#32292f",
         "custom-turq": "#99e1d9",
