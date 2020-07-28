@@ -28,8 +28,8 @@ export const COLORS = {
     dark: "#716e71",
   },
   blackAndWhite: {
-    light: "'0,0,0'",
-    dark: "'255,255,255'",
+    light: `'0,0,0'`,
+    dark: `'255,255,255'`,
   },
 }
 
