@@ -5,6 +5,7 @@ import HomeNav from "./homeNav"
 import DownArrow from "./downArrow"
 import { ThemeContext } from "./darkThemeContext"
 import DarkToggle from "./darkModeToggle"
+import MobileNav from "../components/mobileNav"
 
 const HomeTopFold = () => {
   const { colorMode } = React.useContext(ThemeContext)
@@ -15,6 +16,7 @@ const HomeTopFold = () => {
         colorMode === "dark" ? "dark-theme-background" : ""
       }`}
     >
+      <MobileNav />
       <div className="absolute top-0 right-0 hidden mt-8 mr-8 md:block">
         <DarkToggle />
       </div>

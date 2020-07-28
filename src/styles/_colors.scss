@@ -19,18 +19,19 @@
 // "custom-mono-7": "#32292f",
 
 :root {
-  --text: #32292F; //custom-black
+  --text: #32292f; //custom-black
   --textContrast: #b1b2b2;
-  --backgroundContrast: #1A202C; // gray-900 tailwind
-  --background: #F0F7F4; // custom-gray
+  --backgroundContrast: #1a202c; // gray-900 tailwind
+  --background: #f0f7f4; // custom-gray
   // --primary: #70abaF; // custom-blue
-  --primary: #99E1D9; // custom-turq
-  --secondary: #70abaF; // custom-turq
+  --primary: #99e1d9; // custom-turq
+  --secondary: #70abaf; // custom-turq
   --layoutBorder: #d0d5d3; // "custom-mono-2"
+  --blackAndWhite: 0, 0, 0;
 }
 
 .perma-dark {
-  color: #32292F;
+  color: #32292f;
 }
 
 .text {
@@ -89,13 +90,13 @@
 }
 
 .toggle__dot {
-  top: -.25rem;
-  left: -.25rem;
+  top: -0.25rem;
+  left: -0.25rem;
   transition: all 500ms ease-in-out;
   transition-property: color, transform, background-color;
 }
 
-input:checked~.toggle__dot {
+input:checked ~ .toggle__dot {
   transform: translateX(100%);
   background-color: var(--text);
 }

@@ -77,6 +77,12 @@ const MagicScriptTag = () => {
       ? '${COLORS.layoutBorder.light}'
       : '${COLORS.layoutBorder.dark}'
   );
+  root.style.setProperty(
+    '--blackAndWhite',
+    colorMode === 'light'
+      ? '${COLORS.blackAndWhite.light}'
+      : '${COLORS.blackAndWhite.dark}'
+  );
   root.style.setProperty('${INITIAL_COLOR_MODE_CSS_PROP}', colorMode);
 })()
   `

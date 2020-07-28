@@ -37,7 +37,11 @@
   }
 }
 
-
 .upArrow {
   transition: opacity 300ms linear;
+}
+
+.changing-shadow {
+  box-shadow: 0 4px 6px -1px rgba(var(--blackAndWhite), 0.1),
+    0 2px 4px -1px rgba(var(--blackAndWhite), 0.06);
 }

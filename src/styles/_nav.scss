@@ -37,12 +37,12 @@
 
 .top-nav {
   .top-nav-content {
-    min-height: 5rem;
+    min-height: 3.3rem;
   }
 
   .nav-title {
     font-family: "Megrim", "Courier", sans-serif;
-    font-size: 2.7rem;
+    font-size: 1.9rem;
     @apply leading-none font-bold absolute;
   }
 
@@ -53,8 +53,10 @@
     li {
       @screen md {
         @apply px-3;
-        font-family: "Inconsolata", "Times New Roman", serif;
         font-weight: bold;
+        // font-family: "Inconsolata", "Times New Roman", serif;
+        // font-family: "Megrim", "Courier", sans-serif;
+        font-family: "Raleway", "Times New Roman", serif;
       }
     }
   }

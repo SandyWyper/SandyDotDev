@@ -27,6 +27,10 @@ export const COLORS = {
     light: "#d0d5d3",
     dark: "#716e71",
   },
+  blackAndWhite: {
+    light: "0,0,0",
+    dark: "255,255,255",
+  },
 }
 
 export const COLOR_MODE_KEY = "color-mode"

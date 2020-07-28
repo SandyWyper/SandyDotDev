@@ -8,7 +8,7 @@ const ReturnToTopArrow = () => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const reveal = currPos.y < -1000
+      const reveal = currPos.y < -1000 && currPos.y > prevPos.y
       if (reveal !== isShown) setIsShown(reveal)
     },
     [isShown],
@@ -18,7 +18,7 @@ const ReturnToTopArrow = () => {
   )
 
   const appearSpring = useSpring({
-    marginBottom: isShown ? "2rem" : "-3rem",
+    marginBottom: isShown ? "1rem" : "-3rem",
   })
 
   return (
