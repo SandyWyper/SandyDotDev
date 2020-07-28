@@ -28,7 +28,7 @@ export const COLORS = {
     dark: "#716e71",
   },
   blackAndWhite: {
-    light: "1,0,0",
+    light: "2,0,0",
     dark: "255,255,255",
   },
 }
