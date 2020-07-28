@@ -9,8 +9,7 @@ import ReturnToTopArrow from "../components/returnToTopArrow"
 const Layout = ({ pageContext, children, location }) => {
   return (
     <div className="relative min-h-screen overflow-hidden" id="wrapper">
-      <ThemeProvider>
-        {/* <MobileNav /> */}
+      {children && <ThemeProvider>
         {pageContext.homeLayout ? (
           <TransitionProvider location={location}>
             <TransitionViews>{children}</TransitionViews>
@@ -39,7 +38,8 @@ const Layout = ({ pageContext, children, location }) => {
               <TransitionViews>{children}</TransitionViews>
             </TransitionProvider>
           </>
-        )}
+        )} }
+     
         <Footer />
       </ThemeProvider>
       <ReturnToTopArrow />
