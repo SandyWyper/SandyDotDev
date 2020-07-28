@@ -135,8 +135,8 @@ module.exports = {
         name: `SandyDotDev`,
         short_name: `SandyDev`,
         start_url: `/`,
-        background_color: `#70abaf`,
-        theme_color: `#70abaf`,
+        background_color: `#99E1D9`,
+        theme_color: `#99E1D9`,
         display: `fullscreen`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
