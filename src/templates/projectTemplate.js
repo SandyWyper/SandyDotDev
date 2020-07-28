@@ -12,7 +12,7 @@ const ProjectTemplate = props => {
         title="Projects"
         description={`${frontmatter.title} / ${frontmatter.description}`}
       />
-      <section className="background">
+      <section className="background nav-space">
         <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div>
             <div className="max-w-md px-4 pt-8 mx-auto">

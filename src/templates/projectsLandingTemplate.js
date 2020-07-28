@@ -24,7 +24,7 @@ const ProjectList = props => {
         title="Projects"
         description="Projects that I have built to learn how to build the things I previously couldn't."
       />
-      <section className="background">
+      <section className="background nav-space">
         <div className="container mx-auto border-solid md:border-l md:border-r border-color">
           <div className="lg:justify-between lg:flex">
             <div className="max-w-lg ml-auto">

@@ -25,7 +25,7 @@ const BlogList = props => {
         title="Blog"
         description="I talk about things that interest me, or show how to do things others might like to know."
       />
-      <section className="background">
+      <section className="background nav-space">
         <div className="container py-12 mx-auto border-solid md:border-l md:border-r border-color">
           {isFirst && (
             <FeaturedArticle
