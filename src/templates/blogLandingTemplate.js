@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+import TopNav from "../components/topNav"
 
 const BlogList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -20,7 +21,8 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <>
+    <Layout>
+      <TopNav />
       <SEO
         title="Blog"
         description="I talk about things that interest me, or show how to do things others might like to know."
@@ -57,7 +59,7 @@ const BlogList = props => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 
@@ -98,7 +100,7 @@ export const blogListQuery = graphql`
 
 BlogList.propTypes = {
   pageContext: PropTypes.object.isRequired,
-  path: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 }
+
 export default BlogList

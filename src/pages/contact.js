@@ -3,6 +3,8 @@ import { navigate } from "gatsby"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+import TopNav from "../components/topNav"
 
 const encode = data => {
   return Object.keys(data)
@@ -38,7 +40,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <>
+      <Layout>
+        <TopNav />
         <SEO
           title="Contact"
           description="I would love to hear from you, so please do get in touch."
@@ -159,7 +162,7 @@ class Contact extends Component {
             </div>
           </div>
         </section>
-      </>
+      </Layout>
     )
   }
 }

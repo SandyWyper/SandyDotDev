@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 // import LinkedInLink from "./linkedInLink"
 // import GitHubLink from "./gitHubLink"
 import PropTypes from "prop-types"
-import NavTitle from "./navTitle"
 import HomeLinkIcon from "./homeLinkIcon"
 import DarkToggle from "./darkModeToggle"
 import useScrollPosition from "../lib/useScrollPosition"
@@ -36,20 +35,31 @@ const TopNav = props => {
     >
       <MobileNav />
       <div className="container flex items-center w-full p-3 mx-auto top-nav-content">
-        <NavTitle title={props.title} />
+        <Link to="/" className="nav-title">
+          SandyDotDev
+        </Link>
+
         <ul className="flex items-center justify-end w-full">
           <li className="hidden md:block">
-            <Link to="/projects" activeClassName="" partiallyActive={true}>
+            <Link
+              to="/projects"
+              activeClassName="uppercase"
+              partiallyActive={true}
+            >
               Projects
             </Link>
           </li>
           <li className="hidden md:block">
-            <Link to="/blog" activeClassName="" partiallyActive={true}>
+            <Link to="/blog" activeClassName="uppercase" partiallyActive={true}>
               Blog
             </Link>
           </li>
           <li className="hidden md:block">
-            <Link to="/contact" activeClassName="" partiallyActive={true}>
+            <Link
+              to="/contact"
+              activeClassName="uppercase"
+              partiallyActive={true}
+            >
               Contact
             </Link>
           </li>

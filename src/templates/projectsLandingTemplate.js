@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+import TopNav from "../components/topNav"
 
 const ProjectList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -19,7 +21,8 @@ const ProjectList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <>
+    <Layout>
+      <TopNav />
       <SEO
         title="Projects"
         description="Projects that I have built to learn how to build the things I previously couldn't."
@@ -71,7 +74,7 @@ const ProjectList = props => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 

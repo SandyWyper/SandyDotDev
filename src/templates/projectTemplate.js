@@ -2,12 +2,16 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+import TopNav from "../components/topNav"
+import PropTypes from "prop-types"
 
 const ProjectTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
   return (
-    <>
+    <Layout>
+      <TopNav />
       <SEO
         title="Projects"
         description={`${frontmatter.title} / ${frontmatter.description}`}
@@ -87,7 +91,7 @@ const ProjectTemplate = props => {
           {/* Maybe a link to the next article */}
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 
@@ -118,4 +122,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+ProjectTemplate.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
 export default ProjectTemplate
