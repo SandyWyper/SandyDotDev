@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
+import Link from "gatsby-plugin-transition-link"
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
-import TopNav from "../components/topNav"
+// import Layout from "../components/layout"
+// import TopNav from "../components/topNav"
 
 const BlogList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -21,14 +22,14 @@ const BlogList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <Layout>
-      <TopNav />
+    <>
       <SEO
         title="Blog"
         description="I talk about things that interest me, or show how to do things others might like to know."
       />
-      <section className="background nav-space">
-        <div className="container py-12 mx-auto border-solid md:border-l md:border-r border-color">
+      <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
+        <div className="md:col-span-2 md:w-full xl:col-span-1" />
+        <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
           {isFirst && (
             <FeaturedArticle
               articleDetails={featuredPost.frontmatter}
@@ -36,7 +37,7 @@ const BlogList = props => {
             />
           )}
           <hr />
-          <div className="max-w-4xl px-4 mx-auto xl:px-0">
+          <div className="max-w-4xl xl:px-0">
             {posts.map(({ node }, index) => (
               <div key={node.id}>
                 <ArticleCard
@@ -59,7 +60,7 @@ const BlogList = props => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

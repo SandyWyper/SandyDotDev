@@ -10,6 +10,7 @@ html {
 h1 {
   font-family: "Raleway", "Times New Roman", serif;
   font-size: 3.5rem;
+  color: var(--text);
 
   @screen md {
     font-size: 4rem;
@@ -20,7 +21,7 @@ h2 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 3rem;
   font-weight: bold;
-
+  color: var(--text);
   @screen md {
     font-size: 3rem;
   }
@@ -29,7 +30,7 @@ h2 {
 h3 {
   font-family: "Inconsolata", "Times New Roman", serif;
   // font-family: "Raleway", "Times New Roman", serif;
-
+  color: var(--text);
   font-size: 2.4rem;
   font-weight: bold;
 
@@ -41,6 +42,7 @@ h3 {
 h4 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 2.3rem;
+  color: var(--text);
   @apply leading-tight;
 
   @screen md {
@@ -51,10 +53,10 @@ h4 {
 h5 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 1.4rem;
-
+  color: var(--text);
   @apply leading-tight;
 
-  @screen xsm {
+  @screen sm {
     font-size: 1.6rem;
   }
 }
@@ -62,7 +64,7 @@ h5 {
 p {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 1rem;
-
+  color: var(--text);
   @screen md {
     font-size: 1rem;
   }
@@ -72,6 +74,7 @@ blockquote {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-weight: normal;
   font-style: italic;
+  color: var(--text);
 }
 
 .font-zilla {
@@ -85,6 +88,7 @@ blockquote {
   position: relative;
   width: fit-content;
   z-index: 1;
+  color: var(--text);
 }
 
 .section-header:before {
@@ -96,7 +100,7 @@ blockquote {
   z-index: -1;
   left: -10px;
   bottom: -2px;
-  transition: width 200ms linear;
+  transition: width 400ms ease-in-out;
   background: var(--primary);
 }
 

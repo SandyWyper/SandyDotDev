@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-// import DarkToggle from "./darkModeToggle"
+import Link from "gatsby-plugin-transition-link"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const HomeNav = () => {
   return (
@@ -15,9 +15,6 @@ const HomeNav = () => {
         <li className="">
           <Link to="/contact">Contact</Link>
         </li>
-        {/* <li className="hidden w-12 mr-2 md:block">
-          <DarkToggle mobileNav={false} />
-        </li> */}
       </ul>
     </nav>
   )

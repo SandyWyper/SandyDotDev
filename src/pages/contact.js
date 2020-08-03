@@ -3,8 +3,8 @@ import { navigate } from "gatsby"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
-import TopNav from "../components/topNav"
+// import Layout from "../components/layout"
+// import TopNav from "../components/topNav"
 
 const encode = data => {
   return Object.keys(data)
@@ -40,20 +40,21 @@ class Contact extends Component {
 
   render() {
     return (
-      <Layout>
-        <TopNav />
+      <>
+        {/* <TopNav /> */}
         <SEO
           title="Contact"
           description="I would love to hear from you, so please do get in touch."
         />
-        <section className="background">
-          <div className="container min-h-screen pt-12 mx-auto border-solid md:border-l md:border-r border-color">
-            <div className="mt-8 lg:flex">
-              <div className="w-full px-6 mb-8 lg:w-1/2">
+        <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
+          <div className="md:col-span-2 md:w-full xl:col-span-1" />
+          <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
+            <div className="mt-8">
+              <div className="w-full pr-12 mb-8 text-right">
                 <h4>Get in touch!</h4>
                 <h5>I'll get back to you as soon as I can.</h5>
               </div>
-              <div className="w-full px-4 md:w-3/4 lg:w-1/2">
+              <div className="w-full pr-12">
                 <form
                   className="w-full max-w-xl mx-auto"
                   method="post"
@@ -162,7 +163,7 @@ class Contact extends Component {
             </div>
           </div>
         </section>
-      </Layout>
+      </>
     )
   }
 }

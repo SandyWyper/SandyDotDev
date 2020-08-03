@@ -1,15 +1,14 @@
 import React from "react"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import TopNav from "../components/topNav"
+import Link from "gatsby-plugin-transition-link"
 
 const Thankyou = () => (
-  <Layout>
-    <TopNav />
+  <>
+    {/* <TopNav /> */}
     <SEO title="Thankyou" />
-    <section className="background">
-      <div className="container h-full min-h-screen p-8 pt-12 mx-auto border-solid md:border-l md:border-r border-color">
+    <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
+      <div className="md:col-span-2 md:w-full xl:col-span-1" />
+      <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
         <p className="max-w-md mb-12 lead">
           Your message has been submitted successfully.
           <br />
@@ -20,7 +19,7 @@ const Thankyou = () => (
         </Link>
       </div>
     </section>
-  </Layout>
+  </>
 )
 
 export default Thankyou

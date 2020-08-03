@@ -2,24 +2,28 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
-import TopNav from "../components/topNav"
+// import Layout from "../components/layout"
+// import TopNav from "../components/topNav"
 import PropTypes from "prop-types"
 
 const BlogTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
-      <TopNav />
+    <>
+      {/* <TopNav /> */}
       <SEO
         title="Blog"
         description={`${frontmatter.title} / ${frontmatter.description}`}
       />
-      <section className="background nav-space">
+      {/* <section className="background nav-space">
         <div className="container mx-auto border-solid md:border-l md:border-r border-color">
-          <div>
-            <div className="max-w-md px-4 pt-8 mx-auto">
+          <div> */}
+      <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
+        <div className="md:col-span-2 md:w-full xl:col-span-1" />
+        <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
+          <div className="max-w-md px-4 mx-auto">
+            <div>
               <Img
                 className="mb-4"
                 fluid={frontmatter.cover.childImageSharp.fluid}
@@ -54,7 +58,7 @@ const BlogTemplate = props => {
           {/* Maybe a link to the next article */}
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

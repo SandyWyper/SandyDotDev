@@ -1,5 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Link from "gatsby-plugin-transition-link"
 import ArticleCard from "./articleCard"
 
 const LatestBlogPost = () => {

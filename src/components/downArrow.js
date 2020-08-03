@@ -26,7 +26,7 @@ const DownArrow = () => {
         right: 0,
         left: 0,
       }}
-      config={{ tension: 100, friction: 19, mass: 4, delay: 200 }}
+      config={{ tension: 100, friction: 30, mass: 4, delay: 200 }}
     >
       {props => (
         <div style={props}>

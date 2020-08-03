@@ -30,7 +30,7 @@ const DarkToggle = props => {
         ></div>
 
         <div
-          className={`absolute inset-y-0 left-0 w-6 h-6 p-1 rounded-full shadow toggle__dot background-text text-contrast ${
+          className={`absolute left-0 w-6 h-6 p-1 rounded-full shadow toggle__dot background-text text-contrast ${
             props.mobileNav ? "border-2 border-text-contrast" : ""
           }`}
         >

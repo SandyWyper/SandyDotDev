@@ -1,11 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import Link from "gatsby-plugin-transition-link"
 import PropTypes from "prop-types"
 import ArticleCard from "../components/articleCard"
 import FeaturedArticle from "../components/featuredArticle"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
-import TopNav from "../components/topNav"
 
 const ProjectList = props => {
   // render navigation between blog-listing pages if there are more then one.
@@ -21,28 +20,28 @@ const ProjectList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    <Layout>
-      <TopNav />
+    <>
       <SEO
         title="Projects"
         description="Projects that I have built to learn how to build the things I previously couldn't."
       />
-      <section className="background nav-space">
-        <div className="container mx-auto border-solid md:border-l md:border-r border-color">
-          <div className="lg:justify-between lg:flex">
+      <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
+        <div className="md:col-span-2 md:w-full xl:col-span-1" />
+        <div className="container py-12 md:pr-4 md:col-span-3 md:col-3/5 xl:col-2/4">
+          {/* <div className="lg:justify-between lg:flex">
             <div className="max-w-lg ml-auto">
               <div className="relative p-6 text-right">
                 <blockquote className="z-10 text-xl">
                   “For the things we have to learn before we can do them, we
                   learn by doing them.”
                 </blockquote>
-                <p>- Aristotle</p>
-                {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
+                <p>- Aristotle</p> */}
+          {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
                 <AristotleImage />
               </div> */}
-              </div>
+          {/* </div>
             </div>
-          </div>
+          </div> */}
 
           {isFirst && (
             <FeaturedArticle
@@ -74,7 +73,7 @@ const ProjectList = props => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

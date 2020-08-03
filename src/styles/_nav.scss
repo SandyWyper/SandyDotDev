@@ -1,66 +1,95 @@
-.home-nav {
-  font-family: "Raleway", "Times New Roman", serif;
-  font-weight: bold;
-
-  @apply absolute top-0 right-0 mr-2 mt-2;
+.nav {
+  background-color: var(--primary);
+  transition: background-color 500ms linear;
+  box-shadow: 0 4px 6px -1px rgba(var(--blackAndWhite), 0.1),
+    0 2px 4px -1px rgba(var(--blackAndWhite), 0.06);
 
   @screen md {
-    @apply fixed inset-y-0 right-0 mt-0;
-    margin-right: 55px;
-    top: 25%;
+    display: flex;
+    width: 280px;
+    top: 0;
+    bottom: 0;
+    right: 62%;
+    left: auto;
+
+    background-color: inherit;
+    box-shadow: none;
+  }
+  @screen lg {
+    right: 65%;
+    width: 300px;
+  }
+  @screen xl {
+    right: 76%;
+    width: 300px;
   }
 
-  .links {
-    li {
-      @apply my-3 text-xl lowercase text-right;
-      transform: rotate(-15deg);
-      transition: transform 200ms cubic-bezier(0.84, 0.08, 0.73, 0.99);
-    }
-
-    li:hover {
-      @apply transition-transform;
-      transform: scale(1.2) rotate(-15deg) translate(-8px, -5px);
-    }
-
-    li:after {
-      content: "";
-      transform: rotate(15deg);
-      position: absolute;
-      bottom: -11px;
-      left: 120%;
-      right: -164%;
-      border-bottom: 1px solid var(--text);
-      z-index: -1;
+  .site-title {
+    color: var(--text);
+    @apply w-56 fill-current;
+    @screen md {
+      color: white;
+      @apply py-6;
     }
   }
-}
 
-.top-nav {
-  .top-nav-content {
+  .nav-inner {
     min-height: 3.7rem;
+    @screen md {
+      min-height: 0;
+      background-color: var(--primary);
+      transition: background-color 500ms linear;
+      box-shadow: 0 4px 6px -1px rgba(var(--blackAndWhite), 0.1),
+        0 2px 4px -1px rgba(var(--blackAndWhite), 0.06);
+      // border: 2px solid var(--text);
+    }
+    color: var(--text);
   }
+  .side-nav {
+    @apply hidden;
+    @screen md {
+      @apply block px-4 py-4;
+      width: calc(100% - 6px);
+      margin-bottom: 3px;
+      // border: 1px solid black;
+      box-shadow: inset 0 4px 6px -1px rgba(var(--blackAndWhite), 0.1),
+        inset 0 2px 4px -1px rgba(var(--blackAndWhite), 0.06);
+    }
+    .nav-section-header {
+      position: relative;
+      font-family: "Raleway", "Times New Roman", serif;
+      font-weight: lighter;
+      font-size: 1.4rem;
+      z-index: 1;
+    }
+    .nav-section-header:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 13px;
+      height: 13px;
+      z-index: -1;
+      left: -3px;
+      bottom: -2px;
+      transition: width 400ms ease-in-out;
+      background: var(--primary);
+    }
+    .nav-section-header:hover:before {
+      width: calc(100% + 9px);
+    }
 
-  .nav-title {
-    font-family: "Megrim", "Courier", sans-serif;
-    font-size: 1.9rem;
-    @apply leading-none font-bold absolute;
-  }
-
-  ul {
-    @apply lowercase;
-    font-size: 1.1rem;
-
-    li {
-      @screen md {
-        @apply px-3;
-        font-weight: bold;
-        // font-family: "Inconsolata", "Times New Roman", serif;
-        // font-family: "Megrim", "Courier", sans-serif;
-        font-family: "Raleway", "Times New Roman", serif;
-      }
+    .nav-section-header.active:before {
+      width: calc(100% + 9px);
+    }
+    .post {
+      font-size: 0.8rem;
+      font-family: "Raleway", "Times New Roman", serif;
+      font-weight: lighter;
     }
   }
 }
+
+// ----------------------------------------------- Mobile Nav button
 
 button:focus {
   outline: none;
@@ -95,7 +124,7 @@ button:focus {
 .z-69 {
   z-index: 69;
 }
-
+// ---------------------------------------------------------------- mobile nav drawer
 /// to be applied to the body liberally when mobile nav opens
 .nav-open {
   margin: 0;
@@ -117,4 +146,11 @@ button:focus {
   top: 0.6rem;
   margin: auto 0;
   background: var(--primary);
+}
+
+.nav-space {
+  margin-top: 3.7rem;
+  @screen md {
+    margin-top: 0;
+  }
 }

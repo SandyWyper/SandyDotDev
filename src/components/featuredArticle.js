@@ -1,20 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import Link from "gatsby-plugin-transition-link"
 import Img from "gatsby-image"
 
 const FeaturedArticle = props => {
   const data = props.articleDetails
 
   return (
-    <section className="max-w-2xl mx-auto mb-16 rounded-lg">
+    <section className="max-w-2xl px-4 mx-auto mb-16">
       <div className="flex-col items-center md:flex">
         <Img
           fluid={{
             ...data.cover.childImageSharp.fluid,
             sizes: "(min-width: 768px) 505px, 80vw",
           }}
-          className="w-10/12 m-4 mx-auto md:w-2/3"
+          className="w-10/12 mx-auto md:w-2/3"
           loading="eager"
           alt={data.coverAlt}
         />

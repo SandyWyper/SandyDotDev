@@ -5,7 +5,6 @@ const Moon = () => {
     <svg
       className="fill-current text-contrast"
       role="img"
-      // width="100%"
       viewBox="0 0 512 512"
     >
       <title>Dark Mode</title>
