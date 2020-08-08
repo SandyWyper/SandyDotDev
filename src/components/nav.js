@@ -33,8 +33,9 @@ const Nav = props => {
   const titleSpring = useSpring({
     height: "auto",
   })
+
   const navContentSpring = useSpring({
-    height: "0px",
+    height: "auto",
     overflow: "hidden",
   })
 
@@ -93,7 +94,10 @@ const Nav = props => {
           </svg>
         </Link>
         <MobileNav data={data} />
-        <animated.div style={navContentSpring}>
+        <animated.div
+          style={navContentSpring}
+          className="container flex flex-col items-center"
+        >
           <ul className="background side-nav">
             <li>
               <Link

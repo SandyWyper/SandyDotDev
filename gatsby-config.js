@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      // remember to remove 'gsap' module if unused
       resolve: "gatsby-plugin-transition-link",
       options: {
         layout: require.resolve(`./src/components/layout.js`),

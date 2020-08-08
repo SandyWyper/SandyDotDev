@@ -2,8 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-// import Layout from "../components/layout"
-// import TopNav from "../components/topNav"
 import PropTypes from "prop-types"
 
 const BlogTemplate = props => {
@@ -11,21 +9,17 @@ const BlogTemplate = props => {
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      {/* <TopNav /> */}
       <SEO
         title="Blog"
         description={`${frontmatter.title} / ${frontmatter.description}`}
       />
-      {/* <section className="background nav-space">
-        <div className="container mx-auto border-solid md:border-l md:border-r border-color">
-          <div> */}
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
         <div className="md:col-span-2 md:w-full xl:col-span-1" />
         <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
-          <div className="max-w-md px-4 mx-auto">
+          <div className="max-w-md px-4 mx-auto xl:max-w-lg">
             <div>
               <Img
-                className="mb-4"
+                className="mb-4 custom-border sharp-drop-shadow"
                 fluid={frontmatter.cover.childImageSharp.fluid}
                 alt={frontmatter.coverAlt}
                 loading="eager"
@@ -35,7 +29,7 @@ const BlogTemplate = props => {
                   {frontmatter.title}
                 </h2>
 
-                <div className="w-full sm:flex">
+                <div className="w-full mb-2 md:flex">
                   <p className="text-sm">{frontmatter.date}</p>
                   <ul className="flex flex-wrap space-x-2 sm:ml-auto">
                     {frontmatter.tags.map(item => {
@@ -52,7 +46,7 @@ const BlogTemplate = props => {
           </div>
 
           <article
-            className="max-w-xl px-4 pb-40 mx-auto mt-8 md:px-0 article-styles"
+            className="max-w-2xl px-4 pb-40 mx-auto mt-8 md:px-0 article-styles"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           {/* Maybe a link to the next article */}

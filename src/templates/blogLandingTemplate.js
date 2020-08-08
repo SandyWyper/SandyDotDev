@@ -37,7 +37,7 @@ const BlogList = props => {
             />
           )}
           <hr />
-          <div className="max-w-4xl xl:px-0">
+          <div className="max-w-4xl mx-auto xl:px-0">
             {posts.map(({ node }, index) => (
               <div key={node.id}>
                 <ArticleCard

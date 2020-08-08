@@ -49,3 +49,9 @@
 .changing-text-shadow {
   text-shadow: 1px 2px 8px rgba(var(--blackAndWhite), 0.27);
 }
+.sharp-drop-shadow {
+  box-shadow: -10px 10px 0px 0px var(--text);
+}
+.custom-border {
+  border: 1px solid var(--text);
+}

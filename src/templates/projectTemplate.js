@@ -2,13 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-// import Layout from "../components/layout"
-// import TopNav from "../components/topNav"
 import PropTypes from "prop-types"
 
 const ProjectTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <>
       {/* <TopNav /> */}
@@ -20,9 +19,9 @@ const ProjectTemplate = props => {
         <div className="md:col-span-2 md:w-full xl:col-span-1" />
         <div className="container py-12 md:pr-4 md:col-span-3 md:col-3/5 xl:col-2/4">
           <div>
-            <div className="max-w-md px-4 mx-auto">
+            <div className="max-w-md px-4 mx-auto xl:max-w-lg">
               <Img
-                className="mb-4"
+                className="mb-4 custom-border sharp-drop-shadow"
                 fluid={frontmatter.cover.childImageSharp.fluid}
                 alt={frontmatter.coverAlt}
                 loading="eager"
@@ -31,7 +30,7 @@ const ProjectTemplate = props => {
                 <h2 className="mb-2 leading-none sm:mb-4">
                   {frontmatter.title}
                 </h2>
-                <div className="mb-2 md:flex">
+                <div className="w-full mb-2 md:flex">
                   <div className="md:w-1/2 ">
                     <p className="mb-2 text-xs">{frontmatter.date}</p>
                     <a
@@ -86,7 +85,7 @@ const ProjectTemplate = props => {
           </div>
 
           <article
-            className="max-w-xl px-4 pb-40 mx-auto mt-8 md:px-0 article-styles"
+            className="max-w-2xl px-4 pb-40 mx-auto mt-8 md:px-0 article-styles"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           {/* Maybe a link to the next article */}

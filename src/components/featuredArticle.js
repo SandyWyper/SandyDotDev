@@ -14,7 +14,7 @@ const FeaturedArticle = props => {
             ...data.cover.childImageSharp.fluid,
             sizes: "(min-width: 768px) 505px, 80vw",
           }}
-          className="w-10/12 mx-auto md:w-2/3"
+          className="w-10/12 mx-auto mb-8 custom-border md:w-2/3 sharp-drop-shadow"
           loading="eager"
           alt={data.coverAlt}
         />

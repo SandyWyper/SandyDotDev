@@ -11,7 +11,7 @@ const ArticleCard = props => {
         <div className="mb-2 md:flex">
           <div className="scale-div">
             <Img
-              className="w-40 h-32 rounded-md shadow"
+              className="w-40 h-32 mb-8 sharp-drop-shadow custom-border"
               fluid={{ ...data.cover.childImageSharp.fluid, sizes: "200px" }}
               alt={data.coverAlt}
             />
