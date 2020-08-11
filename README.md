@@ -30,7 +30,7 @@ I want to have two 'blog' type parts to this site. Projects, where I show off th
 ```
 
 - The content of each of these folders will now be able to referenced via graphql, with the gatsby plugin 'gatsby-transformer-remark'.
-- install ['gatsby-tranformer-remark'](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/)
+- install ['gatsby-tranformer-remark'](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) and add to plugins in gastby-config
 - next I created a node field that can be referenced for each project or blog article. It will contain the relevant path/slug
 
 ```javascript
