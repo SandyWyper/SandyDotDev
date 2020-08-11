@@ -1,0 +1,28 @@
+import React from "react"
+import { Spring } from "react-spring"
+import { TransitionState } from "gatsby-plugin-transition-link"
+
+const MySpring = ({ text }) => (
+  <TransitionState>
+    {({ transitionStatus, exit, entry }) => {
+      const mount = ["entering", "entered"].includes(transitionStatus)
+      const seconds = mount ? entry.length : exit.length
+
+      return (
+        <Spring
+          to={{
+            transform: `translateY(${mount ? 0 : "100px"})`,
+            opacity: mount ? 1 : 0,
+          }}
+          config={{
+            duration: seconds * 1000,
+          }}
+        >
+          {props => <div style={props}>{text}</div>}
+        </Spring>
+      )
+    }}
+  </TransitionState>
+)
+
+export { MySpring }

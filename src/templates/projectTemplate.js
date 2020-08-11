@@ -10,7 +10,6 @@ const ProjectTemplate = props => {
 
   return (
     <>
-      {/* <TopNav /> */}
       <SEO
         title="Projects"
         description={`${frontmatter.title} / ${frontmatter.description}`}

@@ -9,7 +9,9 @@ import MobileNav from "./mobileNav"
 import { getWidth } from "../lib/getWidth"
 import LinkedInLink from "./linkedInLink"
 import GitHubLink from "./gitHubLink"
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import TransitionLink from "gatsby-plugin-transition-link"
+import { MySpring } from "./pageTransitionSpring"
 
 const Nav = props => {
   const [isShown, setIsShown] = useState(true)
@@ -38,6 +40,30 @@ const Nav = props => {
     height: "auto",
     overflow: "hidden",
   })
+
+  // const entrySpring = useSpring({
+  //   opacity: 1,
+  //   from: { opacity: 0 },
+  //   // config: { duration: 1250 },
+  // })
+
+  // const exitSpring = useSpring({
+  //   opacity: 0,
+  //   from: { opacity: 1 },
+  //   // config: { duration: 1250 },
+  // })
+
+  const TRANSITION_LENGTH = 1.5
+
+  const exitTransition = {
+    length: TRANSITION_LENGTH, // Take 1.5 seconds to leave
+    trigger: () => console.log("We are exiting"),
+  }
+
+  const entryTransition = {
+    delay: TRANSITION_LENGTH, // Wait 1.5 seconds before entering
+    trigger: () => console.log("We are entering"),
+  }
 
   const data = useStaticQuery(graphql`
     query posts {
@@ -100,14 +126,18 @@ const Nav = props => {
         >
           <ul className="background side-nav">
             <li>
-              <Link
+              {/* <TransitionLink
+                exit={exitTransition}
+                entry={entryTransition}
+                // length={3}
                 to="/projects"
                 className="nav-section-header"
                 activeClassName="active"
                 partiallyActive={true}
               >
                 Projects
-              </Link>
+              </TransitionLink> */}
+              {/* <MySpring text="Projects" /> */}
             </li>
             {data.projects.edges.map(post => (
               <li className="post" key={post.node.id}>

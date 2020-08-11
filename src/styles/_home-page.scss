@@ -84,12 +84,12 @@
   }
 }
 
-// .latest-article {
-//   @apply relative;
-// }
+.latest-article {
+  @apply relative;
+}
 
 .latest-article:after {
-  @apply absolute right-0 top-0 rounded-lg text-right p-4 w-full h-full z-0 -mt-8;
+  @apply absolute right-0 top-0  text-right p-4 w-full h-full z-0 -mt-8;
   content: "latest";
   color: #32292f;
   background: hsl(0, 0, 100);
