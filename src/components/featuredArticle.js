@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Link from "gatsby-plugin-transition-link"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const FeaturedArticle = props => {

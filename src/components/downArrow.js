@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Spring } from "react-spring/renderprops"
 import useScrollPosition from "../lib/useScrollPosition"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const DownArrow = () => {
   const [isShown, setIsShown] = useState(true)
@@ -15,23 +16,37 @@ const DownArrow = () => {
     undefined,
     400
   )
-
+  const handleKeyDown = ({ key }) => {
+    switch (key) {
+      case "Enter":
+        scrollTo("#latest-project")
+        break
+      default:
+    }
+  }
   return (
     <Spring
-      from={{ opacity: 0, bottom: -30, position: "absolute" }}
+      from={{ opacity: 0, bottom: 45, position: "absolute" }}
       to={{
         opacity: isShown ? 1 : 0,
-        bottom: -80,
+        bottom: 15,
         position: "absolute",
         right: 0,
         left: 0,
       }}
-      config={{ tension: 100, friction: 30, mass: 4, delay: 200 }}
+      config={{ tension: 100, friction: 30, mass: 4, delay: 5000 }}
     >
       {props => (
-        <div style={props}>
+        <div
+          style={props}
+          onKeyDown={handleKeyDown}
+          onClick={() => scrollTo("#latest-project")}
+          className="cursor-pointer focus:outline-none"
+          role="button"
+          tabindex="0"
+        >
           <svg
-            className="w-10 h-10 mx-auto fill-current text md:w-16 md:h-16"
+            className="w-10 h-10 mx-auto fill-current text"
             viewBox="0 0 490.688 490.688"
           >
             <g>

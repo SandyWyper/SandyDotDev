@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
-import Link from "gatsby-plugin-transition-link"
+import { Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
-import DarkToggle from "./darkModeToggle"
+import DarkToggle from "../components/darkModeToggle"
 import PropTypes from "prop-types"
 
 const MobileNav = ({ data }) => {

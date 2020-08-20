@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Link from "gatsby-plugin-transition-link"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import ArticleCard from "./articleCard"
 
 const LatestBlogPost = () => {
@@ -45,8 +44,8 @@ const LatestBlogPost = () => {
   return (
     <section className="md:grid md:grid-cols-5 xl:grid-cols-4 latest-blog-background">
       <div className="md:col-span-2 md:w-full xl:col-span-1" />
-      <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4 ">
-        <div className="mx-8 lg:mx-20">
+      <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
+        <div className="mx-8 ">
           <header className="mt-4">
             <Link to="/blog">
               <h3 className="section-header">Blog</h3>

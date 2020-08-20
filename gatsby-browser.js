@@ -4,3 +4,8 @@ require("prismjs/themes/prism-tomorrow.css")
 require("./src/styles/unpurged.scss")
 // styles for the site that get purged
 require("./src/styles/index.scss")
+
+// turning off the default behaviour which will now be handled by 'gatsby-plugin-transitions'
+exports.shouldUpdateScroll = () => {
+  return false
+}

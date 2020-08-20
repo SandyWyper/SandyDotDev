@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { ThemeContext } from "./darkThemeContext"
+import { ThemeContext } from "../layouts/darkThemeContext"
 import Moon from "./moon"
 import PropTypes from "prop-types"
 

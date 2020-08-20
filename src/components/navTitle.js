@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { useSpring, animated } from "react-spring"
-import Link from "gatsby-plugin-transition-link"
+import { Link } from "gatsby"
 
 const NavTitle = props => {
   const [activeTitle, setActiveTitle] = useState(null)

@@ -1,8 +1,10 @@
 .top-fold {
-  height: 85vh;
   position: relative;
   z-index: 2;
-
+  min-height: 50vh;
+  @screen md {
+    min-height: 65vh;
+  }
   &.light-theme-background {
     background: hsla(173, 55, 74, 1);
     background: linear-gradient(
