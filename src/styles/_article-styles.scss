@@ -16,10 +16,11 @@
     margin-bottom: 2rem;
   }
 
+  p a,
   a {
     position: relative;
   }
-
+  p a:before,
   a:before {
     height: 1px;
     content: "";
@@ -29,6 +30,7 @@
     background-color: var(--primary);
   }
 
+  p a:hover:before,
   a:hover:before {
     height: 3px;
   }
