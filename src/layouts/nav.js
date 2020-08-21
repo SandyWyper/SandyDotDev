@@ -104,7 +104,7 @@ const Nav = ({ path }) => {
       projects: allMarkdownRemark(
         filter: { fields: { slug: { regex: "/projects/" } } }
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 3
+        limit: 2
       ) {
         edges {
           node {
@@ -122,7 +122,7 @@ const Nav = ({ path }) => {
       blog: allMarkdownRemark(
         filter: { fields: { slug: { regex: "/blog/" } } }
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 3
+        limit: 2
       ) {
         edges {
           node {
@@ -239,6 +239,9 @@ const Nav = ({ path }) => {
                     </Link>
                   </li>
                 ))}
+                <li className="post">
+                  <Link to="/projects">more ...</Link>
+                </li>
                 <li className="mt-4">
                   <Link
                     to="/blog"
@@ -259,6 +262,9 @@ const Nav = ({ path }) => {
                     </Link>
                   </li>
                 ))}
+                <li className="post ">
+                  <Link to="/blog">more ...</Link>
+                </li>
                 <li className="mt-4">
                   <Link
                     to="/contact"

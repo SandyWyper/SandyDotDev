@@ -136,6 +136,9 @@ const MobileNav = ({ data }) => {
                   </Link>
                 </li>
               ))}
+              <li className="post ">
+                <Link to="/projects">more ...</Link>
+              </li>
               <li className="pt-2 text-3xl text-primary">
                 <Link to="/blog" onClick={toggle} onKeyDown={handleKeyDown}>
                   Blog
@@ -152,6 +155,9 @@ const MobileNav = ({ data }) => {
                   </Link>
                 </li>
               ))}
+              <li className="post ">
+                <Link to="/blog">more ...</Link>
+              </li>
               <li className="pt-2 text-3xl text-primary">
                 <Link to="/contact" onClick={toggle} onKeyDown={handleKeyDown}>
                   Contact

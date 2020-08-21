@@ -6,7 +6,7 @@
   //   0 2px 4px -1px rgba(var(--blackAndWhite), 0.06);
 
   // position: relative;
-
+  // min-height: 3.7rem;
   @screen md {
     display: flex;
     width: 280px;
@@ -27,7 +27,7 @@
   }
 
   .site-title {
-    min-height: 3.7rem;
+    min-height: 4rem;
 
     @screen md {
       min-height: 0;
@@ -36,7 +36,7 @@
   }
 
   .nav-inner {
-    min-height: 3.7rem;
+    // min-height: 3.7rem;
     color: var(--text);
 
     @screen md {
@@ -151,6 +151,9 @@ button:focus {
   top: 0.6rem;
   margin: auto 0;
   background: var(--primary);
+}
+.post:hover:before {
+  background: var(--text);
 }
 
 .nav-space {

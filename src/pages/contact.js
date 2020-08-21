@@ -47,14 +47,14 @@ class Contact extends Component {
           description="I would love to hear from you, so please do get in touch."
         />
         <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
-          <div className="md:col-span-2 md:w-full xl:col-span-1" />
-          <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4">
+          {/* <div className="md:col-span-2 md:w-full xl:col-span-1" /> */}
+          <div className="container px-4 py-6 md:pr-4 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5">
             <div className="mt-8">
-              <div className="w-full pr-12 mb-8 text-right">
+              <div className="w-full max-w-xl mx-auto mb-8 text-right">
                 <h4>Get in touch!</h4>
                 <h5>I'll get back to you as soon as I can.</h5>
               </div>
-              <div className="w-full pr-12">
+              <div className="">
                 <form
                   className="w-full max-w-xl mx-auto"
                   method="post"
@@ -84,7 +84,7 @@ class Contact extends Component {
                         type="text"
                         name="name"
                         id="name"
-                        className="w-full px-4 py-2 leading-tight border-2 rounded appearance-none focus:outline-none contact-field"
+                        className="w-full px-4 py-2 leading-tight border-2 appearance-none focus:outline-none contact-field"
                         onChange={this.handleChange}
                         required
                       />
@@ -104,7 +104,7 @@ class Contact extends Component {
                         type="text"
                         name="email"
                         id="email"
-                        className="w-full px-4 py-2 leading-tight border-2 rounded appearance-none border-custom-turq focus:outline-none contact-field focus:border-custom-blue"
+                        className="w-full px-4 py-2 leading-tight border-2 appearance-none border-custom-turq focus:outline-none contact-field focus:border-custom-blue"
                         onChange={this.handleChange}
                         required
                       />
@@ -124,7 +124,7 @@ class Contact extends Component {
                         name="message"
                         id="message"
                         rows="4"
-                        className="w-full px-4 py-2 leading-tight border-2 rounded appearance-none border-custom-turq focus:outline-none contact-field focus:border-custom-blue"
+                        className="w-full px-4 py-2 leading-tight border-2 appearance-none border-custom-turq focus:outline-none contact-field focus:border-custom-blue"
                         onChange={this.handleChange}
                         required
                       ></textarea>
@@ -136,14 +136,14 @@ class Contact extends Component {
                       <input
                         type="submit"
                         value="Send Message"
-                        className="w-full px-4 py-2 font-bold rounded shadow-lg cursor-pointer text-custom-gray background-primary hover:opacity-75 focus:shadow-outline focus:outline-none"
+                        className="w-full px-4 py-2 font-bold shadow-lg cursor-pointer text background-primary hover:opacity-75 focus:shadow-outline focus:outline-none"
                       />
                     </div>
                     <div className="md:ml-2 md:w-1/4">
                       <input
                         type="reset"
                         value="Reset"
-                        className="w-full px-4 py-2 font-bold rounded shadow-md cursor-pointer text-contrast background-contrast hover:opacity-75 focus:shadow-outline focus:outline-none"
+                        className="w-full px-4 py-2 font-bold shadow-md cursor-pointer text-contrast background-contrast hover:opacity-75 focus:shadow-outline focus:outline-none"
                       />
                     </div>
                   </div>

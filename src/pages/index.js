@@ -21,13 +21,13 @@ const IndexPage = () => {
         <div className="container py-16 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
           <div className="flex flex-col h-full mx-8 md:col-end-6 md:col-start-2 text">
             <h2 className="mb-4 leading-tight">Hi, welcome to my site!</h2>
-            <h5 className="max-w-2xl">
+            <h5 className="max-w-2xl mb-10 md:mb-0">
               I'm a born again web developer who's into learning things and
               building stuff.
             </h5>
           </div>
+          <DownArrow />
         </div>
-        <DownArrow />
       </section>
       <LatestProject />
       <LatestBlogPost />
