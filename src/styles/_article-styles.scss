@@ -20,8 +20,8 @@
   a {
     position: relative;
   }
-  p a:before,
-  a:before {
+  p a:after,
+  a:after {
     height: 1px;
     content: "";
     bottom: -4px;
@@ -30,8 +30,8 @@
     background-color: var(--primary);
   }
 
-  p a:hover:before,
-  a:hover:before {
+  p a:hover:after,
+  a:hover:after {
     height: 3px;
   }
 
