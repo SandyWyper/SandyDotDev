@@ -15,7 +15,6 @@ const Panel = ({ children, path }) => {
   const ref = useRef(null)
   const [height, setFullHeight] = useState(0)
   useLayoutEffect(() => {
-    console.log(ref.current.clientHeight, ref.current)
     setFullHeight(ref.current.clientHeight)
   }, [])
 
