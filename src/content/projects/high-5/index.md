@@ -22,7 +22,7 @@ live: "https://sandywyper.github.io/mop-chop/"
 - Use Google's Map APIs to request specific data, sort that data and display accordingly.
 
 - Use the user's location via the Navigator.geolocation web API or take an input and get location from Google's Geocode library.
-- Request place details via the Places API set to a specific business type, as [categorised by google](https://developers.google.com/places/supported_types).
+- Request place details via the Places API set to a specific business type, as [categorised&nbsp;by&nbsp;google](https://developers.google.com/places/supported_types).
 - User can set the search radius.
 - Present the top 5 user-reviewed places, with all relevant details and place a marker on a map of the searched area accordingly.
 
@@ -34,7 +34,7 @@ Building this taught me a lot, and to go through every step could get a little l
 
 ### Styling a google map.
 
-You can totally customise how the map is presented by passing a JSON array along with your MapsAPI request. I've written a short article about it you [can checkout here](/blog/styling-google-maps).
+You can totally customise how the map is presented by passing a JSON array along with your MapsAPI request. I've written a short article about it you [can&nbsp;checkout&nbsp;here](/blog/styling-google-maps).
 
 ### The Places API
 

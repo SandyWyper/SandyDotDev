@@ -33,7 +33,7 @@ Lets say you have an e-commerce site, or for example a football team's website. 
 
 In the world of front-end development, most websites (huge sweeping generalisation) include JQuery. This code requires it as a dependency, so all you have to do is make sure this plug-in is loaded after JQuery.
 
-I took the structure for this project from a [lesson by Ken Wheeler](https://scotch.io/tutorials/building-your-own-javascript-modal-plugin), that sets about writing your own pop-up modal plug-in. Ken Wheeler also wrote [Slick Slider](https://kenwheeler.github.io/slick/) which is a widely used image carousel plugin, so I based the repository structure on that. I build this to be open-source, so others could contribute and improve the plugin (at the time of writing this..... no takers).
+I took the structure for this project from a [lesson&nbsp;by&nbsp;Ken&nbsp;Wheeler](https://scotch.io/tutorials/building-your-own-javascript-modal-plugin), that sets about writing your own pop-up modal plug-in. Ken Wheeler also wrote [Slick&nbsp;Slider](https://kenwheeler.github.io/slick/) which is a widely used image carousel plugin, so I based the repository structure on that. I build this to be open-source, so others could contribute and improve the plugin (at the time of writing this..... no takers).
 
 ### Get going
 
@@ -79,7 +79,7 @@ Say you want to show some sale banners at the top of your site like [this](https
 </script>
 ```
 
-That's it. The banners should appear on the correct day, fade transition between each message slide, and stop showing on Christmas day. You can further customise the slides by following the instructions in the [repo readme](https://github.com/SandyWyper/Banner-Time/blob/master/README.md). Change; the slide transition type, the transition speed and interval, the styles(CSS) of the banner, the time zone, and add a link to the banner element.
+That's it. The banners should appear on the correct day, fade transition between each message slide, and stop showing on Christmas day. You can further customise the slides by following the instructions in the [repo&nbsp;readme](https://github.com/SandyWyper/Banner-Time/blob/master/README.md). Change; the slide transition type, the transition speed and interval, the styles(CSS) of the banner, the time zone, and add a link to the banner element.
 
 ### Conclusion
 

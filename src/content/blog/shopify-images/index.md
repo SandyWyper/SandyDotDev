@@ -25,13 +25,13 @@ The smaller pixel width size for product images is recommended because you will 
 
 #### You don't need Photoshop
 
-If all you're using Photoshop for is to crop and save files for the web then you might be wasting your money. You can crop an image in Preview on Mac, or Microsoft Paint on Windows. Easy. So you need to resize the image to upload? Shopify's got your back. [Try out this useful tool for resizing your images](https://www.shopify.co.uk/tools/image-resizer).
+If all you're using Photoshop for is to crop and save files for the web then you might be wasting your money. You can crop an image in Preview on Mac, or Microsoft Paint on Windows. Easy. So you need to resize the image to upload? Shopify's got your back. [Try&nbsp;out&nbsp;this&nbsp;useful tool](https://www.shopify.co.uk/tools/image-resizer) for resizing your images.
 
 You see all the clever compression without losing quality that Photoshop offers is wasted on Shopify. When you upload an image, whether directly you your code's assets, or uploaded through the Shopify dashboard, a copy of the image is made and re-rendered. I have done tests where I have exported the same image from Photoshop and the same dimensions but a fraction of the file size. When uploaded to Shopify and requested again through a website at the same size, the file sizes of the two images were practically identical.
 
 The moral of the story is. Give Shopify the best image you can, regardless of file size. The clever bit happens later.
 
-#### [No Big Sizes](https://www.youtube.com/watch?v=zA4jOgMYaS0)
+#### [No&nbsp;Big&nbsp;Sizes](https://www.youtube.com/watch?v=zA4jOgMYaS0)
 
 Shopify's CDN (Content Delivery Network) is top notch, but to understand how it works is key to using it properly.
 
@@ -62,4 +62,4 @@ Something like this...
 />
 ```
 
-If you want to know how to implement this from a developers point of view you can [read my other post on the subject here](https://sandywyper.dev/blog/shopify-image-snippet/).
+If you want to know how to implement this from a developers point of view you can read my [other&nbsp;post](https://sandywyper.dev/blog/shopify-image-snippet/) on the subject here.

@@ -287,6 +287,6 @@ function checkNumeralOrder(rom) {
 
 ### Conclusions
 
-This was a fantastic way of learning conditional logic, refactoring and making the most of traditional switches and loops. To see the evolution of the logic you can refer to my first [repo for this project](https://github.com/SandyWyper/Roman-Numerals).
+This was a fantastic way of learning conditional logic, refactoring and making the most of traditional switches and loops. To see the evolution of the logic you can refer to my first [repo](https://github.com/SandyWyper/Roman-Numerals) for this project.
 
 PWA's in my opinion are massively under used. I'm not sure why more websites don't use it. You don't have to offer the 'add to home screen' option, but you can still cache a lot of the script that would then sky rocket your TTI ( time to interactive) speed. If you go full hog and embrace the app-like functionality, then you can send notifications to users just like native apps, by checking for updates in the background. Snazzy!

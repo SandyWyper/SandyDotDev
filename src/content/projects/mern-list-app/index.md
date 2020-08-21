@@ -80,7 +80,7 @@ module.exports = User = mongoose.model("user", UserSchema)
 Redux uses the principles of functional programming as it's backbone; It's able to treat functions as first-class objects, It's able to pass functions as arguments, It's able to use pure, recursive, higher-order, closure and anonymous functions... etc.
 Also the state doesn’t change (i.e. it’s immutable).
 
-In practice, this means that to use Redux, you can't help but write clean code that strives towards the [single responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle). At first it seemed confusing, but actually it really helps to keep everything ordered and lets you build up the application piece by piece.
+In practice, this means that to use Redux, you can't help but write clean code that strives towards the [single&nbsp;responsibility&nbsp;principle](https://en.wikipedia.org/wiki/Single-responsibility_principle). At first it seemed confusing, but actually it really helps to keep everything ordered and lets you build up the application piece by piece.
 
 Simply put, you have 3 parts **Actions**, **Reducers** and **Store**.
 
