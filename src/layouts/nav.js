@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect, useContext } from "react"
+import React, { useState, useRef, useLayoutEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import DarkToggle from "../components/darkModeToggle"
@@ -9,7 +9,6 @@ import { getWidth } from "../lib/getWidth"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
 import { Spring } from "react-spring/renderprops"
-import { ThemeContext } from "../layouts/darkThemeContext"
 
 const Panel = ({ children, path }) => {
   const ref = useRef(null)
@@ -25,7 +24,7 @@ const Panel = ({ children, path }) => {
     },
     // had to add an extra 35 for some unknown reason
     to: { height: height + 35, overflow: "hidden" },
-    delay: 3000,
+    // delay: 200,
     config: { mass: 40, tension: 280, friction: 160, precision: 1 },
   })
 
@@ -43,8 +42,6 @@ const Panel = ({ children, path }) => {
 }
 
 const Nav = ({ path }) => {
-  // to determine what background color to use in nav
-  const { colorMode } = useContext(ThemeContext)
   // for mobile nav hide and show
   const [isShown, setIsShown] = useState(true)
 
@@ -66,33 +63,20 @@ const Nav = ({ path }) => {
     config: { mass: 1, tension: 200, friction: 30 },
   })
 
-  const homeTitleSpring = useSpring({
+  const desktopTitleSpring = useSpring({
     from: {
       boxShadow: "0px 0px 0px 0px var(--text)",
       border: "0px solid var(--text)",
-      backgroundColor: colorMode === "light" ? "#ffffff00" : "#ffffff00",
+      // backgroundColor: colorMode === "light" ? "#ffffff00" : "#ffffff00",
+      marginLeft: "-400px",
     },
     to: {
-      backgroundColor: colorMode !== "dark" ? "#99e1d9" : "#186a70",
+      // backgroundColor: colorMode !== "dark" ? "#99e1d9" : "#186a70",
       boxShadow: "-10px 10px 0px 0px var(--text)",
       border: "1px solid var(--text)",
+      marginLeft: "0px",
     },
-    config: { mass: 20, tension: 280, friction: 160, clamp: true },
-    delay: 3000,
-  })
-
-  const otherTitleSpring = useSpring({
-    from: {
-      boxShadow: "0px 0px 0px 0px var(--text)",
-      border: "0px solid var(--text)",
-      backgroundColor: colorMode === "light" ? "#00000000" : "#00000000",
-    },
-    to: {
-      backgroundColor: colorMode !== "light" ? "#186a70" : "#99e1d9",
-      boxShadow: "-10px 10px 0px 0px var(--text)",
-      border: "1px solid var(--text)",
-    },
-    config: { mass: 1, tension: 200, friction: 30 },
+    config: { mass: 10, tension: 100, friction: 50, clamp: false },
   })
 
   // for animating the title SVG
@@ -179,20 +163,20 @@ const Nav = ({ path }) => {
         <MobileNav data={data} />
       </div>
       <animated.div
-        style={path === "/" ? homeTitleSpring : otherTitleSpring}
-        className="container relative items-center hidden w-full md:flex md:flex-col nav-inner"
+        style={desktopTitleSpring}
+        className={`container relative items-center hidden w-full md:flex md:flex-col nav-inner background-primary`}
       >
         <Link to="/" className="ml-4 md:ml-0 background-prmary">
           <Spring
             from={{ x: offset }}
             to={{ x: 0 }}
             config={{
-              tension: 1,
+              tension: 5,
               clamp: true,
               friction: 200,
               precision: 0.1,
-              delay: 600,
-              mass: 20,
+              delay: 200,
+              mass: 10,
             }}
           >
             {props => (
@@ -203,7 +187,7 @@ const Nav = ({ path }) => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke="white"
+                  stroke="var(--background)"
                   fill="transparent"
                   strokeDashoffset={props.x}
                   strokeDasharray={offset}

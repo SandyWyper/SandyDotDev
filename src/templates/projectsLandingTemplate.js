@@ -19,42 +19,16 @@ const ProjectList = props => {
     : props.data.allMarkdownRemark.edges
 
   return (
-    // <Spring
-    //   from={{ opacity: 0, paddingTop: "50px" }}
-    //   to={{
-    //     opacity: 1,
-    //     paddingTop: "0px",
-    //   }}
-    //   // config={{
-    //   //   duration: 1000,
-    //   // }}
-    // >
-    //   {props => (
     <>
-      {/* <div style={props}> */}
       <SEO
         title="Projects"
         description="Projects that I have built to learn how to build the things I previously couldn't."
       />
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
-        <div className="container py-6 md:pr-4 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5">
+        <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
           <h1 className="w-full max-w-2xl section-title lg:mx-auto">
             Projects
           </h1>
-          {/* <div className="lg:justify-between lg:flex">
-            <div className="max-w-lg ml-auto">
-            <div className="relative p-6 text-right">
-            <blockquote className="z-10 text-xl">
-            “For the things we have to learn before we can do them, we
-            learn by doing them.”
-            </blockquote>
-          <p>- Aristotle</p> */}
-          {/* <div className="absolute top-0 right-0 z-0 w-56 overflow-hidden opacity-25">
-                <AristotleImage />
-              </div> */}
-          {/* </div>
-            </div>
-          </div> */}
 
           {isFirst && (
             <FeaturedArticle
@@ -86,9 +60,6 @@ const ProjectList = props => {
           </div>
         </div>
       </section>
-      {/* </div>
-      )} */}
-      {/* </Spring> */}
     </>
   )
 }

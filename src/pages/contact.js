@@ -41,14 +41,12 @@ class Contact extends Component {
   render() {
     return (
       <>
-        {/* <TopNav /> */}
         <SEO
           title="Contact"
           description="I would love to hear from you, so please do get in touch."
         />
         <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
-          {/* <div className="md:col-span-2 md:w-full xl:col-span-1" /> */}
-          <div className="container px-4 py-6 md:pr-4 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5">
+          <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
             <div className="mt-8">
               <div className="w-full max-w-xl mx-auto mb-8 text-right">
                 <h4>Get in touch!</h4>
