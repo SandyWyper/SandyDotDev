@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 
 const NotFoundPage = () => (
   <>
-    {/* <TopNav /> */}
     <SEO title="404: Not found" />
     <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
       <div className="md:col-span-2 md:w-full xl:col-span-1" />

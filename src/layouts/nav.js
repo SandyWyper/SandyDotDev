@@ -203,6 +203,11 @@ const Nav = ({ path }) => {
             <div className="container flex flex-col items-center">
               <ul className="background side-nav">
                 <li>
+                  <Link to="/about" className="nav-section-header">
+                    About me
+                  </Link>
+                </li>
+                <li>
                   <Link
                     to="/projects"
                     className="nav-section-header"

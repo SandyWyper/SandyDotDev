@@ -107,6 +107,7 @@ blockquote {
 .section-header:hover:before {
   width: calc(100% + 10px);
 }
+
 .section-title {
   font-size: 4rem;
   font-weight: bold;
@@ -144,4 +145,40 @@ blockquote {
 
 .focus\:shadow-outline:focus {
   box-shadow: 0 0 0 3px rgb(104, 183, 195);
+}
+
+.link {
+  font-size: 1.4rem;
+  font-family: "Raleway", "Times New Roman", serif;
+  font-weight: 700;
+  position: relative;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+// .link:before {
+//   display: block;
+//   content: "";
+//   position: absolute;
+//   bottom: -1px;
+//   left: 0;
+//   width: 0;
+//   height: 3px;
+//   background-color: var(--text);
+//   transition: width 0.3s ease-in;
+// }
+
+.link:after {
+  display: block;
+  content: "\27A7";
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 0.2s ease-in;
+}
+
+// .link:hover:before {
+//   width: 100%;
+// }
+.link:hover:after {
+  right: -0.5rem;
 }

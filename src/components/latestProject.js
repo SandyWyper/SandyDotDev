@@ -44,8 +44,7 @@ const LatestProject = () => {
       className="md:grid md:grid-cols-5 xl:grid-cols-4 latest-project-background"
       id="latest-project"
     >
-      <div className="md:col-span-2 md:w-full xl:col-span-1" />
-      <div className="container py-12 md:col-span-3 md:col-3/5 xl:col-2/4 md:pr-4 ">
+      <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
         <div className="mx-8 ">
           <header className="mt-4">
             <Link to="/projects">
