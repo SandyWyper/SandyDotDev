@@ -25,8 +25,8 @@ const BlogList = props => {
         description="I talk about things that interest me, or show how to do things others might like to know."
       />
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
-        <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
-          <h1 className="w-full max-w-2xl section-title lg:mx-auto">Blog</h1>
+        <div className="pt-6 pb-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
+          <h1 className="w-full max-w-4xl section-title lg:mx-auto">Blog</h1>
           {isFirst && (
             <FeaturedArticle
               articleDetails={featuredPost.frontmatter}

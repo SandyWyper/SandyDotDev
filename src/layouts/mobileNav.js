@@ -163,6 +163,11 @@ const MobileNav = ({ data }) => {
                   Contact
                 </Link>
               </li>
+              <li className="pt-2 text-3xl text-primary">
+                <Link to="/about" onClick={toggle} onKeyDown={handleKeyDown}>
+                  About me
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

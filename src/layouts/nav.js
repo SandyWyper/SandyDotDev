@@ -209,6 +209,16 @@ const Nav = ({ path }) => {
                 </li>
                 <li>
                   <Link
+                    to="/contact"
+                    className="nav-section-header"
+                    activeClassName="active"
+                    partiallyActive={true}
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/projects"
                     className="nav-section-header"
                     activeClassName="active"
@@ -230,7 +240,7 @@ const Nav = ({ path }) => {
                 <li className="post">
                   <Link to="/projects">more ...</Link>
                 </li>
-                <li className="mt-4">
+                <li>
                   <Link
                     to="/blog"
                     className="nav-section-header"
@@ -252,16 +262,6 @@ const Nav = ({ path }) => {
                 ))}
                 <li className="post ">
                   <Link to="/blog">more ...</Link>
-                </li>
-                <li className="mt-4">
-                  <Link
-                    to="/contact"
-                    className="nav-section-header"
-                    activeClassName="active"
-                    partiallyActive={true}
-                  >
-                    Contact
-                  </Link>
                 </li>
               </ul>
               <div className="items-center justify-around hidden w-full p-4 md:flex">

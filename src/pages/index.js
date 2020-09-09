@@ -33,7 +33,7 @@ const IndexPage = () => {
                 everyday and loving it!
               </h5>
               <div className="float-right">
-                <Link to="/about" className="link">
+                <Link to="/about" className="mr-12 link">
                   about me
                 </Link>
               </div>

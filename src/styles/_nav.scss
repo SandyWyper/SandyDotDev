@@ -41,14 +41,6 @@
 
     @screen md {
       min-height: 0;
-      // background-color: var(--primary);
-      // transition: background-color 500ms linear;
-      // box-shadow: 0 4px 6px -1px rgba(var(--blackAndWhite), 0.1),
-      //   0 2px 4px -1px rgba(var(--blackAndWhite), 0.06);
-      // border: 2px solid var(--text);
-
-      // box-shadow: -10px 10px 0px 0px var(--text);
-      // border: 1px solid var(--text);
     }
   }
   .side-nav {
@@ -63,7 +55,6 @@
     .nav-section-header {
       position: relative;
       font-family: "Raleway", "Times New Roman", serif;
-      font-weight: lighter;
       font-size: 1.4rem;
       z-index: 1;
     }
