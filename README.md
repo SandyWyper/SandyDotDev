@@ -430,3 +430,7 @@ export default ({ pageContext, children, location }) => {
   )
 }
 ```
+
+> Going around the houses (with a sweet fase transition)
+
+Ended up trying every combination of transition and layout plugin only to arrive back where i started, albeit wiser for it.
