@@ -231,4 +231,5 @@ blockquote {
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: var(--text);
   font-weight: 700;
+  @apply cursor-pointer;
 }

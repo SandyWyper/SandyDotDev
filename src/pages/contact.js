@@ -47,7 +47,7 @@ class Contact extends Component {
         />
         <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
           <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
-            <div className="mt-8">
+            <div className="px-4 mt-8 md:px-0">
               <div className="w-full max-w-xl mx-auto mb-8 text-right">
                 <h4>Get in touch!</h4>
                 <h5>I'll get back to you as soon as I can.</h5>
