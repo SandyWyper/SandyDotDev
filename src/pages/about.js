@@ -26,7 +26,7 @@ const About = props => {
       <SEO
         title="About"
         description="About me, skills and interests."
-        path={props.path}
+        url={props.location.href}
         image={myPhoto}
         imageAlt="A photo of me - avec barbe"
       />

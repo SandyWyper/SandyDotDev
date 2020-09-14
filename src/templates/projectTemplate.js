@@ -9,13 +9,13 @@ const ProjectTemplate = props => {
   const { frontmatter, html } = markdownRemark
   const sharingImage = frontmatter.cover.childImageSharp.resize.src
   const sharingImageAlt = frontmatter.coverAlt
-  console.log(sharingImageAlt)
+
   return (
     <>
       <SEO
         title={frontmatter.title}
         description={frontmatter.description}
-        path={props.path}
+        url={props.location.href}
         image={sharingImage}
         imageAlt={sharingImageAlt}
         type="article"
