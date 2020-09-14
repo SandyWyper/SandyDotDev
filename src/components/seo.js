@@ -63,6 +63,7 @@ function SEO({
         { property: `og:title`, content: `${title} | ${defaultTitle}` },
         { property: `og:description`, content: metaDescription },
         { property: `og:image`, content: metaImage },
+        { name: "og:image:alt", content: metaImageAlt },
         { property: `og:type`, content: type ? type : `website` },
         { property: `og:url`, content: metaUrl },
         { name: `twitter:card`, content: `summary` },
