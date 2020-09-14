@@ -3,8 +3,6 @@ import { navigate } from "gatsby"
 import LinkedInLink from "../components/linkedInLink"
 import GitHubLink from "../components/gitHubLink"
 import SEO from "../components/seo"
-// import Layout from "../components/layout"
-// import TopNav from "../components/topNav"
 
 const encode = data => {
   return Object.keys(data)
@@ -43,7 +41,8 @@ class Contact extends Component {
       <>
         <SEO
           title="Contact"
-          description="I would love to hear from you, so please do get in touch."
+          description="I would love to hear from you, so please do get in touch. Contact me!"
+          path={this.props.path}
         />
         <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
           <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">

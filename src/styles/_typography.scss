@@ -7,7 +7,8 @@ html {
   transition-property: background-color, color;
 }
 
-h1 {
+h1,
+.h1 {
   font-family: "Raleway", "Times New Roman", serif;
   font-size: 3.5rem;
   color: var(--text);
@@ -17,7 +18,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.h2 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 3rem;
   font-weight: bold;
@@ -27,7 +29,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.h3 {
   font-family: "Inconsolata", "Times New Roman", serif;
   // font-family: "Raleway", "Times New Roman", serif;
   color: var(--text);
@@ -39,7 +42,8 @@ h3 {
   }
 }
 
-h4 {
+h4,
+.h4 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 2.3rem;
   color: var(--text);
@@ -50,7 +54,8 @@ h4 {
   }
 }
 
-h5 {
+h5,
+.h5 {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 1.4rem;
   color: var(--text);
@@ -61,7 +66,8 @@ h5 {
   }
 }
 
-p {
+p,
+.p {
   font-family: "Inconsolata", "Times New Roman", serif;
   font-size: 1rem;
   color: var(--text);

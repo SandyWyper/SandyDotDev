@@ -7,11 +7,18 @@ import PropTypes from "prop-types"
 const BlogTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
+  const sharingImage = frontmatter.cover.childImageSharp.resize.src
+  const sharingImageAlt = frontmatter.coverAlt
+
   return (
     <>
       <SEO
-        title="Blog"
-        description={`${frontmatter.title} / ${frontmatter.description}`}
+        title={frontmatter.title}
+        description={`${frontmatter.description}`}
+        image={sharingImage}
+        imageAlt={sharingImageAlt}
+        type="article"
+        path={props.path}
       />
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
         <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
@@ -24,9 +31,9 @@ const BlogTemplate = props => {
                 loading="eager"
               />
               <div className="flex flex-col flex-wrap px-2 sm:flex-row sm:items-center sm:px-0">
-                <h2 className="mb-2 leading-none sm:mb-4">
+                <h1 className="mb-2 leading-none h2 sm:mb-4">
                   {frontmatter.title}
-                </h2>
+                </h1>
 
                 <div className="w-full mb-2 md:flex">
                   <p className="text-sm">{frontmatter.date}</p>
@@ -61,9 +68,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         category
-        date(formatString: "DD/MM/YYYY")
         tags
         coverAlt
+        description
         cover {
           childImageSharp {
             fluid(
@@ -71,6 +78,9 @@ export const pageQuery = graphql`
               srcSetBreakpoints: [300, 500, 700, 1000, 1200]
             ) {
               ...GatsbyImageSharpFluid_withWebp
+            }
+            resize(width: 800) {
+              src
             }
           }
         }

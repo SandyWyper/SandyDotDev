@@ -3,6 +3,7 @@ module.exports = {
     title: `SandyDotDev`,
     description: `A portfolio and blog site for me, Sandy Wyper, a full-stack web developer. Stuff I've built, things I've learned.`,
     author: `Sandy Wyper`,
+    url: "https://sandywyper.dev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -147,11 +148,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [
-          require("tailwindcss"),
-          // require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
-          require("autoprefixer"),
-        ],
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
     {
@@ -160,14 +157,6 @@ module.exports = {
         printRejected: true,
         develop: false, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
-        // purgeOnly: ["tailwindcss/"],
-        // whitelist: [
-        //   "article-styles",
-        //   "gatsby-highlight",
-        //   "article-styles ol",
-        //   "article-styles ol li",
-        // ], // Don't remove this selector
-        // whitelistPatterns: [/language-/],
         ignore: [
           "prismjs/themes/prism-tomorrow.css",
           "/src/styles/unpurged.scss",

@@ -5,7 +5,7 @@ title: "MERN Stack Lists App"
 description: "MongoDB Atlas database, with CRUD actions handled by a Node.js back-end, using Express and Mongoose.  Client side code is built up from create-react-app, react-strap components and all glued together with Redux.  This web-app uses Json Web Token and bcrypt.js for user login and authentication, so you can write, edit and read your lists from anywhere."
 category: "Side Project"
 cover: "./shopping-list-mobile-view-leafy-bg-crop.jpg"
-coverAlt: "Messy shopping list image"
+coverAlt: "The list app see on a phone"
 tags:
   - "JavaScript"
   - "React"

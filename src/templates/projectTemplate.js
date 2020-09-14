@@ -7,12 +7,18 @@ import PropTypes from "prop-types"
 const ProjectTemplate = props => {
   const { markdownRemark } = props.data // data.markdownRemark holds the post data
   const { frontmatter, html } = markdownRemark
-
+  const sharingImage = frontmatter.cover.childImageSharp.resize.src
+  const sharingImageAlt = frontmatter.coverAlt
+  console.log(sharingImageAlt)
   return (
     <>
       <SEO
-        title="Projects"
-        description={`${frontmatter.title} / ${frontmatter.description}`}
+        title={frontmatter.title}
+        description={frontmatter.description}
+        path={props.path}
+        image={sharingImage}
+        imageAlt={sharingImageAlt}
+        type="article"
       />
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
         <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
@@ -25,9 +31,9 @@ const ProjectTemplate = props => {
                 loading="eager"
               />
               <div className="flex-col flex-wrap md:flex sm:flex-row sm:items-center sm:px-0 md:w-full">
-                <h2 className="mb-2 leading-none sm:mb-4">
+                <h1 className="mb-2 leading-none h2 sm:mb-4">
                   {frontmatter.title}
-                </h2>
+                </h1>
                 <div className="w-full mb-2 md:flex">
                   <div className="md:w-1/2 ">
                     <p className="mb-2 text-xs">{frontmatter.date}</p>
@@ -112,6 +118,9 @@ export const pageQuery = graphql`
               srcSetBreakpoints: [300, 500, 700, 1000, 1200]
             ) {
               ...GatsbyImageSharpFluid_withWebp
+            }
+            resize(width: 800) {
+              src
             }
           }
         }

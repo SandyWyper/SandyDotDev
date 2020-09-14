@@ -12,7 +12,7 @@ import surfingPhoto from "../images/surfing-spiderman2.jpg"
 import divingPhoto from "../images/diving.jpg"
 import golfingPhoto from "../images/golfing.jpg"
 
-const About = () => {
+const About = props => {
   const PictureToolTip = withStyles(theme => ({
     tooltip: {
       backgroundColor: "var(--text)",
@@ -23,7 +23,13 @@ const About = () => {
 
   return (
     <>
-      <SEO title="About" description="About me, skills and interests." />
+      <SEO
+        title="About"
+        description="About me, skills and interests."
+        path={props.path}
+        image={myPhoto}
+        imageAlt="A photo of me - avec barbe"
+      />
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
         <div className="pt-6 pb-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">
           <div className="max-w-4xl pb-40 mx-auto md:px-0">
@@ -100,7 +106,7 @@ const About = () => {
                 having previously worked for LinedUp, Shopify Experts. Here's a
                 list of strings to my bow:
               </p>
-              <ul className="pl-24 mb-4 list-disc">
+              <ul className="pl-12 mb-4 list-disc md:pl-24">
                 <li>JavaScript, React, Redux, Jquery, ES6</li>
                 <li>HTML, CSS, SCSS, Bootstrap, Tailwind</li>
                 <li>Shopify: Liquid themes, JavaScript SDK</li>

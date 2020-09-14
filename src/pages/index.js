@@ -11,7 +11,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Welcome!" />
       <section
         className={`md:grid md:grid-cols-5 xl:grid-cols-4 nav-space top-fold ${
           colorMode === "dark"
