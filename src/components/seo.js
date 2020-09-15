@@ -65,7 +65,7 @@ function SEO({
         { property: `og:image`, content: metaImage },
         { name: "og:image:alt", content: metaImageAlt },
         { property: `og:type`, content: type ? type : `website` },
-        // { property: `og:url`, content: metaUrl },
+        { property: `og:url`, content: metaUrl },
         { name: `twitter:card`, content: `summary` },
         { name: `twitter:creator`, content: author },
         { name: `twitter:title`, content: title },
