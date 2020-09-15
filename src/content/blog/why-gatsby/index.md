@@ -1,7 +1,7 @@
 ---
 date: "2020-09-15"
 title: "Why Gatsby"
-description: "Why static site generators like Gatsby are becoming the norm."
+description: "Static site generators like Gatsby are fast becoming the norm, and for good reason.  Here are 6 reasons why Gatsby is a great tool for producing excellent websites and apps."
 category: "Gatsby"
 cover: "./gatsby.png"
 coverAlt: "Gatsby.js logo"

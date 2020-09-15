@@ -324,7 +324,7 @@ Snazzy Maps to the rescue! Since building a few sites with maps, I have just fou
 
 ### Conclusion
 
-[Snazzy Maps](https://snazzymaps.com/). What more do you need to know?
+[Snazzy Maps](https://snazzymaps.com/) is a great tool simplifying a process that used to be a bit tricky. However for the seasoned dev, and a demanding client you can always tweak the settings to be just how you need them.
 
 ![mono-tone London Map](/mono-london.png)
 
