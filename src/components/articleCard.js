@@ -11,7 +11,7 @@ const ArticleCard = props => {
         <div className="mb-2 lg:flex">
           <div className="scale-div">
             <Img
-              className="w-40 h-32 mb-8 sharp-drop-shadow custom-border"
+              className="w-40 mb-8 sharp-drop-shadow custom-border"
               fluid={{ ...data.cover.childImageSharp.fluid, sizes: "200px" }}
               alt={data.coverAlt}
             />
@@ -22,7 +22,7 @@ const ArticleCard = props => {
             <p className="mb-1">{data.description}</p>
           </div>
         </div>
-        <div className="">
+        <div>
           <ul className="flex flex-wrap justify-end space-x-2">
             {data.tags.map(item => {
               return (

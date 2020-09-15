@@ -35,6 +35,7 @@ function SEO({
       }
     `
   )
+
   const defaultImage = file.childImageSharp.resize.src
   const {
     defaultDescription,
@@ -50,6 +51,7 @@ function SEO({
   const metaImageAlt = imageAlt || defaultTitle
   const metaUrl = url ? url : defaultUrl
   const metaRobots = robots ? robots : "all"
+  const metaType = type ? type : `website`
 
   return (
     <Helmet
@@ -64,7 +66,7 @@ function SEO({
         { property: `og:description`, content: metaDescription },
         { property: `og:image`, content: metaImage },
         { name: "og:image:alt", content: metaImageAlt },
-        { property: `og:type`, content: type ? type : `website` },
+        { property: `og:type`, content: metaType },
         { property: `og:url`, content: metaUrl },
         { name: `twitter:card`, content: `summary` },
         { name: `twitter:creator`, content: author },

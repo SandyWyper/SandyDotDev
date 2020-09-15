@@ -198,7 +198,7 @@ const Nav = ({ path }) => {
             )}
           </Spring>
         </Link>
-        <div className="hidden md:block">
+        <div className="hidden w-full md:block">
           <Panel path={path}>
             <div className="container flex flex-col items-center">
               <ul className="background side-nav">
