@@ -20,12 +20,13 @@ const About = props => {
       border: "1px solid var(--text)",
     },
   }))(Tooltip)
+
   return (
     <>
       <SEO
         title="About"
         description="About me, skills and interests."
-        path={props.uri}
+        path={props.pageContext.slug}
         image={myPhoto}
         imageAlt="A photo of me - avec barbe"
       />

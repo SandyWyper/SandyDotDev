@@ -34,6 +34,7 @@ exports.onCreatePage = ({ page, actions }) => {
       ...page.context,
       homeLayout: page.path.match(/^\/$/) ? true : false,
       navTitle: page.path.split("/")[1],
+      slug: page.path.slice(0, page.path.length - 1),
     },
   })
 }
