@@ -15,7 +15,7 @@ const ProjectTemplate = props => {
       <SEO
         title={frontmatter.title}
         description={frontmatter.description}
-        url={props.location.href}
+        path={props.pageContext.slug}
         image={sharingImage}
         imageAlt={sharingImageAlt}
         type="article"

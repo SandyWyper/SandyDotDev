@@ -11,7 +11,7 @@ function SEO({
   image,
   imageAlt,
   type,
-  url,
+  path,
   robots,
 }) {
   const { site, file } = useStaticQuery(
@@ -49,7 +49,7 @@ function SEO({
     ? `${defaultUrl}${image}`
     : `${defaultUrl}${defaultImage}`
   const metaImageAlt = imageAlt || defaultTitle
-  const metaUrl = url ? url : defaultUrl
+  const metaUrl = path ? `${defaultUrl}${path}` : defaultUrl
   const metaRobots = robots ? robots : "all"
   const metaType = type ? type : `website`
 
@@ -97,7 +97,7 @@ SEO.propTypes = {
   image: PropTypes.string,
   imageAlt: PropTypes.string,
   type: PropTypes.string,
-  url: PropTypes.string,
+  path: PropTypes.string,
   robots: PropTypes.string,
 }
 

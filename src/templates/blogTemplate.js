@@ -18,7 +18,7 @@ const BlogTemplate = props => {
         image={sharingImage}
         imageAlt={sharingImageAlt}
         type="article"
-        url={props.location.href}
+        path={props.pageContext.slug}
       />
       <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
         <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">

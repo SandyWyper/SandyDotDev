@@ -20,13 +20,12 @@ const About = props => {
       border: "1px solid var(--text)",
     },
   }))(Tooltip)
-
   return (
     <>
       <SEO
         title="About"
         description="About me, skills and interests."
-        url={props.location.href}
+        path={props.uri}
         image={myPhoto}
         imageAlt="A photo of me - avec barbe"
       />
@@ -35,7 +34,7 @@ const About = props => {
           <div className="max-w-4xl pb-40 mx-auto md:px-0">
             <h1 className="section-title">Hi!</h1>
             <div className="px-4">
-              <h4 className="mb-4">Back story</h4>
+              <h3 className="mb-4">Back story</h3>
               <p className="inline-block pl-4 mb-6">
                 <PictureToolTip
                   className="inline-block photo-tip"
@@ -97,7 +96,7 @@ const About = props => {
                 job, but when I started learning to code, I knew I was ready for
                 a new challenge.
               </p>
-              <h4 className="mb-4">Skills</h4>
+              <h3 className="mb-4">Skills</h3>
               <p className="pl-4 mb-4">
                 Solid understanding of all things front-end, with excellent
                 knowledge of the fundimentals. Currently building lightning fast
@@ -131,7 +130,7 @@ const About = props => {
                 coupled with a statically generated front-end should result in a
                 fast and scalable web app.
               </p>
-              <h4 className="mb-4">Interests</h4>
+              <h3 className="mb-4">Interests</h3>
               <p className="pl-4 mb-4">
                 I enjoy
                 <PictureToolTip

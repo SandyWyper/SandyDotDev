@@ -18,7 +18,7 @@ tags:
 
 Gatsby is a static site generator, that uses React and Graphql. Perhaps a little daunting if you've never used either of those tools, but it's a great place to start learning. You may think, "Why bother?". This post may peek your interest.
 
-If you've never heard of Gatsby, but your familiar Wordpress, then there are some key points that may help to explain.
+If you've never heard of Gatsby, but you are familiar with Wordpress, these are some key points that may help to explain.
 
 ![take away sign](/takeout.png)
 

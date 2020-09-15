@@ -35,14 +35,13 @@ class Contact extends Component {
       [event.target.name]: event.target.value,
     })
   }
-
   render() {
     return (
       <>
         <SEO
           title="Contact"
           description="I would love to hear from you, so please do get in touch. Contact me!"
-          url={this.props.location.href}
+          path={this.props.uri}
         />
         <section className="md:grid md:grid-cols-5 xl:grid-cols-4 background nav-space">
           <div className="py-12 lg:mr-10 xl:mr-24 md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pr-4">

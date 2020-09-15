@@ -45,13 +45,13 @@ h3,
 h4,
 .h4 {
   font-family: "Inconsolata", "Times New Roman", serif;
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: var(--text);
   @apply leading-tight;
 
-  @screen md {
-    font-size: 2.3rem;
-  }
+  // @screen md {
+  //   font-size: 2.3rem;
+  // }
 }
 
 h5,
