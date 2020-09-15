@@ -22,7 +22,7 @@ function SEO({
             defaultTitle: title
             defaultDescription: description
             author
-            defaultUrl: url
+            defaultUrl: siteUrl
           }
         }
         file(relativePath: { eq: "SandyDotDev-Cover-Image.jpg" }) {
