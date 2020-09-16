@@ -38,7 +38,7 @@ const About = props => {
               <h3 className="mb-4">Back story</h3>
               <p className="inline-block pl-4 mb-6">
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
                   disableFocusListener
                   arrow
                   TransitionComponent={Zoom}
@@ -66,7 +66,7 @@ const About = props => {
                 </PictureToolTip>
                 , graduated with a degree in&nbsp;
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
                   arrow
                   disableFocusListener
                   TransitionComponent={Zoom}
@@ -85,7 +85,7 @@ const About = props => {
                 places and jobs moved permenantly to Cornwall. I was lucky
                 enough to get a job working for the RNLI as a&nbsp;
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
                   arrow
                   disableFocusListener
                   TransitionComponent={Zoom}
@@ -139,7 +139,7 @@ const About = props => {
               <p className="pl-4 mb-4">
                 I enjoy
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
                   arrow
                   disableFocusListener
                   TransitionComponent={Zoom}
@@ -153,7 +153,7 @@ const About = props => {
                 </PictureToolTip>
                 , swiming,&nbsp;
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
                   arrow
                   TransitionComponent={Zoom}
                   title={
@@ -166,7 +166,7 @@ const About = props => {
                 </PictureToolTip>
                 and everything in or on the sea. I am also a keen&nbsp;
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
                   arrow
                   disableFocusListener
                   TransitionComponent={Zoom}
