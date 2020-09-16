@@ -11,13 +11,13 @@ const ArticleCard = props => {
         <div className="mb-2 lg:flex">
           <div className="scale-div">
             <Img
-              className="w-40 mb-8 sharp-drop-shadow custom-border"
+              className="w-56 mb-8 sharp-drop-shadow custom-border"
               fluid={{ ...data.cover.childImageSharp.fluid, sizes: "200px" }}
               alt={data.coverAlt}
             />
           </div>
           <div className="lg:ml-4">
-            <h4 className="leading-none">{data.title}</h4>
+            <h3 className="leading-none">{data.title}</h3>
             <p className="mb-4 text-xs">{data.date}</p>
             <p className="mb-1">{data.description}</p>
           </div>
