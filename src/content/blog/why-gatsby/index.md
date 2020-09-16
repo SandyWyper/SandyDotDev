@@ -54,7 +54,7 @@ In a nutshell, the idea is to have an open source community, building the highes
 
 You don't have to include [this](gatsbyjs.com/plugins/gatsby-plugin-offline/) plugin. But it's very easy if you do want to, and there's very little set up.
 
-Progressive Web Apps have been around for ages, but didn't catch on for quite some time. Probably because they were a bit of a pain to set up, and the though of caching a lot of data on a users phone seemed a bit harsh. Now that technology has come on so far, it's the transfer of data that is the biggest concern.
+Progressive Web Apps have been around for ages, but didn't catch on for quite some time. Probably because they were a bit of a pain to set up, and the thought of caching a lot of data on a users phone seemed a bit harsh. Now that technology has come on so far phones have huge memory capacities and it's the transfer of data that is the biggest concern.
 
 Imagine the scenario from before, when you phone out for food. Well instead of the restaurant giving you a time for delivery, they tell you it's all ready in your kitchen, all plated up and ready to eat. That's the kind of service everyone should be pleased to offer. Of course it's the same order that you placed the last time, but you can nibble on it until the updated one gets to you.
 
