@@ -1,6 +1,6 @@
 ---
 date: "2020-09-15"
-title: "Why Gatsby"
+title: "Why Gatsby?"
 description: "Static site generators like Gatsby are fast becoming the norm, and for good reason.  Here are 6 reasons why Gatsby is a great tool for producing excellent websites and apps."
 category: "Gatsby"
 cover: "./gatsby.png"
@@ -14,19 +14,21 @@ tags:
 
 ##### Behold the paradigm shift that is Static Site Generators. Gatsby is great way to start building tomorrows websites today.
 
+Catchy, right? Truth is, static site generators have been around for a while now. Gatsby is one of the most popular, and provides all the tools for building a high quality product.
+
 ### What is Gatsby?
 
 Gatsby is a static site generator, that uses React and Graphql. Perhaps a little daunting if you've never used either of those tools, but it's a great place to start learning. You may think, "Why bother?". This post may peek your interest.
 
 If you've never heard of Gatsby, but you are familiar with Wordpress, these are some key points that may help to explain.
 
-![take away sign](/takeout.png)
+![take-away sign](/takeout.png)
 
-#### 1. The Take Away Order
+#### 1. The take-away Order
 
 You're hungry and you want to phone out for some food. You phone your favourite Indian restaurant and give your order. They take the order to the kitchen, cook it, and a while later it's delivered to your door. With Wordpress, you click on a link, '...somewebsite.com/blog/massala', for example. Wordpress takes that order, has a look through the database for the content, runs it through a page template, sticks on some navigation and footer for garnish, and eventually delivers the html to the user. With Gatsby, the cooking has already been done, so when you phone up, all that happens is the delivery, which can be very very fast!
 
-Taking this as a core principle, pages are generated so that the core html will render as quickly as possible, staging all the other necessary things in order of importance. For example and e-commerce site would load all the product page, meanwhile make an API call to the shop to find out if the item is in stock.
+Taking this as a core principle, pages are generated so that the html will render as quickly as possible, staging all the other necessary things in order of importance. For example and e-commerce site would load all the product page, meanwhile make an API call to the shop to find out if the item is in stock.
 
 > Gatsby loads only critical parts of the page, so your site loads as fast as possible. Once loaded, Gatsby pre-fetches resources for other pages so that clicking on the site feels incredibly fast. Gatsby lets teams focus on creating content-driven websites instead of worrying about performance.
 
@@ -40,9 +42,13 @@ Secondly, Gatsby is a JavaScript based framework, so uses NPM or YARN to manage 
 
 #### 3. High Standards
 
-Gatsby uses React components as the building blocks for you to build with. When you include an image, you import the Img component from the ['gatsby-image'](https://www.gatsbyjs.com/plugins/gatsby-image/) node module. This will out put the best bloody image component you will ever see. Source sets for different screen sizes, multiple formats, blur-up effects, lazy-loading and the list goes on. The Link component is part of Gatsby core, which enables pre-fetching, tab-selection and accessibility considerations.
+Gatsby uses React components as the building blocks for you to build with. When you include an image, you import the Img component from the ['gatsby-image'](https://www.gatsbyjs.com/plugins/gatsby-image/) node module. This will output the best bloody image component you will ever see. Source sets for different screen sizes, multiple formats, blur-up effects, lazy-loading and the list goes on.
+
+The Link component is part of Gatsby core, which enables pre-fetching, tab-selection and accessibility considerations.
 
 In a nutshell, the idea is to have an open source community, building the highest performing components, to implemented easily, for fantastic websites and apps.
+
+> Gatsby automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure your site is fully optimized. **No manual tuning required**.
 
 #### 4. PWA? I knew you were going to say that
 
@@ -52,17 +58,17 @@ Progressive Web Apps have been around for ages, but didn't catch on for quite so
 
 Imagine the scenario from before, when you phone out for food. Well instead of the restaurant giving you a time for delivery, they tell you it's all ready in your kitchen, all plated up and ready to eat. That's the kind of service everyone should be pleased to offer. Of course it's the same order that you placed the last time, but you can nibble on it until the updated one gets to you.
 
+#### 5. Security
+
+Imaging the take-away analogy again (starting to wear thin, I know). Imagine in the Kitchen is where all the secret ingredients and recipes are stored. Well with Gatsby, there is no kitchen (sorry Spongebob) for malicious threats to try to spy on.
+
 ![Plankton stealing the secret formula](/plankton.jpg)
-
-#### 5. Secret formula
-
-Imaging the take away analogy again (starting to wear thin, I know). Imagine in the Kitchen is where all the secret ingredients and recipes are stored. Well with Gatsby, there is no kitchen (sorry Spongebob) for malicious threats to try to spy on.
 
 > Gatsby’s serverless rendering generates static HTML at build time. No server and no reachable database equals no malicious requests, DDOS attacks, or accidental exposure. A Gatsby site’s attack surface is non-existent.
 
 #### 6. Scalability
 
-That poor take away chef can't deal with 'Eat out to help out', so how are they going to deal with 10,000 orders per second when all of a sudden your take away goes viral.
+That poor take-away chef can't deal with 'Eat out to help out', so how are they going to deal with 10,000 orders per second when your take-away goes viral all of a sudden.
 
 > Gatsby sites don't require complex scaling operations or expensive hosting. They scale when needed, but when traffic drops so does your usage — and your costs. Host at scale for pennies.
 
