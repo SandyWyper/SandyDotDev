@@ -39,6 +39,7 @@ const About = props => {
               <p className="inline-block pl-4 mb-6">
                 <PictureToolTip
                   className="inline-block photo-tip"
+                  disableFocusListener
                   arrow
                   TransitionComponent={Zoom}
                   title={
@@ -51,7 +52,8 @@ const About = props => {
                 </PictureToolTip>
                 &nbsp;grew up in&nbsp;
                 <PictureToolTip
-                  className="inline-block photo-tip"
+                  className="inline-block select-none photo-tip"
+                  disableFocusListener
                   arrow
                   TransitionComponent={Zoom}
                   title={
@@ -66,6 +68,7 @@ const About = props => {
                 <PictureToolTip
                   className="inline-block photo-tip"
                   arrow
+                  disableFocusListener
                   TransitionComponent={Zoom}
                   title={
                     <div>
@@ -84,6 +87,7 @@ const About = props => {
                 <PictureToolTip
                   className="inline-block photo-tip"
                   arrow
+                  disableFocusListener
                   TransitionComponent={Zoom}
                   title={
                     <div>
@@ -137,6 +141,7 @@ const About = props => {
                 <PictureToolTip
                   className="inline-block photo-tip"
                   arrow
+                  disableFocusListener
                   TransitionComponent={Zoom}
                   title={
                     <div>
@@ -163,6 +168,7 @@ const About = props => {
                 <PictureToolTip
                   className="inline-block photo-tip"
                   arrow
+                  disableFocusListener
                   TransitionComponent={Zoom}
                   title={
                     <div>
