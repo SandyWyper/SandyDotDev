@@ -120,17 +120,17 @@ const MobileNav = ({ data }) => {
               </li>
             </ul>
             <ul>
-              <li className="pt-2 text-3xl text-primary">
+              <li className="pt-1 text-3xl text-primary">
                 <Link to="/about" onClick={toggle} onKeyDown={handleKeyDown}>
                   About me
                 </Link>
               </li>
-              <li className="pt-2 text-3xl text-primary">
+              <li className="pt-1 text-3xl text-primary">
                 <Link to="/contact" onClick={toggle} onKeyDown={handleKeyDown}>
                   Contact
                 </Link>
               </li>
-              <li className="text-3xl text-primary">
+              <li className="pt-1 text-3xl text-primary">
                 <Link to="/projects" onClick={toggle} onKeyDown={handleKeyDown}>
                   Projects
                 </Link>
@@ -146,12 +146,12 @@ const MobileNav = ({ data }) => {
                   </Link>
                 </li>
               ))}
-              <li className="post ">
+              <li className="post">
                 <Link to="/projects" onClick={toggle} onKeyDown={handleKeyDown}>
                   more ...
                 </Link>
               </li>
-              <li className="pt-2 text-3xl text-primary">
+              <li className="pt-1 text-3xl text-primary">
                 <Link to="/blog" onClick={toggle} onKeyDown={handleKeyDown}>
                   Blog
                 </Link>
@@ -167,8 +167,10 @@ const MobileNav = ({ data }) => {
                   </Link>
                 </li>
               ))}
-              <li className="post ">
-                <Link to="/blog">more ...</Link>
+              <li className="post">
+                <Link to="/blog" onClick={toggle} onKeyDown={handleKeyDown}>
+                  more ...
+                </Link>
               </li>
             </ul>
           </div>

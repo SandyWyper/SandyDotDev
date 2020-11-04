@@ -1,7 +1,7 @@
 export const COLORS = {
   text: {
     light: "#32292F",
-    dark: "#b1b2b2",
+    dark: "#e8e8e8",
   },
   textContrast: {
     light: "#b1b2b2",
