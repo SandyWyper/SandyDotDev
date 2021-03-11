@@ -32,11 +32,11 @@ const IndexPage = () => {
                 Architecture graduate, 8 years RNLI beach Lifeguard, now coding
                 everyday and loving it!
               </h5>
-              <div className="float-right">
+              {/* <div className="float-right">
                 <Link to="/about" className="mr-12 link">
                   about me
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <DownArrow />

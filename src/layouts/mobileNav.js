@@ -120,11 +120,11 @@ const MobileNav = ({ data }) => {
               </li>
             </ul>
             <ul>
-              <li className="pt-1 text-3xl text-primary">
+              {/* <li className="pt-1 text-3xl text-primary">
                 <Link to="/about" onClick={toggle} onKeyDown={handleKeyDown}>
                   About me
                 </Link>
-              </li>
+              </li> */}
               <li className="pt-1 text-3xl text-primary">
                 <Link to="/contact" onClick={toggle} onKeyDown={handleKeyDown}>
                   Contact

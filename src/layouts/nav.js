@@ -162,7 +162,7 @@ const Nav = ({ path }) => {
           <Panel path={path}>
             <div className="container flex flex-col items-center">
               <ul className="background side-nav">
-                <li>
+                {/* <li>
                   <Link
                     to="/about"
                     className="nav-section-header"
@@ -170,7 +170,7 @@ const Nav = ({ path }) => {
                   >
                     About me
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="/contact"
