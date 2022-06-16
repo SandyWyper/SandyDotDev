@@ -100,7 +100,7 @@ class Contact extends Component {
                         type="text"
                         name="email"
                         id="email"
-                        className="w-full px-4 py-2 leading-tight border-2 appearance-none border-custom-turq focus:outline-none contact-field focus:border-custom-blue"
+                        className="w-full px-4 py-2 leading-tight border-2 appearance-none focus:outline-none contact-field"
                         onChange={this.handleChange}
                         required
                       />
@@ -120,7 +120,7 @@ class Contact extends Component {
                         name="message"
                         id="message"
                         rows="4"
-                        className="w-full px-4 py-2 leading-tight border-2 appearance-none border-custom-turq focus:outline-none contact-field focus:border-custom-blue"
+                        className="w-full px-4 py-2 leading-tight border-2 appearance-none focus:outline-none contact-field"
                         onChange={this.handleChange}
                         required
                       ></textarea>

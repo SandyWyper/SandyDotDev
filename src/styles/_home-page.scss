@@ -1,9 +1,9 @@
 .top-fold {
   position: relative;
   z-index: 2;
-  min-height: 70vh;
+  // min-height: 70vh;
   @screen md {
-    min-height: 65vh;
+    //   min-height: 65vh;
   }
   &.light-theme-background {
     background: hsla(173, 55, 74, 1);
